@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+      "module": "CommonJS",
+      "esModuleInterop": true
+  },
+  "ts-node": {
+        "esm": true,
+        "compilerOptions": {
+             "module": "CommonJS",
+            "esModuleInterop": true
+        },
+    }
+}

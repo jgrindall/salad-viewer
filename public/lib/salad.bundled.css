@@ -1,0 +1,457 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../../../node_modules/.pnpm/css-loader@2.1.1_webpack@5.88.0/node_modules/css-loader/dist/cjs.js!../../../../node_modules/.pnpm/sass-loader@14.2.1_node-sass@9.0.0_webpack@5.88.0/node_modules/sass-loader/dist/cjs.js!../scss/salad.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+:root {
+  --sdk-theme-600: #8E24AA; }
+
+#salad_container {
+  position: absolute;
+  overflow: hidden; }
+  #salad_container .layer {
+    transform-origin: top left; }
+    #salad_container .layer.layer-background {
+      z-index: 10;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    #salad_container .layer.layer-debug {
+      z-index: 30;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    #salad_container .layer.layer-drawing {
+      z-index: 40;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    #salad_container .layer.layer-instances {
+      z-index: 50;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    #salad_container .layer.layer-camera {
+      z-index: 60;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    #salad_container .layer.layer-keyboard {
+      z-index: 62;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    #salad_container .layer.layer-ui {
+      z-index: 65;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    #salad_container .layer.layer-debug {
+      width: 100%;
+      height: 100%; }
+    #salad_container .layer.layer-ui {
+      pointer-events: none; }
+      #salad_container .layer.layer-ui button.layer-ui-button {
+        user-select: none;
+        pointer-events: all;
+        background: var(--sdk-theme-600);
+        border: none;
+        color: white;
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+        position: absolute; }
+        #salad_container .layer.layer-ui button.layer-ui-button:hover {
+          filter: brightness(90%); }
+        #salad_container .layer.layer-ui button.layer-ui-button:disabled {
+          opacity: 0.5;
+          background: #666; }
+        #salad_container .layer.layer-ui button.layer-ui-button svg {
+          top: 0;
+          left: 0;
+          width: 30px;
+          height: 30px; }
+        #salad_container .layer.layer-ui button.layer-ui-button-home {
+          top: 0;
+          left: 0; }
+        #salad_container .layer.layer-ui button.layer-ui-button-left {
+          top: 50%;
+          left: 0; }
+        #salad_container .layer.layer-ui button.layer-ui-button-right {
+          top: 50%;
+          right: 0; }
+        #salad_container .layer.layer-ui button.layer-ui-button-up {
+          left: 50%;
+          top: 0; }
+        #salad_container .layer.layer-ui button.layer-ui-button-down {
+          bottom: 0;
+          left: 50%; }
+        #salad_container .layer.layer-ui button.layer-ui-button-prev, #salad_container .layer.layer-ui button.layer-ui-button-history-back {
+          top: 80%;
+          left: 0; }
+        #salad_container .layer.layer-ui button.layer-ui-button-next, #salad_container .layer.layer-ui button.layer-ui-button-history-forward {
+          top: 80%;
+          right: 0; }
+    #salad_container .layer.layer-camera {
+      pointer-events: none; }
+      #salad_container .layer.layer-camera .layer-camera-element {
+        border: 1px dashed var(--sdk-theme-600); }
+        #salad_container .layer.layer-camera .layer-camera-element:after {
+          content: "camera";
+          position: absolute;
+          bottom: 4px;
+          right: 4px;
+          color: var(--sdk-theme-600);
+          font-size: x-small; }
+    #salad_container .layer.layer-keyboard {
+      pointer-events: none; }
+      #salad_container .layer.layer-keyboard button {
+        height: 40px;
+        width: 40px;
+        border-radius: 10px;
+        color: #333;
+        border: 1px solid #bdbdbd;
+        font-size: 2em;
+        font-weight: 700;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        text-shadow: 0 1px rgba(255, 255, 255, 0.4);
+        background-color: #c4c4c4;
+        box-shadow: 0 6px 0 #919191;
+        margin: 12px; }
+    #salad_container .layer.layer-instances .instance {
+      min-width: 10px;
+      min-height: 10px;
+      box-sizing: border-box; }
+      #salad_container .layer.layer-instances .instance-shadow-large:after, #salad_container .layer.layer-instances .instance-shadow-small:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: var(--background-image);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transform-origin: bottom center; }
+      #salad_container .layer.layer-instances .instance-shadow-large:after {
+        transform: skewX(-25deg) scale(1, 0.75);
+        filter: grayscale(1) blur(4px) brightness(0);
+        opacity: 0.25; }
+      #salad_container .layer.layer-instances .instance-shadow-small:after {
+        transform: skewX(-1.5deg) scale(1, 0.85);
+        filter: grayscale(1) blur(4px) brightness(0);
+        opacity: 0.333; }
+      #salad_container .layer.layer-instances .instance.visibility-hidden {
+        visibility: hidden; }
+      #salad_container .layer.layer-instances .instance.visibility-none {
+        display: none; }
+      #salad_container .layer.layer-instances .instance.editor-hidden {
+        display: none; }
+      #salad_container .layer.layer-instances .instance.editor-border {
+        outline: 1px solid rgba(var(--sdk-theme-600), 0.2); }
+        #salad_container .layer.layer-instances .instance.editor-border .component-child {
+          outline: 1px solid rgba(var(--sdk-theme-600), 0.2); }
+        #salad_container .layer.layer-instances .instance.editor-border.editor-grouped {
+          outline: 1px dashed var(--sdk-theme-600); }
+      #salad_container .layer.layer-instances .instance-highlight-shake {
+        animation: shake 0.5s;
+        animation-iteration-count: 3; }
+      #salad_container .layer.layer-instances .instance-highlight-glow {
+        box-shadow: 0 0 10px 5px #48abe0, 0 0 20px 7px #ebecca, 0 0 25px 20px #8a2be2, 0 0 30px 25px #ff1493; }
+      #salad_container .layer.layer-instances .instance-highlight-pulse {
+        animation-name: pulse;
+        animation-direction: alternate;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out; }
+      #salad_container .layer.layer-instances .instance-hover-lighten {
+        filter: brightness(1.15); }
+      #salad_container .layer.layer-instances .instance-hover-shake {
+        animation: shake 0.5s; }
+      #salad_container .layer.layer-instances .instance-hover-darken {
+        filter: brightness(0.85); }
+      #salad_container .layer.layer-instances .instance-hover-blur {
+        filter: blur(2px); }
+      #salad_container .layer.layer-instances .instance-hover-grayscale {
+        filter: grayscale(0.75); }
+      #salad_container .layer.layer-instances .instance-hover-yellowshadow {
+        filter: drop-shadow(0 0 5px yellow); }
+      #salad_container .layer.layer-instances .instance-hover-yellowshadowshake {
+        animation: shake 0.5s;
+        filter: drop-shadow(0 0 5px yellow); }
+      #salad_container .layer.layer-instances .instance .component {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        box-sizing: border-box;
+        margin: 0; }
+        #salad_container .layer.layer-instances .instance .component.component-identity {
+          z-index: 10; }
+        #salad_container .layer.layer-instances .instance .component.component-shape {
+          z-index: 20; }
+        #salad_container .layer.layer-instances .instance .component.component-image {
+          z-index: 30; }
+        #salad_container .layer.layer-instances .instance .component.component-lottie {
+          z-index: 40; }
+        #salad_container .layer.layer-instances .instance .component.component-text {
+          z-index: 50; }
+        #salad_container .layer.layer-instances .instance .component.component-drawing {
+          z-index: 60; }
+        #salad_container .layer.layer-instances .instance .component.component-droppable {
+          z-index: 70; }
+        #salad_container .layer.layer-instances .instance .component.component-draggable {
+          z-index: 80; }
+        #salad_container .layer.layer-instances .instance .component.component-rotate {
+          z-index: 90; }
+        #salad_container .layer.layer-instances .instance .component.component-movement {
+          z-index: 100; }
+        #salad_container .layer.layer-instances .instance .component.component-draggable {
+          width: 16px;
+          height: 16px;
+          top: 1px;
+          left: 3px; }
+          #salad_container .layer.layer-instances .instance .component.component-draggable:after {
+            color: var(--sdk-theme-600);
+            content: "↝"; }
+        #salad_container .layer.layer-instances .instance .component.component-droppable {
+          width: 100%;
+          height: 100%; }
+          #salad_container .layer.layer-instances .instance .component.component-droppable.component-droppable-counter {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+            background: rgba(0, 0, 0, 0.1); }
+          #salad_container .layer.layer-instances .instance .component.component-droppable.component-droppable-contain, #salad_container .layer.layer-instances .instance .component.component-droppable.component-droppable-point {
+            width: 16px;
+            height: 16px; }
+          #salad_container .layer.layer-instances .instance .component.component-droppable.component-droppable-contain {
+            top: 1px;
+            left: 3px; }
+            #salad_container .layer.layer-instances .instance .component.component-droppable.component-droppable-contain:after {
+              color: var(--sdk-theme-600);
+              content: "🞖"; }
+          #salad_container .layer.layer-instances .instance .component.component-droppable.component-droppable-point {
+            top: 50%;
+            left: 50%;
+            margin-left: -8px;
+            margin-top: -8px; }
+            #salad_container .layer.layer-instances .instance .component.component-droppable.component-droppable-point:after {
+              color: var(--sdk-theme-600);
+              content: "◉"; }
+        #salad_container .layer.layer-instances .instance .component.component-lottie {
+          contain: strict;
+          filter: none;
+          box-shadow: none;
+          backface-visibility: hidden; }
+          #salad_container .layer.layer-instances .instance .component.component-lottie svg {
+            contain: strict;
+            filter: none;
+            box-shadow: none;
+            image-rendering: crisp-edges; }
+          #salad_container .layer.layer-instances .instance .component.component-lottie img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; }
+        #salad_container .layer.layer-instances .instance .component.component-drawing.enabled {
+          width: 100%;
+          height: 100%;
+          background-size: 100% 100%;
+          background-repeat: no-repeat; }
+        #salad_container .layer.layer-instances .instance .component.component-movement {
+          width: 0;
+          height: 0;
+          transform-origin: center;
+          background: red;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          z-index: 10000; }
+          #salad_container .layer.layer-instances .instance .component.component-movement:after {
+            content: "⟶";
+            font-size: 64px;
+            font-weight: bolder;
+            color: rgba(20, 20, 20, 0.75);
+            font-family: 'Nunito';
+            width: 50px;
+            height: 50px;
+            display: block;
+            margin-top: -39px; }
+        #salad_container .layer.layer-instances .instance .component.component-material.edit-material {
+          width: 100%;
+          height: 100%;
+          background-size: 100% 100%;
+          background-repeat: no-repeat; }
+          #salad_container .layer.layer-instances .instance .component.component-material.edit-material-water {
+            background-image: url("/images/sdk/builderstray/water/editor-tray-water.png"); }
+          #salad_container .layer.layer-instances .instance .component.component-material.edit-material-sand {
+            background-image: url("/images/sdk/builderstray/sand/editor-tray-sand.png"); }
+        #salad_container .layer.layer-instances .instance .component.component-material.play-material {
+          width: 100%;
+          height: 100%;
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          background-image: url("/images/sdk/builderstray/water/tray.png");
+          /**
+        Clip using the octagonal tray 
+    **/ }
+          #salad_container .layer.layer-instances .instance .component.component-material.play-material:after {
+            content: "";
+            background-image: url("/images/sdk/builderstray/water/tray_over.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; }
+          #salad_container .layer.layer-instances .instance .component.component-material.play-material canvas, #salad_container .layer.layer-instances .instance .component.component-material.play-material .water-cover {
+            -webkit-user-drag: none;
+            user-select: none; }
+          #salad_container .layer.layer-instances .instance .component.component-material.play-material-custard canvas, #salad_container .layer.layer-instances .instance .component.component-material.play-material-foam canvas, #salad_container .layer.layer-instances .instance .component.component-material.play-material-sand canvas, #salad_container .layer.layer-instances .instance .component.component-material.play-material-soil canvas {
+            clip-path: polygon(26.25% 8.5%, 73.5% 8.5%, 85% 17.75%, 94.25% 65%, 82.5% 82%, 17.25% 82%, 7% 67%, 14.75% 17.5%); }
+          #salad_container .layer.layer-instances .instance .component.component-material.play-material-water canvas, #salad_container .layer.layer-instances .instance .component.component-material.play-material-water .water-cover {
+            clip-path: polygon(26.25% 7.5%, 73.5% 7.5%, 85% 17.75%, 92.75% 68%, 82.5% 82%, 17.25% 82%, 6.5% 67.25%, 14.75% 17.5%); }
+          #salad_container .layer.layer-instances .instance .component.component-material.play-material-water canvas {
+            opacity: 0.75;
+            filter: brightness(0.85);
+            pointer-events: none; }
+          #salad_container .layer.layer-instances .instance .component.component-material.play-material-water .water-cover {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(66, 57, 137, 0.25);
+            pointer-events: none; }
+          #salad_container .layer.layer-instances .instance .component.component-material.play-material-confetti canvas, #salad_container .layer.layer-instances .instance .component.component-material.play-material-rice canvas, #salad_container .layer.layer-instances .instance .component.component-material.play-material-glitter canvas, #salad_container .layer.layer-instances .instance .component.component-material.play-material-paper canvas, #salad_container .layer.layer-instances .instance .component.component-material.play-material-empty canvas {
+            clip-path: polygon(27.25% 9.25%, 72.5% 9.25%, 84% 18.75%, 91.25% 69%, 82.5% 83%, 17% 83%, 8.25% 68.5%, 15.75% 18%); }
+        #salad_container .layer.layer-instances .instance .component.component-identity {
+          opacity: 0.5;
+          top: -18px;
+          height: 18px !important;
+          background: rgba(var(--sdk-theme-600), 0.2);
+          color: var(--sdk-theme-600);
+          font-size: 12px;
+          -webkit-user-drag: none; }
+        #salad_container .layer.layer-instances .instance .component.component-button > button {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 12px;
+          padding: 4px 8px;
+          font-size: larger; }
+          #salad_container .layer.layer-instances .instance .component.component-button > button:hover:not(:disabled) {
+            filter: brightness(0.9); }
+          #salad_container .layer.layer-instances .instance .component.component-button > button:disabled {
+            opacity: 0.666;
+            filter: grayscale(0.85);
+            pointer-events: none; }
+          #salad_container .layer.layer-instances .instance .component.component-button > button.theme_transparent_black:hover, #salad_container .layer.layer-instances .instance .component.component-button > button.theme_transparent_white:hover {
+            filter: none;
+            background-color: rgba(128, 128, 128, 0.333) !important; }
+        #salad_container .layer.layer-instances .instance .component.component-button > div {
+          position: absolute;
+          background-size: 100%;
+          background-repeat: no-repeat; }
+        #salad_container .layer.layer-instances .instance .component.component-text {
+          background-repeat: no-repeat;
+          background-size: 100% 100%; }
+          #salad_container .layer.layer-instances .instance .component.component-text:focus {
+            outline: inherit !important;
+            filter: brightness(0.1); }
+          #salad_container .layer.layer-instances .instance .component.component-text .component-text-cover, #salad_container .layer.layer-instances .instance .component.component-text textarea {
+            background-color: transparent !important; }
+          #salad_container .layer.layer-instances .instance .component.component-text .component-text-cover {
+            position: absolute;
+            width: 100% !important;
+            height: 100% !important;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0) !important; }
+            #salad_container .layer.layer-instances .instance .component.component-text .component-text-cover:not(.component-text-cover-play) {
+              background-color: rgba(255, 255, 255, 0.25) !important; }
+              #salad_container .layer.layer-instances .instance .component.component-text .component-text-cover:not(.component-text-cover-play):after {
+                content: "dbl click to edit";
+                position: absolute;
+                bottom: 4px;
+                right: 4px;
+                color: var(--sdk-theme-600);
+                opacity: 0.5;
+                font-size: x-small; }
+          #salad_container .layer.layer-instances .instance .component.component-text textarea {
+            border: none;
+            border-radius: 0;
+            box-sizing: border-box;
+            padding: 0;
+            resize: none;
+            min-height: 0 !important;
+            line-height: 1.2;
+            box-sizing: border-box;
+            letter-spacing: 0;
+            word-spacing: 0;
+            font-feature-settings: "kern" 0, "liga" 0;
+            -webkit-font-smoothing: antialiased; }
+            #salad_container .layer.layer-instances .instance .component.component-text textarea:disabled {
+              background-color: transparent !important;
+              pointer-events: none; }
+          #salad_container .layer.layer-instances .instance .component.component-text.component-text-speech_left {
+            background-image: url("/images/sdk/speech_bubble.svg"); }
+        #salad_container .layer.layer-instances .instance .component.component-select .component-text-cover {
+          background-color: transparent !important;
+          position: absolute;
+          width: 100% !important;
+          height: 100% !important;
+          top: 0;
+          left: 0;
+          background-color: rgba(255, 255, 255, 0) !important; }
+        #salad_container .layer.layer-instances .instance .component.component-rotate {
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          background-color: rgba(250, 250, 250, 0.75);
+          border: 2px solid rgba(200, 200, 200, 0.9);
+          border-radius: 50%;
+          margin-left: -8px;
+          margin-top: -8px;
+          cursor: pointer;
+          opacity: 0.5;
+          transform-origin: center;
+          user-select: none; }
+          #salad_container .layer.layer-instances .instance .component.component-rotate:hover {
+            opacity: 1; }
+      #salad_container .layer.layer-instances .instance-mouse-disabled {
+        pointer-events: none; }
+  #salad_container .activity-preloader-container {
+    z-index: 10000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    #salad_container .activity-preloader-container .activity-preloader-progress {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: larger;
+      padding: 10px;
+      background: #ccc;
+      border-radius: 8px;
+      min-width: 160px;
+      text-align: center; }
+    #salad_container .activity-preloader-container .activity-preloader-bar {
+      background-color: rgba(200, 200, 200, 0.2);
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      position: absolute;
+      top: 0;
+      left: 0; }
+
