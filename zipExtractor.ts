@@ -3,6 +3,8 @@ import fs  from "fs-extra";
 import path from "path";
 import { Asset, JSONAsset } from "./types";
 import { saveAsset } from "./assetDatabase";
+import { getActivitiesPath } from "./paths";
+import { getAssetPath } from "./paths";
 
 class ZipExtractor{
 
@@ -17,7 +19,7 @@ class ZipExtractor{
     async extractAsset(asset: Asset){
         const assetSourcePath = path.join(this.extractPath, 'assets', asset.key);
         console.log("asset", asset, assetSourcePath);
-        const assetDestPath = path.join(__dirname, 'uploads/assets', asset.hash);
+        const assetDestPath = path.join(getAssetPath(), asset.hash);
         saveAsset(asset);
         await fs.copy(assetSourcePath, assetDestPath);
     }
@@ -38,7 +40,7 @@ class ZipExtractor{
             await this.extractAsset(asset);
         }
     
-        const activityDestPath = path.join(__dirname, 'uploads/activities', `${activityId}.json`);
+        const activityDestPath = path.join(getActivitiesPath(), `${activityId}.json`);
        
         // read the activity.json file
         const activityPath = path.join(this.extractPath, 'activity.json');

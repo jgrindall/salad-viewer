@@ -5,9 +5,10 @@ import cors from "cors";
 import ZipExtractor from "./zipExtractor";
 import {IncomingForm} from "formidable";
 import { getAsset } from "./assetDatabase";
+import { getZipPath, getTempPath, getActivitiesPath, getAssetPath } from "./paths";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.static('public'));
@@ -20,13 +21,14 @@ app.post('/upload', async (req:any, res:any) => {
     try { 
         const form = new IncomingForm();
         form.keepExtensions = true;
-        form.uploadDir = path.join(__dirname, 'uploads', 'zips');
+        form.uploadDir = getZipPath();
         form.parse(req, async (err:any, fields:any, files:any) => {
             //get the file
             const zipFile = files.zipfile[0] || files.zipfile;
-            const tempPath = path.join(form.uploadDir, zipFile.newFilename);
+            const tempPath = path.join(getZipPath(), zipFile.newFilename);
+
             // where to put it
-            const extractPath = path.join(__dirname, 'uploads', 'temp', path.basename(zipFile.newFilename, '.zip'));
+            const extractPath = path.join(getTempPath(), path.basename(zipFile.newFilename, '.zip'));
             await fs.ensureDir(extractPath);
             // extract it all
             const extractor = new ZipExtractor(tempPath, extractPath);
@@ -48,7 +50,7 @@ app.get('/view/:activityId', async (req:any, res:any) => {
     const activityId = req.params.activityId;
     const viewerPath = path.join(__dirname, 'public', 'viewer.html');
     let html = await fs.readFile(viewerPath, 'utf8');
-    const activityPath = path.join(__dirname, 'uploads', 'activities', `activity-${activityId}.json`);
+    const activityPath = path.join(getActivitiesPath(), `activity-${activityId}.json`);
     const json = await fs.readJson(activityPath);
     const pages = json.edit.pages;
     const assets = json.assets;
@@ -94,7 +96,7 @@ app.get('/asset/hash/:hash', async (req: any, res: any) => {
     console.log("get asset2", hash);
     const contentType = getContentTypeForAsset(hash);
 
-    const assetPath = path.join(__dirname, 'uploads', 'assets', hash);
+    const assetPath = path.join(getAssetPath(), hash);
     res.setHeader('Content-Type', contentType);
     res.sendFile(assetPath);
 });
