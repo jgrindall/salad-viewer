@@ -6,12 +6,15 @@
     "formidable": "^3.5.2",
     "fs-extra": "^11.3.0",
     "multer": "^1.4.5-lts.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
   },
   "scripts": {
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "start": "ts-node main.ts"
   }
 }
