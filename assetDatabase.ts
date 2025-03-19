@@ -4,7 +4,7 @@ import path from 'path';
 
 const DB_FILE = path.join(__dirname, 'asset-db.json');
 
-let db:any = {};
+let db:{[key:string]: Asset} = {};
 
 export function saveAsset(asset: Asset) {
   console.log("save", asset)
@@ -12,7 +12,7 @@ export function saveAsset(asset: Asset) {
   persist();
 }
 
-export function getAsset(hash: string) {
+export function getAsset(hash: string): Asset | undefined {
   return db[hash];
 }
 
