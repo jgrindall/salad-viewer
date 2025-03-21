@@ -16,18 +16,6 @@ window.getApi = (assetsMap)=>{
         }
     }
 
-    const soundSequencer = {
-        playSound: (sound) => {
-            console.log('Playing sound', sound)
-        },
-        unmute: () => {},
-        mute: () => {},
-        preloadSound: (id, src, onLoaded) => {
-            console.log('Preloading sound', id, src)
-            onLoaded();
-        }
-    }
-    
     const stats = {
         createAssessmentStats: (assessment) => {
             console.log('Creating assessment stats', assessment);
@@ -37,7 +25,7 @@ window.getApi = (assetsMap)=>{
     return {
         assetManager: Salad.Factory.createAssetManager(assetsMap, resolver, soundSequencer),
         translator,
-        soundSequencer,
+        soundSequencer: Salad.Factory.getDefaultSoundSequencer(),
         stats
     }
 }
