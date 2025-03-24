@@ -22,10 +22,12 @@ window.getApi = (assetsMap)=>{
         }
     }
 
+    const soundSequencer = Salad.Factory.getDefaultSoundSequencer();
+
     return {
         assetManager: Salad.Factory.createAssetManager(assetsMap, resolver, soundSequencer),
         translator,
-        soundSequencer: Salad.Factory.getDefaultSoundSequencer(),
+        soundSequencer,
         stats
     }
 }
