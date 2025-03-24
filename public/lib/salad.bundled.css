@@ -1,6 +1,6 @@
-/*!*******************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ../../../../node_modules/.pnpm/css-loader@2.1.1_webpack@5.88.0/node_modules/css-loader/dist/cjs.js!../../../../node_modules/.pnpm/sass-loader@14.2.1_node-sass@9.0.0_webpack@5.88.0/node_modules/sass-loader/dist/cjs.js!../scss/salad.scss ***!
-  \*******************************************************************************************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../../../node_modules/.pnpm/css-loader@2.1.1_webpack@5.88.0/node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].use[2]!../../../../node_modules/.pnpm/sass-loader@14.2.1_node-sass@9.0.0_webpack@5.88.0/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!../scss/salad.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 @charset "UTF-8";
 :root {
   --sdk-theme-600: #8E24AA; }
@@ -105,8 +105,8 @@
     #salad_container .layer.layer-keyboard {
       pointer-events: none; }
       #salad_container .layer.layer-keyboard button {
-        height: 40px;
-        width: 40px;
+        height: 50px;
+        min-width: 50px;
         border-radius: 10px;
         color: #333;
         border: 1px solid #bdbdbd;
@@ -283,55 +283,6 @@
             height: 50px;
             display: block;
             margin-top: -39px; }
-        #salad_container .layer.layer-instances .instance .component.component-material.edit-material {
-          width: 100%;
-          height: 100%;
-          background-size: 100% 100%;
-          background-repeat: no-repeat; }
-          #salad_container .layer.layer-instances .instance .component.component-material.edit-material-water {
-            background-image: url("/images/sdk/builderstray/water/editor-tray-water.png"); }
-          #salad_container .layer.layer-instances .instance .component.component-material.edit-material-sand {
-            background-image: url("/images/sdk/builderstray/sand/editor-tray-sand.png"); }
-        #salad_container .layer.layer-instances .instance .component.component-material.play-material {
-          width: 100%;
-          height: 100%;
-          background-size: 100% 100%;
-          background-repeat: no-repeat;
-          background-image: url("/images/sdk/builderstray/water/tray.png");
-          /**
-        Clip using the octagonal tray 
-    **/ }
-          #salad_container .layer.layer-instances .instance .component.component-material.play-material:after {
-            content: "";
-            background-image: url("/images/sdk/builderstray/water/tray_over.png");
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%; }
-          #salad_container .layer.layer-instances .instance .component.component-material.play-material canvas, #salad_container .layer.layer-instances .instance .component.component-material.play-material .water-cover {
-            -webkit-user-drag: none;
-            user-select: none; }
-          #salad_container .layer.layer-instances .instance .component.component-material.play-material-custard canvas, #salad_container .layer.layer-instances .instance .component.component-material.play-material-foam canvas, #salad_container .layer.layer-instances .instance .component.component-material.play-material-sand canvas, #salad_container .layer.layer-instances .instance .component.component-material.play-material-soil canvas {
-            clip-path: polygon(26.25% 8.5%, 73.5% 8.5%, 85% 17.75%, 94.25% 65%, 82.5% 82%, 17.25% 82%, 7% 67%, 14.75% 17.5%); }
-          #salad_container .layer.layer-instances .instance .component.component-material.play-material-water canvas, #salad_container .layer.layer-instances .instance .component.component-material.play-material-water .water-cover {
-            clip-path: polygon(26.25% 7.5%, 73.5% 7.5%, 85% 17.75%, 92.75% 68%, 82.5% 82%, 17.25% 82%, 6.5% 67.25%, 14.75% 17.5%); }
-          #salad_container .layer.layer-instances .instance .component.component-material.play-material-water canvas {
-            opacity: 0.75;
-            filter: brightness(0.85);
-            pointer-events: none; }
-          #salad_container .layer.layer-instances .instance .component.component-material.play-material-water .water-cover {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background-color: rgba(66, 57, 137, 0.25);
-            pointer-events: none; }
-          #salad_container .layer.layer-instances .instance .component.component-material.play-material-confetti canvas, #salad_container .layer.layer-instances .instance .component.component-material.play-material-rice canvas, #salad_container .layer.layer-instances .instance .component.component-material.play-material-glitter canvas, #salad_container .layer.layer-instances .instance .component.component-material.play-material-paper canvas, #salad_container .layer.layer-instances .instance .component.component-material.play-material-empty canvas {
-            clip-path: polygon(27.25% 9.25%, 72.5% 9.25%, 84% 18.75%, 91.25% 69%, 82.5% 83%, 17% 83%, 8.25% 68.5%, 15.75% 18%); }
         #salad_container .layer.layer-instances .instance .component.component-identity {
           opacity: 0.5;
           top: -18px;
@@ -402,7 +353,7 @@
               background-color: transparent !important;
               pointer-events: none; }
           #salad_container .layer.layer-instances .instance .component.component-text.component-text-speech_left {
-            background-image: url("/images/sdk/speech_bubble.svg"); }
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyOTkuOTk2IiBoZWlnaHQ9IjIyNS45MjQiIHZlcnNpb249IjEuMCIgdmlld0JveD0iMCAwIDg1LjcwNCA2NC41NDIiPjxwYXRoIGQ9Ik00NS44MTMgMS44MzZjMjAuOTc0IDAgMzcuOTc3IDExLjgzNSAzNy45NzcgMjYuNDMzIDAgMTQuNTk3LTE3LjAwMyAyNi40MzItMzcuOTc3IDI2LjQzMi02LjU3NSAwLTEyLjc1OS0xLjE2NC0xOC4xNTItMy4yMUMxNy4wMTcgNTUuNDk4IDIuNDgzIDYzLjA2NyAyLjQ4MyA2My4wNjdzOS40NzctNS4zNjUgMTMuMzg0LTExLjg3OWMuOTk4LTEuNjY1IDEuNTgyLTMuNDEgMS45MTctNS4wODctNi4xNzYtNC43LTkuOTQ3LTEwLjk2LTkuOTQ3LTE3LjgzMiAwLTE0LjU5OCAxNy4wMDItMjYuNDMzIDM3Ljk3Ni0yNi40MzNtMCAyLjEwNmMtMTkuNzggMC0zNS44NyAxMC45MTMtMzUuODcgMjQuMzI4IDAgNS45NDQgMy4yMzcgMTEuNjgyIDkuMTE2IDE2LjE1NmwxLjA0Ny43OTgtLjI1NyAxLjI5Yy0uNDIyIDIuMTE2LTEuMTU0IDQuMDUzLTIuMTc2IDUuNzU4LS4zMjMuNTM4LS42OCAxLjA2OS0xLjA2MyAxLjU4OCAzLjQ0LTEuNTYyIDcuMDQtMy4xMDggMTAuMzA5LTQuMzM5bC43NDUtLjI4Ljc0NC4yODJjNS4yOTggMi4wMSAxMS4zMTcgMy4wNzMgMTcuNDA1IDMuMDczIDE5Ljc4IDAgMzUuODcxLTEwLjkxMyAzNS44NzEtMjQuMzI3IDAtMTMuNDE1LTE2LjA5MS0yNC4zMjctMzUuODctMjQuMzI3eiIvPjwvc3ZnPg==); }
         #salad_container .layer.layer-instances .instance .component.component-select .component-text-cover {
           background-color: transparent !important;
           position: absolute;
@@ -428,6 +379,8 @@
             opacity: 1; }
       #salad_container .layer.layer-instances .instance-mouse-disabled {
         pointer-events: none; }
+      #salad_container .layer.layer-instances .instance.layout-paint {
+        contain: layout paint; }
   #salad_container .activity-preloader-container {
     z-index: 10000;
     position: absolute;
