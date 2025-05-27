@@ -235591,11 +235591,6 @@ class AButtonComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.ACompone
     }
     _redrawUI() {
         // apply theme
-        const css = (0,_ButtonThemes__WEBPACK_IMPORTED_MODULE_3__.getCSSForTheme)(this.data.type);
-        this.page.getComponent("domupdate").addCSSUpdate({
-            element: this._button,
-            css,
-        });
         if (this.data.state === "disabled") {
             this._button.setAttribute("disabled", "disabled");
         }
@@ -235603,12 +235598,14 @@ class AButtonComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.ACompone
             this._button.removeAttribute("disabled");
         }
         const buttonDrawer = new _ButtonPointerDrawer__WEBPACK_IMPORTED_MODULE_2__.ButtonPointerDrawer(this._ui);
+        this._ui.classList.add("drawer", "drawer-theme_" + this.data.type);
         if (this.data.arrow.x === 0 && this.data.arrow.y === 0) {
             buttonDrawer.clear();
         }
         else {
             this.instance.getComponent("render").setLayoutPaint(false);
-            buttonDrawer.draw(this.data.arrow, css);
+            const color = (0,_ButtonThemes__WEBPACK_IMPORTED_MODULE_3__.getColorForTheme)(this.data.type);
+            buttonDrawer.draw(this.data.arrow, color);
         }
     }
     addElement() {
@@ -235688,7 +235685,7 @@ class ButtonPointerDrawer {
      * @param point
      * @param style
      */
-    draw(point, style) {
+    draw(point, color) {
         const angle = Math.atan2(point.y, point.x) + Math.PI / 2;
         const baseLength = ButtonPointerDrawer.ARROW_WIDTH;
         const baseDx = (Math.cos(angle) * baseLength) / 2;
@@ -235729,9 +235726,9 @@ class ButtonPointerDrawer {
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}">
     <polygon 
         points="${p0Translated.x},${p0Translated.y} ${p1Translated.x},${p1Translated.y} ${p2Translated.x} ${p2Translated.y}" 
-        fill="${style.backgroundColor}"
-        stroke="${style.borderColor}" 
-        stroke-width="${parseInt(style.borderWidth)}"/>
+        fill="${color}"
+        stroke="${color}" 
+        stroke-width="0"/>
 </svg>
 `;
         const svgDataUri = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
@@ -235745,6 +235742,7 @@ class ButtonPointerDrawer {
             width: `${w}px`,
             height: `${h}px`,
         });
+        this.uiElement.classList.add("button-pointer-drawer");
     }
 }
 ButtonPointerDrawer.ARROW_WIDTH = 24;
@@ -235761,53 +235759,17 @@ ButtonPointerDrawer.ARROW_WIDTH = 24;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   getCSSForTheme: () => (/* binding */ getCSSForTheme)
+/* harmony export */   getColorForTheme: () => (/* binding */ getColorForTheme)
 /* harmony export */ });
-const buttonThemes = {
-    green: {
-        backgroundColor: "#43A047",
-        color: "white",
-        borderColor: "#66BB6A",
-        borderWidth: "0",
-        borderStyle: "solid",
-    },
-    purple: {
-        backgroundColor: "#8E24AA",
-        color: "white",
-        borderColor: "#AB47BC",
-        borderWidth: "0",
-        borderStyle: "solid",
-    },
-    red: {
-        backgroundColor: "#E53935",
-        color: "white",
-        borderColor: "#EF5350",
-        borderWidth: "0",
-        borderStyle: "solid",
-    },
-    blue: {
-        backgroundColor: "#1E88E5",
-        color: "white",
-        borderColor: "#42A5F5",
-        borderWidth: "0",
-        borderStyle: "solid",
-    },
-    transparent_white: {
-        backgroundColor: "transparent",
-        color: "white",
-        borderColor: "transparent",
-        borderWidth: "0",
-        borderStyle: "none",
-    },
-    transparent_black: {
-        backgroundColor: "transparent",
-        color: "black",
-        borderColor: "transparent",
-        borderWidth: "0",
-        borderStyle: "none",
-    },
+const buttonColors = {
+    green: "#43A047",
+    purple: "#8E24AA",
+    red: "#E53935",
+    blue: "#1E88E5",
+    transparent_white: "transparent",
+    transparent_black: "transparent"
 };
-const getCSSForTheme = (type) => buttonThemes[type];
+const getColorForTheme = (type) => buttonColors[type];
 
 
 /***/ }),
@@ -239698,7 +239660,6 @@ class PositionComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.ACompon
                     top: `${this.data.y}px`,
                 }
             });
-            //TODO? element.style.transform = `translate(${this.data.x}px, ${this.data.y}px)`;
         }
     }
 }
@@ -239845,10 +239806,6 @@ class ARenderComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_1__.ACompone
     removeClass(className) {
         this._element.classList.remove(className);
     }
-    updateLayoutPaint() {
-        var _a;
-        (_a = this._element) === null || _a === void 0 ? void 0 : _a.classList.toggle("layout-paint", this.data.layoutPaint);
-    }
     updateOpacity() {
         const element = this.getElement();
         this.page.getComponent("domupdate").addCSSUpdate({
@@ -239943,6 +239900,10 @@ class EditRenderComponent extends _ARenderComponent__WEBPACK_IMPORTED_MODULE_0__
         super.onCreated();
         this._element.classList.add("editor-border");
     }
+    updateLayoutPaint() {
+        var _a;
+        (_a = this._element) === null || _a === void 0 ? void 0 : _a.classList.remove("layout-paint");
+    }
 }
 
 
@@ -239994,6 +239955,10 @@ class PlayRenderComponent extends _ARenderComponent__WEBPACK_IMPORTED_MODULE_0__
         else {
             (_b = this._element) === null || _b === void 0 ? void 0 : _b.classList.remove("instance-mouse-disabled");
         }
+    }
+    updateLayoutPaint() {
+        var _a;
+        (_a = this._element) === null || _a === void 0 ? void 0 : _a.classList.toggle("layout-paint", this.data.layoutPaint);
     }
 }
 
@@ -241189,6 +241154,15 @@ class ATextComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComponent
         this.data.value = value;
         this._updateValue();
     }
+    focus() {
+        this.textElement.focus();
+        const length = this.textElement.value.length;
+        this.textElement.setSelectionRange(length, length);
+    }
+    setMaxLength(length) {
+        this.data.maxlength = length;
+        this._updateMaxLen();
+    }
     /**
      * set the type - eg. speech bubble, plain text etc
      * @param type
@@ -241247,6 +241221,8 @@ class ATextComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComponent
             this.addElement();
             this._updateValue();
             this._updateTypeUI();
+            this._updateMaxLen();
+            this._updateMaxLen();
             this._updatePosition();
         }
         this._listenToSizeChange();
@@ -241310,6 +241286,7 @@ class ATextComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComponent
             this.addElement();
             this._updateValue();
             this._updateTypeUI();
+            this._updateMaxLen();
             this._updatePosition();
         }
         this._listenToSizeChange();
@@ -241326,6 +241303,11 @@ class ATextComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComponent
     }
     _updatePosition() {
         Object.assign(this.element.style, Object.assign({}, this.data.position));
+    }
+    _updateMaxLen() {
+        if (this.textElement) {
+            this.textElement.maxLength = this.data.maxlength;
+        }
     }
     _updateTypeUI() {
         _schema_schema__WEBPACK_IMPORTED_MODULE_3__.textTypes.forEach((type) => {
@@ -242764,6 +242746,7 @@ const defaultSchema = {
         readOnClick: false,
         type: "plain",
         position: {},
+        maxlength: 1000000,
         textFormat: {
             backgroundColor: "",
             textAlign: "left",
@@ -247183,9 +247166,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_TypedEventEmitter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utils/TypedEventEmitter */ "../salad/utils/TypedEventEmitter.ts");
 /**
  * handles key presses and also virutal keyboard presses on tablets
- *
- * //TODO: implement virtual keyboard
- *
  */
 
 class KeyboardHandler extends _utils_TypedEventEmitter__WEBPACK_IMPORTED_MODULE_0__.TypedEventEmitter {
@@ -253688,6 +253668,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/utils */ "../salad/utils/utils.ts");
 /* harmony import */ var _components_DefaultComponentFactories__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/DefaultComponentFactories */ "../salad/components/DefaultComponentFactories.ts");
 /* harmony import */ var _pageComponents_DefaultPageComponentFactories__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../pageComponents/DefaultPageComponentFactories */ "../salad/pageComponents/DefaultPageComponentFactories.ts");
+/* harmony import */ var _root_utils_export_FontImport__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @root/utils/export/FontImport */ "../utils/export/FontImport.ts");
 /**
  * An activity is a collection of pages that are displayed in a sequence.
  * And a way to navigate between them.
@@ -253702,6 +253683,7 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+
 
 
 
@@ -253759,6 +253741,10 @@ class Activity {
             // start!
             this.listeners = (0,_listeners_ActivityListeners__WEBPACK_IMPORTED_MODULE_2__.getListeners)(this, this.options.mode);
             this.makeComponents();
+            if (this.options.fonts) {
+                console.log("load", this.options.fonts);
+                yield new _root_utils_export_FontImport__WEBPACK_IMPORTED_MODULE_9__.FontImport(this.options.fonts).importFonts();
+            }
             const themeColor = ((_a = this.settings.getSettings()) === null || _a === void 0 ? void 0 : _a.themeColor) || "rgb(200,200,200,0.5)";
             const preloader = (0,_preloader_ActivityPreloader__WEBPACK_IMPORTED_MODULE_1__.getPreloader)({
                 container: this.options.container,
@@ -256154,6 +256140,50 @@ const getPreloaderElement = (options) => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "../utils/export/FontImport.ts":
+/*!*************************************!*\
+  !*** ../utils/export/FontImport.ts ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   FontImport: () => (/* binding */ FontImport)
+/* harmony export */ });
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+class FontImport {
+    constructor(fonts) {
+        this.fonts = fonts;
+    }
+    importFonts() {
+        return __awaiter(this, void 0, void 0, function* () {
+            for (const fontName in this.fonts) {
+                const font = this.fonts[fontName];
+                const fontFace = new FontFace(fontName, `url(${font.base64})`);
+                try {
+                    yield fontFace.load();
+                    // @ts-ignore
+                    document.fonts.add(fontFace);
+                }
+                catch (e) {
+                }
+            }
+        });
+    }
+}
 
 
 /***/ }),

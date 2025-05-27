@@ -16,3 +16,11 @@ export type JSONAsset = {
     type:string,
     contentType:string
 }
+
+export type JSONActivity = {
+    assets: JSONAsset[],
+    pages: any[],
+    data:any,
+    fonts:{[key:string]:{base64: string}},
+    script: any
+}

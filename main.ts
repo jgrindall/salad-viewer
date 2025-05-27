@@ -6,7 +6,8 @@ import { Fields, Files, Error as FormidableError, IncomingForm } from 'formidabl
 import { getAsset } from "./assetDatabase";
 import { getZipPath, getTempPath, getActivitiesPath, getAssetPath } from "./paths";
 import express, { Request, Response } from 'express';
-import { JSONAsset } from "./types";
+import { JSONAsset, JSONActivity } from "./types";
+import { list } from "./activitiesDatabase";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -14,11 +15,22 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.static('public'));
 
+console.log("starting...")
+
 app.get('/', (req:Request, res:Response) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.post('/upload', async (req:Request, res:Response) => {
+app.get("/api/list", async (req:Request, res:Response) => {
+    const activities = list();
+    res.json(activities);
+})
+
+app.get('/admin', (req:Request, res:Response) => {
+    res.sendFile(path.join(__dirname, 'public', 'admin.html'));
+});
+
+app.post('/admin/upload', async (req:Request, res:Response) => {
     try { 
         const form = new IncomingForm();
         form.keepExtensions = true;
@@ -52,25 +64,52 @@ app.post('/upload', async (req:Request, res:Response) => {
  */
 app.get('/view/:activityId', async (req: Request, res:Response) => {
     const activityId = req.params.activityId;
+
+    if (!activityId) {
+        res
+        .status(404)
+        .sendFile(path.join(__dirname, 'public', '404.html'));
+        return;
+    }
+
     const viewerPath = path.join(__dirname, 'public', 'viewer.html');
     
+
     // basic html
     let html = await fs.readFile(viewerPath, 'utf8');
-    
+
     // Read the activity file
     const activityPath = path.join(getActivitiesPath(), `activity-${activityId}.json`);
 
-    const json = await fs.readJson(activityPath) as {
-        assets: JSONAsset[],
-        edit: {
-            pages: any[]
+    let json: any = {};
+
+    try{
+        json = await fs.readJson(activityPath) as JSONActivity;
+
+        if (!json) {
+            res
+            .status(404)
+            .sendFile(path.join(__dirname, 'public', '404.html'));
+            return;
         }
-    };
+    }
+    catch (e) {
+        res
+        .status(404)
+        .sendFile(path.join(__dirname, 'public', '404.html'));
+        return;
+    }
+
     
-    const pages = json.edit.pages;
+    
+    const pages = json.pages;
+    const data = json.data;
+    const script = json.script;
+    const fonts = json.fonts;
     
     const assetMap = {};
-    json.assets.forEach((asset: JSONAsset) => {
+    
+    (json.assets || []).forEach((asset: JSONAsset) => {
         assetMap[asset.name] = {
             type: asset.type,
             src: asset.src,
@@ -79,16 +118,29 @@ app.get('/view/:activityId', async (req: Request, res:Response) => {
     });
 
     // Make a script to load the activity
-    const script = `
+    const scriptSrc = `
       <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const api = window.getApi(${JSON.stringify(assetMap, null, 4)});
+
             const container = document.getElementById("salad_container");
+            
+            const api = window.getApi(${JSON.stringify(assetMap, null, 4)});
+        
+            const data = ${JSON.stringify(data, null, 4)};
+        
+            const script = ${JSON.stringify(script, null, 4)};
+        
+            const pages = ${JSON.stringify(pages, null, 4)};
+
+            const fonts = ${JSON.stringify(fonts, null, 4)};
+        
             const options = {
                 mode: "play",
                 container,
+                data,
                 api,
-                pages: ${JSON.stringify(pages, null, 4)}
+                fonts,
+                pages
             };
 
             Salad.Factory.createActivity(options);
@@ -97,7 +149,7 @@ app.get('/view/:activityId', async (req: Request, res:Response) => {
     `;
     
     // Insert the script right before the closing body tag
-    html = html.replace('</body>', `${script}\n</body>`);
+    html = html.replace('</body>', `${scriptSrc}\n</body>`);
     res.send(html);
 });
 

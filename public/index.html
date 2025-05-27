@@ -1,25 +1,52 @@
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/main.css">
+
         <style>
-            body{
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: larger;
-            }
-            *{
-                margin: 10px;
-                padding: 10px;
-            }
             
+            .monster{
+                width: 220px;
+                height: 283px;
+                background-image: url('level6.png');
+                background-position: 0 0;
+                background-size: 600% 100%;
+            }
         </style>
     </head>
+
     <body>
-        <form action="/upload" method="post" enctype="multipart/form-data">
-            <label for="zipfile">Select a zip file:</label><br>
-            <input type="file" id="zipfile" name="zipfile" accept=".zip" required><br>
-            <button type="submit" class="btn">Submit</button>
-        </form>
+        <h1>
+            This is the home page
+        </h1>
+        <div class="monster">
+        </div>
+        <ul class="activities">
+        </ul>
     </body>
     <script>
+        const listActivities = async ()=>{
+            const response = await fetch("/api/list", {});
+            const activities = await response.json();
+            const container = document.querySelector(".activities");
+            activities.forEach((a)=>{
+                const activity = document.createElement("div");
+                const id = a.match(/^activity-(.*)\.json$/)[1];
+                console.log(id);
+                activity.innerHTML = `
+<li>
+    <a href='/view/${id}'>
+        <p>${a}</p>
+    </a>
+</li>`;
+                container.appendChild(activity);
+            })
+        }
+
+        listActivities();
+
         
+
     </script>
 </html>

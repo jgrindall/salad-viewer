@@ -294,19 +294,44 @@
         #salad_container .layer.layer-instances .instance .component.component-button > button {
           position: absolute;
           width: 100%;
-          height: 100%;
+          height: calc(100% - 4px);
           border-radius: 12px;
           padding: 4px 8px;
-          font-size: larger; }
+          font-size: larger;
+          border-width: 0; }
           #salad_container .layer.layer-instances .instance .component.component-button > button:hover:not(:disabled) {
             filter: brightness(0.9); }
           #salad_container .layer.layer-instances .instance .component.component-button > button:disabled {
             opacity: 0.666;
             filter: grayscale(0.85);
             pointer-events: none; }
-          #salad_container .layer.layer-instances .instance .component.component-button > button.theme_transparent_black:hover, #salad_container .layer.layer-instances .instance .component.component-button > button.theme_transparent_white:hover {
-            filter: none;
-            background-color: rgba(128, 128, 128, 0.333) !important; }
+          #salad_container .layer.layer-instances .instance .component.component-button > button.theme_transparent_black {
+            color: white; }
+          #salad_container .layer.layer-instances .instance .component.component-button > button.theme_transparent_white {
+            color: black; }
+          #salad_container .layer.layer-instances .instance .component.component-button > button.theme_transparent_black, #salad_container .layer.layer-instances .instance .component.component-button > button.theme_transparent_white {
+            background-color: transparent;
+            border-color: transparent;
+            border-style: none; }
+            #salad_container .layer.layer-instances .instance .component.component-button > button.theme_transparent_black:hover, #salad_container .layer.layer-instances .instance .component.component-button > button.theme_transparent_white:hover {
+              filter: none;
+              background-color: rgba(128, 128, 128, 0.333) !important; }
+          #salad_container .layer.layer-instances .instance .component.component-button > button.theme_purple {
+            background-color: #8E24AA;
+            color: white;
+            box-shadow: 0 4px 0 #6b1b80; }
+          #salad_container .layer.layer-instances .instance .component.component-button > button.theme_green {
+            background-color: #43A047;
+            color: white;
+            box-shadow: 0 4px 0 #347c37; }
+          #salad_container .layer.layer-instances .instance .component.component-button > button.theme_red {
+            background-color: #E53935;
+            color: white;
+            box-shadow: 0 4px 0 #cd1e1a; }
+          #salad_container .layer.layer-instances .instance .component.component-button > button.theme_blue {
+            background-color: #1E88E5;
+            color: white;
+            box-shadow: 0 4px 0 #166dba; }
         #salad_container .layer.layer-instances .instance .component.component-button > div {
           position: absolute;
           background-size: 100%;

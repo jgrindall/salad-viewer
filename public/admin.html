@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: larger;
+            }
+            *{
+                margin: 10px;
+                padding: 10px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="zipfile">Select a zip file:</label><br>
+            <input type="file" id="zipfile" name="zipfile" accept=".zip" required><br>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </body>
+    <script>
+        
+    </script>
+</html>

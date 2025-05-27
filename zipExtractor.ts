@@ -51,7 +51,7 @@ class ZipExtractor{
             return lookUpInManifest ? lookUpInManifest.hash : null;
         }
 
-        activity.assets.forEach((a: JSONAsset) => {
+        (activity.assets || []).forEach((a: JSONAsset) => {
             const hash = getHashForKey(a.name);
             a.src = `/asset/hash/${hash}`;
         });
