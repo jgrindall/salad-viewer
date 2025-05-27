@@ -16,32 +16,37 @@
       top: 0;
       left: 0; }
     #salad_container .layer.layer-debug {
-      z-index: 30;
+      z-index: 15;
       position: absolute;
       top: 0;
       left: 0; }
     #salad_container .layer.layer-drawing {
-      z-index: 40;
+      z-index: 20;
       position: absolute;
       top: 0;
       left: 0; }
-    #salad_container .layer.layer-instances {
-      z-index: 50;
+    #salad_container .layer.layer-instances-container {
+      z-index: 25;
       position: absolute;
       top: 0;
       left: 0; }
     #salad_container .layer.layer-camera {
-      z-index: 60;
+      z-index: 30;
       position: absolute;
       top: 0;
       left: 0; }
     #salad_container .layer.layer-keyboard {
-      z-index: 62;
+      z-index: 35;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    #salad_container .layer.layer-highlight {
+      z-index: 40;
       position: absolute;
       top: 0;
       left: 0; }
     #salad_container .layer.layer-ui {
-      z-index: 65;
+      z-index: 45;
       position: absolute;
       top: 0;
       left: 0; }
@@ -104,308 +109,340 @@
           font-size: x-small; }
     #salad_container .layer.layer-keyboard {
       pointer-events: none; }
-      #salad_container .layer.layer-keyboard button {
-        height: 50px;
-        min-width: 50px;
-        border-radius: 10px;
-        color: #333;
-        border: 1px solid #bdbdbd;
-        font-size: 2em;
-        font-weight: 700;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        text-shadow: 0 1px rgba(255, 255, 255, 0.4);
-        background-color: #c4c4c4;
-        box-shadow: 0 6px 0 #919191;
-        margin: 12px; }
-    #salad_container .layer.layer-instances .instance {
-      min-width: 10px;
-      min-height: 10px;
-      box-sizing: border-box; }
-      #salad_container .layer.layer-instances .instance-shadow-large:after, #salad_container .layer.layer-instances .instance-shadow-small:after {
-        content: "";
+      #salad_container .layer.layer-keyboard .keyboard-buttons {
         position: absolute;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        display: flex; }
+        #salad_container .layer.layer-keyboard .keyboard-buttons-bottom {
+          bottom: 0; }
+        #salad_container .layer.layer-keyboard .keyboard-buttons-top {
+          top: 0; }
+        #salad_container .layer.layer-keyboard .keyboard-buttons > button {
+          height: 50px;
+          min-width: 50px;
+          border-radius: 10px;
+          color: #333;
+          border: 1px solid #bdbdbd;
+          font-size: 2em;
+          font-weight: 700;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          text-shadow: 0 1px rgba(255, 255, 255, 0.4);
+          background-color: #c4c4c4;
+          box-shadow: 0 6px 0 #919191;
+          margin: 12px;
+          pointer-events: all; }
+    #salad_container .layer.layer-highlight {
+      pointer-events: none; }
+    #salad_container .layer.layer-instances-container {
+      transform-style: preserve-3d;
+      perspective: 10000px;
+      pointer-events: all; }
+      #salad_container .layer.layer-instances-container .layer-instances, #salad_container .layer.layer-instances-container .layer-instances-hud {
+        pointer-events: none;
+        position: absolute;
+        -webkit-user-drag: none;
+        user-drag: none;
+        user-select: none;
+        -webkit-user-select: none;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: var(--background-image);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        transform-origin: bottom center; }
-      #salad_container .layer.layer-instances .instance-shadow-large:after {
-        transform: skewX(-25deg) scale(1, 0.75);
-        filter: grayscale(1) blur(4px) brightness(0);
-        opacity: 0.25; }
-      #salad_container .layer.layer-instances .instance-shadow-small:after {
-        transform: skewX(-1.5deg) scale(1, 0.85);
-        filter: grayscale(1) blur(4px) brightness(0);
-        opacity: 0.333; }
-      #salad_container .layer.layer-instances .instance.visibility-hidden {
-        visibility: hidden; }
-      #salad_container .layer.layer-instances .instance.visibility-none {
-        display: none; }
-      #salad_container .layer.layer-instances .instance.editor-hidden {
-        display: none; }
-      #salad_container .layer.layer-instances .instance.editor-border {
-        outline: 1px solid rgba(var(--sdk-theme-600), 0.2); }
-        #salad_container .layer.layer-instances .instance.editor-border .component-child {
-          outline: 1px solid rgba(var(--sdk-theme-600), 0.2); }
-        #salad_container .layer.layer-instances .instance.editor-border.editor-grouped {
-          outline: 1px dashed var(--sdk-theme-600); }
-      #salad_container .layer.layer-instances .instance-highlight-shake {
-        animation: shake 0.5s;
-        animation-iteration-count: 3; }
-      #salad_container .layer.layer-instances .instance-highlight-glow {
-        box-shadow: 0 0 10px 5px #48abe0, 0 0 20px 7px #ebecca, 0 0 25px 20px #8a2be2, 0 0 30px 25px #ff1493; }
-      #salad_container .layer.layer-instances .instance-highlight-pulse {
-        animation-name: pulse;
-        animation-direction: alternate;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out; }
-      #salad_container .layer.layer-instances .instance-hover-lighten {
-        filter: brightness(1.15); }
-      #salad_container .layer.layer-instances .instance-hover-shake {
-        animation: shake 0.5s; }
-      #salad_container .layer.layer-instances .instance-hover-darken {
-        filter: brightness(0.85); }
-      #salad_container .layer.layer-instances .instance-hover-blur {
-        filter: blur(2px); }
-      #salad_container .layer.layer-instances .instance-hover-grayscale {
-        filter: grayscale(0.75); }
-      #salad_container .layer.layer-instances .instance-hover-yellowshadow {
-        filter: drop-shadow(0 0 5px yellow); }
-      #salad_container .layer.layer-instances .instance-hover-yellowshadowshake {
-        animation: shake 0.5s;
-        filter: drop-shadow(0 0 5px yellow); }
-      #salad_container .layer.layer-instances .instance .component {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        box-sizing: border-box;
-        margin: 0; }
-        #salad_container .layer.layer-instances .instance .component.component-identity {
-          z-index: 10; }
-        #salad_container .layer.layer-instances .instance .component.component-shape {
-          z-index: 20; }
-        #salad_container .layer.layer-instances .instance .component.component-image {
-          z-index: 30; }
-        #salad_container .layer.layer-instances .instance .component.component-lottie {
-          z-index: 40; }
-        #salad_container .layer.layer-instances .instance .component.component-text {
-          z-index: 50; }
-        #salad_container .layer.layer-instances .instance .component.component-drawing {
-          z-index: 60; }
-        #salad_container .layer.layer-instances .instance .component.component-droppable {
-          z-index: 70; }
-        #salad_container .layer.layer-instances .instance .component.component-draggable {
-          z-index: 80; }
-        #salad_container .layer.layer-instances .instance .component.component-rotate {
-          z-index: 90; }
-        #salad_container .layer.layer-instances .instance .component.component-movement {
-          z-index: 100; }
-        #salad_container .layer.layer-instances .instance .component.component-draggable {
-          width: 16px;
-          height: 16px;
-          top: 1px;
-          left: 3px; }
-          #salad_container .layer.layer-instances .instance .component.component-draggable:after {
-            color: var(--sdk-theme-600);
-            content: "↝"; }
-        #salad_container .layer.layer-instances .instance .component.component-droppable {
-          width: 100%;
-          height: 100%; }
-          #salad_container .layer.layer-instances .instance .component.component-droppable.component-droppable-counter {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            user-select: none;
-            background: rgba(0, 0, 0, 0.1); }
-          #salad_container .layer.layer-instances .instance .component.component-droppable.component-droppable-contain, #salad_container .layer.layer-instances .instance .component.component-droppable.component-droppable-point {
-            width: 16px;
-            height: 16px; }
-          #salad_container .layer.layer-instances .instance .component.component-droppable.component-droppable-contain {
-            top: 1px;
-            left: 3px; }
-            #salad_container .layer.layer-instances .instance .component.component-droppable.component-droppable-contain:after {
-              color: var(--sdk-theme-600);
-              content: "🞖"; }
-          #salad_container .layer.layer-instances .instance .component.component-droppable.component-droppable-point {
-            top: 50%;
-            left: 50%;
-            margin-left: -8px;
-            margin-top: -8px; }
-            #salad_container .layer.layer-instances .instance .component.component-droppable.component-droppable-point:after {
-              color: var(--sdk-theme-600);
-              content: "◉"; }
-        #salad_container .layer.layer-instances .instance .component.component-lottie {
-          contain: strict;
-          filter: none;
-          box-shadow: none;
-          backface-visibility: hidden; }
-          #salad_container .layer.layer-instances .instance .component.component-lottie svg {
-            contain: strict;
-            filter: none;
-            box-shadow: none;
-            image-rendering: crisp-edges; }
-          #salad_container .layer.layer-instances .instance .component.component-lottie img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain; }
-        #salad_container .layer.layer-instances .instance .component.component-drawing.enabled {
-          width: 100%;
-          height: 100%;
-          background-size: 100% 100%;
-          background-repeat: no-repeat; }
-        #salad_container .layer.layer-instances .instance .component.component-movement {
-          width: 0;
-          height: 0;
-          transform-origin: center;
-          background: red;
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          z-index: 10000; }
-          #salad_container .layer.layer-instances .instance .component.component-movement:after {
-            content: "⟶";
-            font-size: 64px;
-            font-weight: bolder;
-            color: rgba(20, 20, 20, 0.75);
-            font-family: 'Nunito';
-            width: 50px;
-            height: 50px;
-            display: block;
-            margin-top: -39px; }
-        #salad_container .layer.layer-instances .instance .component.component-identity {
-          opacity: 0.5;
-          top: -18px;
-          height: 18px !important;
-          background: rgba(var(--sdk-theme-600), 0.2);
-          color: var(--sdk-theme-600);
-          font-size: 12px;
-          -webkit-user-drag: none; }
-        #salad_container .layer.layer-instances .instance .component.component-button > button {
-          position: absolute;
-          width: 100%;
-          height: calc(100% - 4px);
-          border-radius: 12px;
-          padding: 4px 8px;
-          font-size: larger;
-          border-width: 0; }
-          #salad_container .layer.layer-instances .instance .component.component-button > button:hover:not(:disabled) {
-            filter: brightness(0.9); }
-          #salad_container .layer.layer-instances .instance .component.component-button > button:disabled {
-            opacity: 0.666;
-            filter: grayscale(0.85);
-            pointer-events: none; }
-          #salad_container .layer.layer-instances .instance .component.component-button > button.theme_transparent_black {
-            color: white; }
-          #salad_container .layer.layer-instances .instance .component.component-button > button.theme_transparent_white {
-            color: black; }
-          #salad_container .layer.layer-instances .instance .component.component-button > button.theme_transparent_black, #salad_container .layer.layer-instances .instance .component.component-button > button.theme_transparent_white {
-            background-color: transparent;
-            border-color: transparent;
-            border-style: none; }
-            #salad_container .layer.layer-instances .instance .component.component-button > button.theme_transparent_black:hover, #salad_container .layer.layer-instances .instance .component.component-button > button.theme_transparent_white:hover {
-              filter: none;
-              background-color: rgba(128, 128, 128, 0.333) !important; }
-          #salad_container .layer.layer-instances .instance .component.component-button > button.theme_purple {
-            background-color: #8E24AA;
-            color: white;
-            box-shadow: 0 4px 0 #6b1b80; }
-          #salad_container .layer.layer-instances .instance .component.component-button > button.theme_green {
-            background-color: #43A047;
-            color: white;
-            box-shadow: 0 4px 0 #347c37; }
-          #salad_container .layer.layer-instances .instance .component.component-button > button.theme_red {
-            background-color: #E53935;
-            color: white;
-            box-shadow: 0 4px 0 #cd1e1a; }
-          #salad_container .layer.layer-instances .instance .component.component-button > button.theme_blue {
-            background-color: #1E88E5;
-            color: white;
-            box-shadow: 0 4px 0 #166dba; }
-        #salad_container .layer.layer-instances .instance .component.component-button > div {
-          position: absolute;
-          background-size: 100%;
-          background-repeat: no-repeat; }
-        #salad_container .layer.layer-instances .instance .component.component-text {
-          background-repeat: no-repeat;
-          background-size: 100% 100%; }
-          #salad_container .layer.layer-instances .instance .component.component-text:focus {
-            outline: inherit !important;
-            filter: brightness(0.1); }
-          #salad_container .layer.layer-instances .instance .component.component-text .component-text-cover, #salad_container .layer.layer-instances .instance .component.component-text textarea {
-            background-color: transparent !important; }
-          #salad_container .layer.layer-instances .instance .component.component-text .component-text-cover {
+        transform-style: preserve-3d; }
+        #salad_container .layer.layer-instances-container .layer-instances .instance, #salad_container .layer.layer-instances-container .layer-instances-hud .instance {
+          min-width: 10px;
+          min-height: 10px;
+          box-sizing: border-box;
+          pointer-events: all; }
+          #salad_container .layer.layer-instances-container .layer-instances .instance-shadow-large:after, #salad_container .layer.layer-instances-container .layer-instances .instance-shadow-small:after, #salad_container .layer.layer-instances-container .layer-instances-hud .instance-shadow-large:after, #salad_container .layer.layer-instances-container .layer-instances-hud .instance-shadow-small:after {
+            content: "";
             position: absolute;
-            width: 100% !important;
-            height: 100% !important;
             top: 0;
             left: 0;
-            background-color: rgba(255, 255, 255, 0) !important; }
-            #salad_container .layer.layer-instances .instance .component.component-text .component-text-cover:not(.component-text-cover-play) {
-              background-color: rgba(255, 255, 255, 0.25) !important; }
-              #salad_container .layer.layer-instances .instance .component.component-text .component-text-cover:not(.component-text-cover-play):after {
-                content: "dbl click to edit";
-                position: absolute;
-                bottom: 4px;
-                right: 4px;
-                color: var(--sdk-theme-600);
-                opacity: 0.5;
-                font-size: x-small; }
-          #salad_container .layer.layer-instances .instance .component.component-text textarea {
-            border: none;
-            border-radius: 0;
-            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            background-image: var(--background-image);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            transform-origin: bottom center; }
+          #salad_container .layer.layer-instances-container .layer-instances .instance-shadow-large:after, #salad_container .layer.layer-instances-container .layer-instances-hud .instance-shadow-large:after {
+            transform: skewX(-25deg) scale(1, 0.75);
+            filter: grayscale(1) blur(4px) brightness(0);
+            opacity: 0.25; }
+          #salad_container .layer.layer-instances-container .layer-instances .instance-shadow-small:after, #salad_container .layer.layer-instances-container .layer-instances-hud .instance-shadow-small:after {
+            transform: skewX(-1.5deg) scale(1, 0.85);
+            filter: grayscale(1) blur(4px) brightness(0);
+            opacity: 0.333; }
+          #salad_container .layer.layer-instances-container .layer-instances .instance.visibility-hidden, #salad_container .layer.layer-instances-container .layer-instances-hud .instance.visibility-hidden {
+            visibility: hidden; }
+          #salad_container .layer.layer-instances-container .layer-instances .instance.visibility-none, #salad_container .layer.layer-instances-container .layer-instances-hud .instance.visibility-none {
+            display: none; }
+          #salad_container .layer.layer-instances-container .layer-instances .instance.editor-hidden, #salad_container .layer.layer-instances-container .layer-instances-hud .instance.editor-hidden {
+            display: none; }
+          #salad_container .layer.layer-instances-container .layer-instances .instance.editor-border, #salad_container .layer.layer-instances-container .layer-instances-hud .instance.editor-border {
+            outline: 1px solid rgba(var(--sdk-theme-600), 0.2); }
+            #salad_container .layer.layer-instances-container .layer-instances .instance.editor-border .component-child, #salad_container .layer.layer-instances-container .layer-instances-hud .instance.editor-border .component-child {
+              outline: 1px solid rgba(var(--sdk-theme-600), 0.2); }
+            #salad_container .layer.layer-instances-container .layer-instances .instance.editor-border.editor-grouped, #salad_container .layer.layer-instances-container .layer-instances-hud .instance.editor-border.editor-grouped {
+              outline: 1px dashed var(--sdk-theme-600); }
+          #salad_container .layer.layer-instances-container .layer-instances .instance .component, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             padding: 0;
-            resize: none;
-            min-height: 0 !important;
-            line-height: 1.2;
             box-sizing: border-box;
-            letter-spacing: 0;
-            word-spacing: 0;
-            font-feature-settings: "kern" 0, "liga" 0;
-            -webkit-font-smoothing: antialiased; }
-            #salad_container .layer.layer-instances .instance .component.component-text textarea:disabled {
+            margin: 0; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-identity, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-identity {
+              z-index: 10; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-shape, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-shape {
+              z-index: 20; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-image, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-image {
+              z-index: 30; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-lottie, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-lottie {
+              z-index: 40; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-text, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-text {
+              z-index: 50; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-drawing, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-drawing {
+              z-index: 60; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-droppable, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-droppable {
+              z-index: 70; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-draggable, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-draggable {
+              z-index: 80; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-rotate, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-rotate {
+              z-index: 90; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-movement, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-movement {
+              z-index: 100; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-draggable, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-draggable {
+              width: 16px;
+              height: 16px;
+              top: 1px;
+              left: 3px; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-draggable:after, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-draggable:after {
+                color: var(--sdk-theme-600);
+                content: "↝"; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-droppable, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-droppable {
+              width: 100%;
+              height: 100%; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-droppable.component-droppable-counter, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-droppable.component-droppable-counter {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                user-select: none;
+                background: rgba(0, 0, 0, 0.1); }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-droppable.component-droppable-contain, #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-droppable.component-droppable-point, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-droppable.component-droppable-contain, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-droppable.component-droppable-point {
+                width: 16px;
+                height: 16px; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-droppable.component-droppable-contain, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-droppable.component-droppable-contain {
+                top: 1px;
+                left: 3px; }
+                #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-droppable.component-droppable-contain:after, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-droppable.component-droppable-contain:after {
+                  color: var(--sdk-theme-600);
+                  content: "🞖"; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-droppable.component-droppable-point, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-droppable.component-droppable-point {
+                top: 50%;
+                left: 50%;
+                margin-left: -8px;
+                margin-top: -8px; }
+                #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-droppable.component-droppable-point:after, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-droppable.component-droppable-point:after {
+                  color: var(--sdk-theme-600);
+                  content: "◉"; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-lottie, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-lottie {
+              contain: strict;
+              filter: none;
+              box-shadow: none;
+              backface-visibility: hidden; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-lottie svg, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-lottie svg {
+                contain: strict;
+                filter: none;
+                box-shadow: none;
+                image-rendering: crisp-edges; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-lottie img, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-lottie img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-drawing.enabled, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-drawing.enabled {
+              width: 100%;
+              height: 100%;
+              background-size: 100% 100%;
+              background-repeat: no-repeat; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-movement, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-movement {
+              width: 0;
+              height: 0;
+              transform-origin: center;
+              background: red;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              z-index: 10000; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-movement:after, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-movement:after {
+                content: "⟶";
+                font-size: 64px;
+                font-weight: bolder;
+                color: rgba(20, 20, 20, 0.75);
+                font-family: 'Nunito';
+                width: 50px;
+                height: 50px;
+                display: block;
+                margin-top: -39px; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-identity, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-identity {
+              opacity: 0.5;
+              top: -18px;
+              height: 18px !important;
+              background: rgba(var(--sdk-theme-600), 0.2);
+              color: var(--sdk-theme-600);
+              font-size: 12px;
+              -webkit-user-drag: none; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-button > button, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-button > button {
+              position: absolute;
+              border-width: 0;
+              font-size: larger;
+              user-select: none;
+              -webkit-user-select: none; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-button > button.role_default, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-button > button.role_default {
+                width: 100%;
+                height: calc(100% - 4px);
+                border-radius: 12px;
+                padding: 4px 8px; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-button > button.role_sound, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-button > button.role_sound {
+                width: 100%;
+                border-radius: 50%;
+                height: calc(100% - 4px);
+                padding: 4px 8px; }
+                #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-button > button.role_sound:after, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-button > button.role_sound:after {
+                  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 8H1c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h4l5 5V3L5 8z' fill='%23fff'/%3E%3Cpath d='M12,9.5 a2,2.5 0 0,1 0,5' stroke='%23fff' stroke-width='0.5' fill='none'/%3E%3Cpath d='M13,8 a3,4 0 0,1 0,8' stroke='%23fff' stroke-width='0.5' fill='none'/%3E%3Cpath d='M14,6.5 a4,5.5 0 0,1 0,11' stroke='%23fff' stroke-width='0.5' fill='none'/%3E%3C/svg%3E");
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  background-size: contain;
+                  content: "";
+                  width: 80%;
+                  height: 80%;
+                  position: absolute;
+                  top: 10%;
+                  left: 10%; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-button > button:hover:not(:disabled), #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-button > button:hover:not(:disabled) {
+                filter: brightness(0.9); }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-button > button:disabled, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-button > button:disabled {
+                opacity: 0.666;
+                filter: grayscale(0.85);
+                pointer-events: none; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-button > button.theme_transparent_black, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-button > button.theme_transparent_black {
+                color: white; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-button > button.theme_transparent_white, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-button > button.theme_transparent_white {
+                color: black; }
+                #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-button > button.theme_transparent_white.role_sound:after, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-button > button.theme_transparent_white.role_sound:after {
+                  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 8H1c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h4l5 5V3L5 8z' fill='%23000'/%3E%3Cpath d='M12,9.5 a2,2.5 0 0,1 0,5' stroke='%23000' stroke-width='0.5' fill='none'/%3E%3Cpath d='M13,8 a3,4 0 0,1 0,8' stroke='%23000' stroke-width='0.5' fill='none'/%3E%3Cpath d='M14,6.5 a4,5.5 0 0,1 0,11' stroke='%23000' stroke-width='0.5' fill='none'/%3E%3C/svg%3E"); }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-button > button.theme_transparent_black, #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-button > button.theme_transparent_white, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-button > button.theme_transparent_black, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-button > button.theme_transparent_white {
+                background-color: transparent;
+                border-color: transparent;
+                border-style: none; }
+                #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-button > button.theme_transparent_black:hover, #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-button > button.theme_transparent_white:hover, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-button > button.theme_transparent_black:hover, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-button > button.theme_transparent_white:hover {
+                  filter: none;
+                  background-color: rgba(128, 128, 128, 0.333) !important; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-button > button.theme_purple, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-button > button.theme_purple {
+                background-color: #8E24AA;
+                color: white;
+                box-shadow: 0 4px 0 #6b1b80; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-button > button.theme_green, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-button > button.theme_green {
+                background-color: #43A047;
+                color: white;
+                box-shadow: 0 4px 0 #347c37; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-button > button.theme_red, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-button > button.theme_red {
+                background-color: #E53935;
+                color: white;
+                box-shadow: 0 4px 0 #cd1e1a; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-button > button.theme_blue, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-button > button.theme_blue {
+                background-color: #1E88E5;
+                color: white;
+                box-shadow: 0 4px 0 #166dba; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-button > div, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-button > div {
+              position: absolute;
+              background-size: 100%;
+              background-repeat: no-repeat; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-clock, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-clock {
+              display: flex;
+              align-items: center;
+              width: 75px;
+              height: 40px;
+              gap: 8px; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-clock > span, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-clock > span {
+                user-select: none;
+                -webkit-user-select: none; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-text, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-text {
+              background-repeat: no-repeat;
+              background-size: 100% 100%; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-text:focus, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-text:focus {
+                outline: inherit !important;
+                filter: brightness(0.1); }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-text .component-text-cover, #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-text textarea, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-text .component-text-cover, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-text textarea {
+                background-color: transparent !important; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-text .component-text-cover, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-text .component-text-cover {
+                position: absolute;
+                width: 100% !important;
+                height: 100% !important;
+                top: 0;
+                left: 0;
+                background-color: rgba(255, 255, 255, 0) !important; }
+                #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-text .component-text-cover:not(.component-text-cover-play), #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-text .component-text-cover:not(.component-text-cover-play) {
+                  background-color: rgba(255, 255, 255, 0.25) !important; }
+                  #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-text .component-text-cover:not(.component-text-cover-play):after, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-text .component-text-cover:not(.component-text-cover-play):after {
+                    content: "dbl click to edit";
+                    position: absolute;
+                    bottom: 4px;
+                    right: 4px;
+                    color: var(--sdk-theme-600);
+                    opacity: 0.5;
+                    font-size: x-small; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-text textarea, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-text textarea {
+                border: none;
+                border-radius: 0;
+                box-sizing: border-box;
+                padding: 0;
+                resize: none;
+                min-height: 0 !important;
+                line-height: 1.2;
+                box-sizing: border-box;
+                letter-spacing: 0;
+                word-spacing: 0;
+                font-feature-settings: "kern" 0, "liga" 0;
+                -webkit-font-smoothing: antialiased; }
+                #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-text textarea:disabled, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-text textarea:disabled {
+                  background-color: transparent !important;
+                  pointer-events: none; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-text.component-text-speech_left, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-text.component-text-speech_left {
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyOTkuOTk2IiBoZWlnaHQ9IjIyNS45MjQiIHZlcnNpb249IjEuMCIgdmlld0JveD0iMCAwIDg1LjcwNCA2NC41NDIiPjxwYXRoIGQ9Ik00NS44MTMgMS44MzZjMjAuOTc0IDAgMzcuOTc3IDExLjgzNSAzNy45NzcgMjYuNDMzIDAgMTQuNTk3LTE3LjAwMyAyNi40MzItMzcuOTc3IDI2LjQzMi02LjU3NSAwLTEyLjc1OS0xLjE2NC0xOC4xNTItMy4yMUMxNy4wMTcgNTUuNDk4IDIuNDgzIDYzLjA2NyAyLjQ4MyA2My4wNjdzOS40NzctNS4zNjUgMTMuMzg0LTExLjg3OWMuOTk4LTEuNjY1IDEuNTgyLTMuNDEgMS45MTctNS4wODctNi4xNzYtNC43LTkuOTQ3LTEwLjk2LTkuOTQ3LTE3LjgzMiAwLTE0LjU5OCAxNy4wMDItMjYuNDMzIDM3Ljk3Ni0yNi40MzNtMCAyLjEwNmMtMTkuNzggMC0zNS44NyAxMC45MTMtMzUuODcgMjQuMzI4IDAgNS45NDQgMy4yMzcgMTEuNjgyIDkuMTE2IDE2LjE1NmwxLjA0Ny43OTgtLjI1NyAxLjI5Yy0uNDIyIDIuMTE2LTEuMTU0IDQuMDUzLTIuMTc2IDUuNzU4LS4zMjMuNTM4LS42OCAxLjA2OS0xLjA2MyAxLjU4OCAzLjQ0LTEuNTYyIDcuMDQtMy4xMDggMTAuMzA5LTQuMzM5bC43NDUtLjI4Ljc0NC4yODJjNS4yOTggMi4wMSAxMS4zMTcgMy4wNzMgMTcuNDA1IDMuMDczIDE5Ljc4IDAgMzUuODcxLTEwLjkxMyAzNS44NzEtMjQuMzI3IDAtMTMuNDE1LTE2LjA5MS0yNC4zMjctMzUuODctMjQuMzI3eiIvPjwvc3ZnPg==); }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-select .component-text-cover, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-select .component-text-cover {
               background-color: transparent !important;
-              pointer-events: none; }
-          #salad_container .layer.layer-instances .instance .component.component-text.component-text-speech_left {
-            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyOTkuOTk2IiBoZWlnaHQ9IjIyNS45MjQiIHZlcnNpb249IjEuMCIgdmlld0JveD0iMCAwIDg1LjcwNCA2NC41NDIiPjxwYXRoIGQ9Ik00NS44MTMgMS44MzZjMjAuOTc0IDAgMzcuOTc3IDExLjgzNSAzNy45NzcgMjYuNDMzIDAgMTQuNTk3LTE3LjAwMyAyNi40MzItMzcuOTc3IDI2LjQzMi02LjU3NSAwLTEyLjc1OS0xLjE2NC0xOC4xNTItMy4yMUMxNy4wMTcgNTUuNDk4IDIuNDgzIDYzLjA2NyAyLjQ4MyA2My4wNjdzOS40NzctNS4zNjUgMTMuMzg0LTExLjg3OWMuOTk4LTEuNjY1IDEuNTgyLTMuNDEgMS45MTctNS4wODctNi4xNzYtNC43LTkuOTQ3LTEwLjk2LTkuOTQ3LTE3LjgzMiAwLTE0LjU5OCAxNy4wMDItMjYuNDMzIDM3Ljk3Ni0yNi40MzNtMCAyLjEwNmMtMTkuNzggMC0zNS44NyAxMC45MTMtMzUuODcgMjQuMzI4IDAgNS45NDQgMy4yMzcgMTEuNjgyIDkuMTE2IDE2LjE1NmwxLjA0Ny43OTgtLjI1NyAxLjI5Yy0uNDIyIDIuMTE2LTEuMTU0IDQuMDUzLTIuMTc2IDUuNzU4LS4zMjMuNTM4LS42OCAxLjA2OS0xLjA2MyAxLjU4OCAzLjQ0LTEuNTYyIDcuMDQtMy4xMDggMTAuMzA5LTQuMzM5bC43NDUtLjI4Ljc0NC4yODJjNS4yOTggMi4wMSAxMS4zMTcgMy4wNzMgMTcuNDA1IDMuMDczIDE5Ljc4IDAgMzUuODcxLTEwLjkxMyAzNS44NzEtMjQuMzI3IDAtMTMuNDE1LTE2LjA5MS0yNC4zMjctMzUuODctMjQuMzI3eiIvPjwvc3ZnPg==); }
-        #salad_container .layer.layer-instances .instance .component.component-select .component-text-cover {
-          background-color: transparent !important;
-          position: absolute;
-          width: 100% !important;
-          height: 100% !important;
-          top: 0;
-          left: 0;
-          background-color: rgba(255, 255, 255, 0) !important; }
-        #salad_container .layer.layer-instances .instance .component.component-rotate {
-          position: absolute;
-          width: 16px;
-          height: 16px;
-          background-color: rgba(250, 250, 250, 0.75);
-          border: 2px solid rgba(200, 200, 200, 0.9);
-          border-radius: 50%;
-          margin-left: -8px;
-          margin-top: -8px;
-          cursor: pointer;
-          opacity: 0.5;
-          transform-origin: center;
-          user-select: none; }
-          #salad_container .layer.layer-instances .instance .component.component-rotate:hover {
-            opacity: 1; }
-      #salad_container .layer.layer-instances .instance-mouse-disabled {
-        pointer-events: none; }
-      #salad_container .layer.layer-instances .instance.layout-paint {
-        contain: layout paint; }
+              position: absolute;
+              width: 100% !important;
+              height: 100% !important;
+              top: 0;
+              left: 0;
+              background-color: rgba(255, 255, 255, 0) !important; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-rotate, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-rotate {
+              position: absolute;
+              width: 16px;
+              height: 16px;
+              background-color: rgba(250, 250, 250, 0.75);
+              border: 2px solid rgba(200, 200, 200, 0.9);
+              border-radius: 50%;
+              margin-left: -8px;
+              margin-top: -8px;
+              cursor: pointer;
+              opacity: 0.5;
+              transform-origin: center;
+              user-select: none; }
+              #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-rotate:hover, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-rotate:hover {
+                opacity: 1; }
+          #salad_container .layer.layer-instances-container .layer-instances .instance-mouse-disabled, #salad_container .layer.layer-instances-container .layer-instances-hud .instance-mouse-disabled {
+            pointer-events: none; }
+          #salad_container .layer.layer-instances-container .layer-instances .instance.layout-paint, #salad_container .layer.layer-instances-container .layer-instances-hud .instance.layout-paint {
+            contain: layout paint; }
   #salad_container .activity-preloader-container {
     z-index: 10000;
     position: absolute;

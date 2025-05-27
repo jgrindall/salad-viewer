@@ -233963,44 +233963,47 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _drawing_EditDrawingComponent__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./drawing/EditDrawingComponent */ "../salad/components/drawing/EditDrawingComponent.ts");
 /* harmony import */ var _drawing_PlayDrawingComponent__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./drawing/PlayDrawingComponent */ "../salad/components/drawing/PlayDrawingComponent.ts");
 /* harmony import */ var _image_ImageComponent__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./image/ImageComponent */ "../salad/components/image/ImageComponent.ts");
-/* harmony import */ var _movieclip_MovieClipComponent__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./movieclip/MovieClipComponent */ "../salad/components/movieclip/MovieClipComponent.ts");
-/* harmony import */ var _video_VideoComponent__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./video/VideoComponent */ "../salad/components/video/VideoComponent.ts");
-/* harmony import */ var _velocity_PlayVelocityComponent__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./velocity/PlayVelocityComponent */ "../salad/components/velocity/PlayVelocityComponent.ts");
-/* harmony import */ var _velocity_EditVelocityComponent__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./velocity/EditVelocityComponent */ "../salad/components/velocity/EditVelocityComponent.ts");
-/* harmony import */ var _collision_CollisionComponent__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./collision/CollisionComponent */ "../salad/components/collision/CollisionComponent.ts");
-/* harmony import */ var _angularvelocity_EditAngularVelocityComponent__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./angularvelocity/EditAngularVelocityComponent */ "../salad/components/angularvelocity/EditAngularVelocityComponent.ts");
-/* harmony import */ var _angularvelocity_PlayAngularVelocityComponent__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./angularvelocity/PlayAngularVelocityComponent */ "../salad/components/angularvelocity/PlayAngularVelocityComponent.ts");
-/* harmony import */ var _droppable_EditDroppableComponent__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./droppable/EditDroppableComponent */ "../salad/components/droppable/EditDroppableComponent.ts");
-/* harmony import */ var _droppable_PlayDroppableComponent__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./droppable/PlayDroppableComponent */ "../salad/components/droppable/PlayDroppableComponent.ts");
-/* harmony import */ var _data_DataComponent__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./data/DataComponent */ "../salad/components/data/DataComponent.ts");
-/* harmony import */ var _shape_ShapeComponent__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./shape/ShapeComponent */ "../salad/components/shape/ShapeComponent.ts");
-/* harmony import */ var _script_ScriptComponent__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./script/ScriptComponent */ "../salad/components/script/ScriptComponent.ts");
-/* harmony import */ var _identity_EditIdentityComponent__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./identity/EditIdentityComponent */ "../salad/components/identity/EditIdentityComponent.ts");
-/* harmony import */ var _gamecontrol_EditGameControlComponent__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./gamecontrol/EditGameControlComponent */ "../salad/components/gamecontrol/EditGameControlComponent.ts");
-/* harmony import */ var _gamecontrol_PlayGameControlComponent__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./gamecontrol/PlayGameControlComponent */ "../salad/components/gamecontrol/PlayGameControlComponent.ts");
-/* harmony import */ var _identity_PlayIdentityComponent__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./identity/PlayIdentityComponent */ "../salad/components/identity/PlayIdentityComponent.ts");
-/* harmony import */ var _animations_EditAnimationComponent__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./animations/EditAnimationComponent */ "../salad/components/animations/EditAnimationComponent.ts");
-/* harmony import */ var _animations_PlayAnimationComponent__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./animations/PlayAnimationComponent */ "../salad/components/animations/PlayAnimationComponent.ts");
-/* harmony import */ var _animations_AnimationListComponent__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./animations/AnimationListComponent */ "../salad/components/animations/AnimationListComponent.ts");
-/* harmony import */ var _background_BackgroundComponent__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./background/BackgroundComponent */ "../salad/components/background/BackgroundComponent.ts");
-/* harmony import */ var _border_BorderComponent__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./border/BorderComponent */ "../salad/components/border/BorderComponent.ts");
-/* harmony import */ var _highlights_EditHighlightComponent__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./highlights/EditHighlightComponent */ "../salad/components/highlights/EditHighlightComponent.ts");
-/* harmony import */ var _highlights_PlayHighlightComponent__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./highlights/PlayHighlightComponent */ "../salad/components/highlights/PlayHighlightComponent.ts");
-/* harmony import */ var _hover_EditHoverComponent__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./hover/EditHoverComponent */ "../salad/components/hover/EditHoverComponent.ts");
-/* harmony import */ var _hover_PlayHoverComponent__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./hover/PlayHoverComponent */ "../salad/components/hover/PlayHoverComponent.ts");
-/* harmony import */ var _navigation_PlayNavigationComponent__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./navigation/PlayNavigationComponent */ "../salad/components/navigation/PlayNavigationComponent.ts");
-/* harmony import */ var _navigation_EditNavigationComponent__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./navigation/EditNavigationComponent */ "../salad/components/navigation/EditNavigationComponent.ts");
-/* harmony import */ var _modals_EditModalsComponent__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./modals/EditModalsComponent */ "../salad/components/modals/EditModalsComponent.ts");
-/* harmony import */ var _modals_PlayModalsComponent__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./modals/PlayModalsComponent */ "../salad/components/modals/PlayModalsComponent.ts");
-/* harmony import */ var _sounds_EditSoundsComponent__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./sounds/EditSoundsComponent */ "../salad/components/sounds/EditSoundsComponent.ts");
-/* harmony import */ var _sounds_PlaySoundsComponent__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./sounds/PlaySoundsComponent */ "../salad/components/sounds/PlaySoundsComponent.ts");
-/* harmony import */ var _cursor_CursorComponent__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./cursor/CursorComponent */ "../salad/components/cursor/CursorComponent.ts");
-/* harmony import */ var _movement_PlayMovementComponent__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./movement/PlayMovementComponent */ "../salad/components/movement/PlayMovementComponent.ts");
-/* harmony import */ var _movement_EditMovementComponent__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./movement/EditMovementComponent */ "../salad/components/movement/EditMovementComponent.ts");
-/* harmony import */ var _group_PlayGroupComponent__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./group/PlayGroupComponent */ "../salad/components/group/PlayGroupComponent.ts");
-/* harmony import */ var _group_EditGroupComponent__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./group/EditGroupComponent */ "../salad/components/group/EditGroupComponent.ts");
-/* harmony import */ var _containment_ContainmentComponent__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./containment/ContainmentComponent */ "../salad/components/containment/ContainmentComponent.ts");
-/* harmony import */ var _ComponentFactory__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./ComponentFactory */ "../salad/components/ComponentFactory.ts");
+/* harmony import */ var _movieclip_PlayMovieClipComponent__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./movieclip/PlayMovieClipComponent */ "../salad/components/movieclip/PlayMovieClipComponent.ts");
+/* harmony import */ var _movieclip_EditMovieClipComponent__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./movieclip/EditMovieClipComponent */ "../salad/components/movieclip/EditMovieClipComponent.ts");
+/* harmony import */ var _clock_PlayClockComponent__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./clock/PlayClockComponent */ "../salad/components/clock/PlayClockComponent.ts");
+/* harmony import */ var _clock_EditClockComponent__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./clock/EditClockComponent */ "../salad/components/clock/EditClockComponent.ts");
+/* harmony import */ var _video_VideoComponent__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./video/VideoComponent */ "../salad/components/video/VideoComponent.ts");
+/* harmony import */ var _velocity_PlayVelocityComponent__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./velocity/PlayVelocityComponent */ "../salad/components/velocity/PlayVelocityComponent.ts");
+/* harmony import */ var _velocity_EditVelocityComponent__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./velocity/EditVelocityComponent */ "../salad/components/velocity/EditVelocityComponent.ts");
+/* harmony import */ var _collision_CollisionComponent__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./collision/CollisionComponent */ "../salad/components/collision/CollisionComponent.ts");
+/* harmony import */ var _angularvelocity_EditAngularVelocityComponent__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./angularvelocity/EditAngularVelocityComponent */ "../salad/components/angularvelocity/EditAngularVelocityComponent.ts");
+/* harmony import */ var _angularvelocity_PlayAngularVelocityComponent__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./angularvelocity/PlayAngularVelocityComponent */ "../salad/components/angularvelocity/PlayAngularVelocityComponent.ts");
+/* harmony import */ var _droppable_EditDroppableComponent__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./droppable/EditDroppableComponent */ "../salad/components/droppable/EditDroppableComponent.ts");
+/* harmony import */ var _droppable_PlayDroppableComponent__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./droppable/PlayDroppableComponent */ "../salad/components/droppable/PlayDroppableComponent.ts");
+/* harmony import */ var _data_DataComponent__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./data/DataComponent */ "../salad/components/data/DataComponent.ts");
+/* harmony import */ var _shape_ShapeComponent__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./shape/ShapeComponent */ "../salad/components/shape/ShapeComponent.ts");
+/* harmony import */ var _script_ScriptComponent__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./script/ScriptComponent */ "../salad/components/script/ScriptComponent.ts");
+/* harmony import */ var _identity_EditIdentityComponent__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./identity/EditIdentityComponent */ "../salad/components/identity/EditIdentityComponent.ts");
+/* harmony import */ var _gamecontrol_EditGameControlComponent__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./gamecontrol/EditGameControlComponent */ "../salad/components/gamecontrol/EditGameControlComponent.ts");
+/* harmony import */ var _gamecontrol_PlayGameControlComponent__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./gamecontrol/PlayGameControlComponent */ "../salad/components/gamecontrol/PlayGameControlComponent.ts");
+/* harmony import */ var _identity_PlayIdentityComponent__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./identity/PlayIdentityComponent */ "../salad/components/identity/PlayIdentityComponent.ts");
+/* harmony import */ var _animations_EditAnimationComponent__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./animations/EditAnimationComponent */ "../salad/components/animations/EditAnimationComponent.ts");
+/* harmony import */ var _animations_PlayAnimationComponent__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./animations/PlayAnimationComponent */ "../salad/components/animations/PlayAnimationComponent.ts");
+/* harmony import */ var _animations_AnimationListComponent__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./animations/AnimationListComponent */ "../salad/components/animations/AnimationListComponent.ts");
+/* harmony import */ var _background_BackgroundComponent__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./background/BackgroundComponent */ "../salad/components/background/BackgroundComponent.ts");
+/* harmony import */ var _border_BorderComponent__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./border/BorderComponent */ "../salad/components/border/BorderComponent.ts");
+/* harmony import */ var _highlights_EditHighlightComponent__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./highlights/EditHighlightComponent */ "../salad/components/highlights/EditHighlightComponent.ts");
+/* harmony import */ var _highlights_PlayHighlightComponent__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./highlights/PlayHighlightComponent */ "../salad/components/highlights/PlayHighlightComponent.ts");
+/* harmony import */ var _hover_EditHoverComponent__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./hover/EditHoverComponent */ "../salad/components/hover/EditHoverComponent.ts");
+/* harmony import */ var _hover_PlayHoverComponent__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./hover/PlayHoverComponent */ "../salad/components/hover/PlayHoverComponent.ts");
+/* harmony import */ var _navigation_PlayNavigationComponent__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./navigation/PlayNavigationComponent */ "../salad/components/navigation/PlayNavigationComponent.ts");
+/* harmony import */ var _navigation_EditNavigationComponent__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./navigation/EditNavigationComponent */ "../salad/components/navigation/EditNavigationComponent.ts");
+/* harmony import */ var _modals_EditModalsComponent__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./modals/EditModalsComponent */ "../salad/components/modals/EditModalsComponent.ts");
+/* harmony import */ var _modals_PlayModalsComponent__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./modals/PlayModalsComponent */ "../salad/components/modals/PlayModalsComponent.ts");
+/* harmony import */ var _sounds_EditSoundsComponent__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./sounds/EditSoundsComponent */ "../salad/components/sounds/EditSoundsComponent.ts");
+/* harmony import */ var _sounds_PlaySoundsComponent__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./sounds/PlaySoundsComponent */ "../salad/components/sounds/PlaySoundsComponent.ts");
+/* harmony import */ var _cursor_CursorComponent__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./cursor/CursorComponent */ "../salad/components/cursor/CursorComponent.ts");
+/* harmony import */ var _movement_PlayMovementComponent__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./movement/PlayMovementComponent */ "../salad/components/movement/PlayMovementComponent.ts");
+/* harmony import */ var _movement_EditMovementComponent__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./movement/EditMovementComponent */ "../salad/components/movement/EditMovementComponent.ts");
+/* harmony import */ var _group_PlayGroupComponent__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./group/PlayGroupComponent */ "../salad/components/group/PlayGroupComponent.ts");
+/* harmony import */ var _group_EditGroupComponent__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./group/EditGroupComponent */ "../salad/components/group/EditGroupComponent.ts");
+/* harmony import */ var _containment_ContainmentComponent__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./containment/ContainmentComponent */ "../salad/components/containment/ContainmentComponent.ts");
+/* harmony import */ var _ComponentFactory__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./ComponentFactory */ "../salad/components/ComponentFactory.ts");
 /**
  * How are components to be made?
  * Map name to class
@@ -234070,35 +234073,37 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
 const defaultMap = {
     position: _position_PositionComponent__WEBPACK_IMPORTED_MODULE_14__["default"],
     image: _image_ImageComponent__WEBPACK_IMPORTED_MODULE_26__["default"],
-    movieclip: _movieclip_MovieClipComponent__WEBPACK_IMPORTED_MODULE_27__["default"],
-    video: _video_VideoComponent__WEBPACK_IMPORTED_MODULE_28__["default"],
+    video: _video_VideoComponent__WEBPACK_IMPORTED_MODULE_31__["default"],
     timers: _timers_TimersComponent__WEBPACK_IMPORTED_MODULE_22__["default"],
     transform: _transform_TransformComponent__WEBPACK_IMPORTED_MODULE_23__["default"],
-    collision: _collision_CollisionComponent__WEBPACK_IMPORTED_MODULE_31__["default"],
-    animationlist: _animations_AnimationListComponent__WEBPACK_IMPORTED_MODULE_45__["default"],
-    data: _data_DataComponent__WEBPACK_IMPORTED_MODULE_36__["default"],
-    cursor: _cursor_CursorComponent__WEBPACK_IMPORTED_MODULE_58__["default"],
+    collision: _collision_CollisionComponent__WEBPACK_IMPORTED_MODULE_34__["default"],
+    animationlist: _animations_AnimationListComponent__WEBPACK_IMPORTED_MODULE_48__["default"],
+    data: _data_DataComponent__WEBPACK_IMPORTED_MODULE_39__["default"],
+    cursor: _cursor_CursorComponent__WEBPACK_IMPORTED_MODULE_61__["default"],
     size: _size_SizeComponent__WEBPACK_IMPORTED_MODULE_19__["default"],
-    shape: _shape_ShapeComponent__WEBPACK_IMPORTED_MODULE_37__["default"],
-    script: _script_ScriptComponent__WEBPACK_IMPORTED_MODULE_38__["default"],
-    containment: _containment_ContainmentComponent__WEBPACK_IMPORTED_MODULE_63__["default"],
-    background: _background_BackgroundComponent__WEBPACK_IMPORTED_MODULE_46__["default"],
-    border: _border_BorderComponent__WEBPACK_IMPORTED_MODULE_47__["default"],
+    shape: _shape_ShapeComponent__WEBPACK_IMPORTED_MODULE_40__["default"],
+    script: _script_ScriptComponent__WEBPACK_IMPORTED_MODULE_41__["default"],
+    containment: _containment_ContainmentComponent__WEBPACK_IMPORTED_MODULE_66__["default"],
+    background: _background_BackgroundComponent__WEBPACK_IMPORTED_MODULE_49__["default"],
+    border: _border_BorderComponent__WEBPACK_IMPORTED_MODULE_50__["default"],
 };
-const editMap = Object.assign(Object.assign({}, defaultMap), { render: _render_EditRenderComponent__WEBPACK_IMPORTED_MODULE_15__["default"], visibility: _visibility_EditVisibilityComponent__WEBPACK_IMPORTED_MODULE_17__["default"], droppable: _droppable_EditDroppableComponent__WEBPACK_IMPORTED_MODULE_34__["default"], modals: _modals_EditModalsComponent__WEBPACK_IMPORTED_MODULE_54__["default"], draggable: _draggable_EditDraggableComponent__WEBPACK_IMPORTED_MODULE_0__["default"], rotateable: _rotateable_EditRotateableComponent__WEBPACK_IMPORTED_MODULE_2__["default"], gamecontrol: _gamecontrol_EditGameControlComponent__WEBPACK_IMPORTED_MODULE_40__["default"], spawn: _spawn_EditSpawnComponent__WEBPACK_IMPORTED_MODULE_4__["default"], text: _text_EditTextComponent__WEBPACK_IMPORTED_MODULE_20__["default"], drawing: _drawing_EditDrawingComponent__WEBPACK_IMPORTED_MODULE_24__["default"], lottie: _lottie_EditLottieComponent__WEBPACK_IMPORTED_MODULE_8__["default"], button: _button_EditButtonComponent__WEBPACK_IMPORTED_MODULE_10__["default"], select: _select_EditSelectComponent__WEBPACK_IMPORTED_MODULE_12__["default"], animation: _animations_EditAnimationComponent__WEBPACK_IMPORTED_MODULE_43__["default"], movement: _movement_EditMovementComponent__WEBPACK_IMPORTED_MODULE_60__["default"], group: _group_EditGroupComponent__WEBPACK_IMPORTED_MODULE_62__["default"], selected: _selected_EditSelectedComponent__WEBPACK_IMPORTED_MODULE_6__["default"], identity: _identity_EditIdentityComponent__WEBPACK_IMPORTED_MODULE_39__["default"], velocity: _velocity_EditVelocityComponent__WEBPACK_IMPORTED_MODULE_30__["default"], angularvelocity: _angularvelocity_EditAngularVelocityComponent__WEBPACK_IMPORTED_MODULE_32__["default"], highlight: _highlights_EditHighlightComponent__WEBPACK_IMPORTED_MODULE_48__["default"], hover: _hover_EditHoverComponent__WEBPACK_IMPORTED_MODULE_50__["default"], sounds: _sounds_EditSoundsComponent__WEBPACK_IMPORTED_MODULE_56__["default"], navigation: _navigation_EditNavigationComponent__WEBPACK_IMPORTED_MODULE_53__["default"] });
-const playMap = Object.assign(Object.assign({}, defaultMap), { modals: _modals_PlayModalsComponent__WEBPACK_IMPORTED_MODULE_55__["default"], render: _render_PlayRenderComponent__WEBPACK_IMPORTED_MODULE_16__["default"], visibility: _visibility_PlayVisibilityComponent__WEBPACK_IMPORTED_MODULE_18__["default"], gamecontrol: _gamecontrol_PlayGameControlComponent__WEBPACK_IMPORTED_MODULE_41__["default"], draggable: _draggable_PlayDraggableComponent__WEBPACK_IMPORTED_MODULE_1__["default"], rotateable: _rotateable_PlayRotateableComponent__WEBPACK_IMPORTED_MODULE_3__["default"], droppable: _droppable_PlayDroppableComponent__WEBPACK_IMPORTED_MODULE_35__["default"], spawn: _spawn_PlaySpawnComponent__WEBPACK_IMPORTED_MODULE_5__["default"], drawing: _drawing_PlayDrawingComponent__WEBPACK_IMPORTED_MODULE_25__["default"], text: _text_PlayTextComponent__WEBPACK_IMPORTED_MODULE_21__["default"], animation: _animations_PlayAnimationComponent__WEBPACK_IMPORTED_MODULE_44__["default"], movement: _movement_PlayMovementComponent__WEBPACK_IMPORTED_MODULE_59__["default"], group: _group_PlayGroupComponent__WEBPACK_IMPORTED_MODULE_61__["default"], lottie: _lottie_PlayLottieComponent__WEBPACK_IMPORTED_MODULE_9__["default"], button: _button_PlayButtonComponent__WEBPACK_IMPORTED_MODULE_11__["default"], select: _select_PlaySelectComponent__WEBPACK_IMPORTED_MODULE_13__["default"], selected: _selected_PlaySelectedComponent__WEBPACK_IMPORTED_MODULE_7__["default"], velocity: _velocity_PlayVelocityComponent__WEBPACK_IMPORTED_MODULE_29__["default"], angularvelocity: _angularvelocity_PlayAngularVelocityComponent__WEBPACK_IMPORTED_MODULE_33__["default"], identity: _identity_PlayIdentityComponent__WEBPACK_IMPORTED_MODULE_42__["default"], highlight: _highlights_PlayHighlightComponent__WEBPACK_IMPORTED_MODULE_49__["default"], hover: _hover_PlayHoverComponent__WEBPACK_IMPORTED_MODULE_51__["default"], sounds: _sounds_PlaySoundsComponent__WEBPACK_IMPORTED_MODULE_57__["default"], navigation: _navigation_PlayNavigationComponent__WEBPACK_IMPORTED_MODULE_52__["default"] });
+const editMap = Object.assign(Object.assign({}, defaultMap), { render: _render_EditRenderComponent__WEBPACK_IMPORTED_MODULE_15__["default"], visibility: _visibility_EditVisibilityComponent__WEBPACK_IMPORTED_MODULE_17__["default"], droppable: _droppable_EditDroppableComponent__WEBPACK_IMPORTED_MODULE_37__["default"], modals: _modals_EditModalsComponent__WEBPACK_IMPORTED_MODULE_57__["default"], movieclip: _movieclip_EditMovieClipComponent__WEBPACK_IMPORTED_MODULE_28__["default"], clock: _clock_EditClockComponent__WEBPACK_IMPORTED_MODULE_30__["default"], draggable: _draggable_EditDraggableComponent__WEBPACK_IMPORTED_MODULE_0__["default"], rotateable: _rotateable_EditRotateableComponent__WEBPACK_IMPORTED_MODULE_2__["default"], gamecontrol: _gamecontrol_EditGameControlComponent__WEBPACK_IMPORTED_MODULE_43__["default"], spawn: _spawn_EditSpawnComponent__WEBPACK_IMPORTED_MODULE_4__["default"], text: _text_EditTextComponent__WEBPACK_IMPORTED_MODULE_20__["default"], drawing: _drawing_EditDrawingComponent__WEBPACK_IMPORTED_MODULE_24__["default"], lottie: _lottie_EditLottieComponent__WEBPACK_IMPORTED_MODULE_8__["default"], button: _button_EditButtonComponent__WEBPACK_IMPORTED_MODULE_10__["default"], select: _select_EditSelectComponent__WEBPACK_IMPORTED_MODULE_12__["default"], animation: _animations_EditAnimationComponent__WEBPACK_IMPORTED_MODULE_46__["default"], movement: _movement_EditMovementComponent__WEBPACK_IMPORTED_MODULE_63__["default"], group: _group_EditGroupComponent__WEBPACK_IMPORTED_MODULE_65__["default"], selected: _selected_EditSelectedComponent__WEBPACK_IMPORTED_MODULE_6__["default"], identity: _identity_EditIdentityComponent__WEBPACK_IMPORTED_MODULE_42__["default"], velocity: _velocity_EditVelocityComponent__WEBPACK_IMPORTED_MODULE_33__["default"], angularvelocity: _angularvelocity_EditAngularVelocityComponent__WEBPACK_IMPORTED_MODULE_35__["default"], highlight: _highlights_EditHighlightComponent__WEBPACK_IMPORTED_MODULE_51__["default"], hover: _hover_EditHoverComponent__WEBPACK_IMPORTED_MODULE_53__["default"], sounds: _sounds_EditSoundsComponent__WEBPACK_IMPORTED_MODULE_59__["default"], navigation: _navigation_EditNavigationComponent__WEBPACK_IMPORTED_MODULE_56__["default"] });
+const playMap = Object.assign(Object.assign({}, defaultMap), { modals: _modals_PlayModalsComponent__WEBPACK_IMPORTED_MODULE_58__["default"], movieclip: _movieclip_PlayMovieClipComponent__WEBPACK_IMPORTED_MODULE_27__["default"], clock: _clock_PlayClockComponent__WEBPACK_IMPORTED_MODULE_29__["default"], render: _render_PlayRenderComponent__WEBPACK_IMPORTED_MODULE_16__["default"], visibility: _visibility_PlayVisibilityComponent__WEBPACK_IMPORTED_MODULE_18__["default"], gamecontrol: _gamecontrol_PlayGameControlComponent__WEBPACK_IMPORTED_MODULE_44__["default"], draggable: _draggable_PlayDraggableComponent__WEBPACK_IMPORTED_MODULE_1__["default"], rotateable: _rotateable_PlayRotateableComponent__WEBPACK_IMPORTED_MODULE_3__["default"], droppable: _droppable_PlayDroppableComponent__WEBPACK_IMPORTED_MODULE_38__["default"], spawn: _spawn_PlaySpawnComponent__WEBPACK_IMPORTED_MODULE_5__["default"], drawing: _drawing_PlayDrawingComponent__WEBPACK_IMPORTED_MODULE_25__["default"], text: _text_PlayTextComponent__WEBPACK_IMPORTED_MODULE_21__["default"], animation: _animations_PlayAnimationComponent__WEBPACK_IMPORTED_MODULE_47__["default"], movement: _movement_PlayMovementComponent__WEBPACK_IMPORTED_MODULE_62__["default"], group: _group_PlayGroupComponent__WEBPACK_IMPORTED_MODULE_64__["default"], lottie: _lottie_PlayLottieComponent__WEBPACK_IMPORTED_MODULE_9__["default"], button: _button_PlayButtonComponent__WEBPACK_IMPORTED_MODULE_11__["default"], select: _select_PlaySelectComponent__WEBPACK_IMPORTED_MODULE_13__["default"], selected: _selected_PlaySelectedComponent__WEBPACK_IMPORTED_MODULE_7__["default"], velocity: _velocity_PlayVelocityComponent__WEBPACK_IMPORTED_MODULE_32__["default"], angularvelocity: _angularvelocity_PlayAngularVelocityComponent__WEBPACK_IMPORTED_MODULE_36__["default"], identity: _identity_PlayIdentityComponent__WEBPACK_IMPORTED_MODULE_45__["default"], highlight: _highlights_PlayHighlightComponent__WEBPACK_IMPORTED_MODULE_52__["default"], hover: _hover_PlayHoverComponent__WEBPACK_IMPORTED_MODULE_54__["default"], sounds: _sounds_PlaySoundsComponent__WEBPACK_IMPORTED_MODULE_60__["default"], navigation: _navigation_PlayNavigationComponent__WEBPACK_IMPORTED_MODULE_55__["default"] });
 const getDefaultComponentFactory = (mode) => {
-    return mode === "edit" ? (0,_ComponentFactory__WEBPACK_IMPORTED_MODULE_64__.createComponentFactory)(editMap) : (0,_ComponentFactory__WEBPACK_IMPORTED_MODULE_64__.createComponentFactory)(playMap);
+    return mode === "edit" ? (0,_ComponentFactory__WEBPACK_IMPORTED_MODULE_67__.createComponentFactory)(editMap) : (0,_ComponentFactory__WEBPACK_IMPORTED_MODULE_67__.createComponentFactory)(playMap);
 };
 const getComponentFactoryForKeys = (keys, mode) => {
     let map = {};
     keys.forEach((key) => {
         map = Object.assign(Object.assign({}, map), { [key]: mode === "edit" ? editMap[key] : playMap[key] });
     });
-    return (0,_ComponentFactory__WEBPACK_IMPORTED_MODULE_64__.createComponentFactory)(map);
+    return (0,_ComponentFactory__WEBPACK_IMPORTED_MODULE_67__.createComponentFactory)(map);
 };
 
 
@@ -234270,6 +234275,15 @@ __webpack_require__.r(__webpack_exports__);
  * Abstract class for identity component.
  * This contains, for example the display name of the instance
  */
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 
 
 class AAnimationComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComponent {
@@ -234297,6 +234311,24 @@ class AAnimationComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComp
     }
     getAnimation() {
         return new _EmptyInstanceAnimation__WEBPACK_IMPORTED_MODULE_1__.EmptyInstanceAnimation(); // in edit mode there are no animations
+    }
+    stopAnimation() {
+        // do nothing
+    }
+    playAnimationByNameAsync(name, settings, options) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return Promise.resolve();
+        });
+    }
+    playAnimationAsync(props, settings, options) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return Promise.resolve();
+        });
+    }
+    sequenceAnimations(animations) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return Promise.resolve();
+        });
     }
 }
 
@@ -235035,6 +235067,15 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Edit mode identity
  */
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 
 
 
@@ -235067,6 +235108,42 @@ class PlayAnimationComponent extends _AAnimationComponent__WEBPACK_IMPORTED_MODU
         this.incompleteDecorator = undefined;
         this.destroyAnimation();
         super.onDestroyed();
+    }
+    stopAnimation() {
+        this.destroyAnimation();
+    }
+    playAnimationByNameAsync(name, settings, options) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return new Promise((resolve) => {
+                const anim = this.playAnimationByName(name, settings, options);
+                anim.on("complete", resolve);
+            });
+        });
+    }
+    playAnimationAsync(props, settings, options) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return new Promise((resolve) => {
+                const anim = this.playAnimation(props, settings, options);
+                anim.on("complete", resolve);
+            });
+        });
+    }
+    sequenceAnimations(animations) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const animListComponent = this.instance.getComponent("animationlist");
+            const getProps = (animData) => {
+                if ("name" in animData) {
+                    return animListComponent.getAnimationByName(animData.name);
+                }
+                else {
+                    return animData.props;
+                }
+            };
+            for (const animData of animations) {
+                const props = getProps(animData);
+                yield this.playAnimationAsync(props, animData.settings, animData.options);
+            }
+        });
     }
     playAnimationByName(name, settings, options) {
         // find the one to play
@@ -235137,12 +235214,14 @@ class PlayAnimationComponent extends _AAnimationComponent__WEBPACK_IMPORTED_MODU
         this.page.events.off(_types_external__WEBPACK_IMPORTED_MODULE_0__.Events.ENTER_FRAME, this.onEnterFrame);
     }
     onEnterFrame(data) {
-        var _a, _b;
+        var _a;
         // tick
-        (_a = this.animation) === null || _a === void 0 ? void 0 : _a.setCurrentTime(data.time);
-        //store progress so we can restart it
-        const incompleteData = this.animation.getIncompleteAnimationData();
-        (_b = this.incompleteDecorator) === null || _b === void 0 ? void 0 : _b.store(incompleteData);
+        if (this.animation) {
+            this.animation.setCurrentTime(data.time);
+            //store progress so we can restart it
+            const incompleteData = this.animation.getIncompleteAnimationData();
+            (_a = this.incompleteDecorator) === null || _a === void 0 ? void 0 : _a.store(incompleteData);
+        }
     }
     /**
      * listen to the relevant events
@@ -235597,8 +235676,8 @@ class AButtonComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.ACompone
         else {
             this._button.removeAttribute("disabled");
         }
-        const buttonDrawer = new _ButtonPointerDrawer__WEBPACK_IMPORTED_MODULE_2__.ButtonPointerDrawer(this._ui);
         this._ui.classList.add("drawer", "drawer-theme_" + this.data.type);
+        const buttonDrawer = new _ButtonPointerDrawer__WEBPACK_IMPORTED_MODULE_2__.ButtonPointerDrawer(this._ui);
         if (this.data.arrow.x === 0 && this.data.arrow.y === 0) {
             buttonDrawer.clear();
         }
@@ -235613,7 +235692,7 @@ class AButtonComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.ACompone
         this._element = (0,_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__.buttonContainer)(parent);
         this._ui = (0,_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__.buttonUI)(this._element);
         this._button = (0,_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__.button)(this._element);
-        this._button.classList.add("theme_" + this.data.type);
+        this._button.classList.add("theme_" + this.data.type, "role_" + this.data.role);
         this._redrawUI();
         this._updatePosition();
     }
@@ -235646,9 +235725,10 @@ class AButtonComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.ACompone
         return this.data.position;
     }
     _updatePosition() {
+        const css = Object.assign({}, this.data.position);
         this.page.getComponent("domupdate").addCSSUpdate({
             element: this._element,
-            css: Object.assign({}, this.data.position)
+            css
         });
     }
     getElement() {
@@ -235821,6 +235901,370 @@ class PlayButtonComponent extends _AButtonComponent__WEBPACK_IMPORTED_MODULE_0__
 
 /***/ }),
 
+/***/ "../salad/components/clock/AClockComponent.ts":
+/*!****************************************************!*\
+  !*** ../salad/components/clock/AClockComponent.ts ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ AClockComponent)
+/* harmony export */ });
+/* harmony import */ var _AComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../AComponent */ "../salad/components/AComponent.ts");
+
+class AClockComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComponent {
+    constructor(data, instance, page) {
+        super(data, instance, page);
+        this.name = "clock";
+    }
+}
+
+
+/***/ }),
+
+/***/ "../salad/components/clock/ClockTimer.ts":
+/*!***********************************************!*\
+  !*** ../salad/components/clock/ClockTimer.ts ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ClockTimer: () => (/* binding */ ClockTimer)
+/* harmony export */ });
+class ClockTimer {
+    constructor() {
+        this.currentTime = 0;
+        this.referenceWorldTime = null;
+        this.lastUpdateSecs = null;
+    }
+    setTime(time) {
+        this.currentTime = time;
+        // Reset reference points when time is manually set
+        this.referenceWorldTime = null;
+        this.lastUpdateSecs = null;
+    }
+    getTime() {
+        return this.currentTime;
+    }
+    destroy() {
+        this.currentTime = 0;
+        this.referenceWorldTime = null;
+        this.lastUpdateSecs = null;
+    }
+    /**
+     * Update the clock based on world time
+     * @param worldTime Current world time in milliseconds
+     * @returns True if the clock time changed, false otherwise
+     */
+    update(worldTime) {
+        // Initialize reference time on first update or after setTime
+        if (this.referenceWorldTime === null) {
+            this.referenceWorldTime = worldTime;
+            this.lastUpdateSecs = Math.floor(worldTime / 1000);
+            return true;
+        }
+        const currentSecs = Math.floor(worldTime / 1000);
+        // Check if a new second has elapsed
+        if (currentSecs > this.lastUpdateSecs) {
+            const deltaSeconds = currentSecs - this.lastUpdateSecs;
+            this.currentTime += deltaSeconds;
+            this.lastUpdateSecs = currentSecs;
+            return true;
+        }
+        return false;
+    }
+}
+
+
+/***/ }),
+
+/***/ "../salad/components/clock/ClockUI.ts":
+/*!********************************************!*\
+  !*** ../salad/components/clock/ClockUI.ts ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getUI: () => (/* binding */ getUI)
+/* harmony export */ });
+const PURPLE = "#8E24AA";
+class ClockUI {
+    constructor(element, time, direction) {
+        this.element = element;
+        this.time = time;
+        this.direction = direction;
+        this.size = 24;
+        this.finished = false;
+        this.text = document.createElement("span");
+        this.text.innerText = "";
+        Object.assign(this.text.style, {
+            flex: 1
+        });
+        this.makeClock();
+        element.appendChild(this.clockContainer);
+        element.appendChild(this.text);
+    }
+    makeClock() {
+        this.clockContainer = document.createElement("div");
+        this.clockContainer.classList.add("component-clock-face");
+        Object.assign(this.clockContainer.style, {
+            width: `${this.size}px`,
+            height: `${this.size}px`,
+            maxWidth: `${this.size}px`,
+            maxHeight: `${this.size}px`,
+        });
+        const basePath = "http://www.w3.org/";
+        const svgns = `${basePath}2000/svg`;
+        const nsAttrs = [`${basePath}2000/xmlns/`, "xmlns:xlink", `${basePath}1999/xlink`];
+        const clock = document.createElementNS(svgns, "svg");
+        clock.setAttributeNS(nsAttrs[0], nsAttrs[1], nsAttrs[2]);
+        // Force exact pixel dimensions with no scaling
+        clock.setAttribute("width", `${this.size}`);
+        clock.setAttribute("height", `${this.size}`);
+        clock.setAttribute("viewBox", `0 0 ${this.size} ${this.size}`);
+        // Add these styles to prevent browser scaling
+        Object.assign(clock.style, {
+            width: `${this.size}px`,
+            height: `${this.size}px`,
+            maxWidth: `${this.size}px`,
+            maxHeight: `${this.size}px`,
+            display: "block", // Prevent inline display issues
+        });
+        // Preserve aspect ratio but don't scale
+        clock.setAttribute("preserveAspectRatio", "xMidYMid meet");
+        const face = document.createElementNS(svgns, "circle");
+        face.setAttribute("cx", `${this.size / 2}`);
+        face.setAttribute("cy", `${this.size / 2}`);
+        face.setAttribute("r", `${this.size / 2 - 2}`);
+        face.setAttribute("fill", "none");
+        face.setAttribute("stroke", PURPLE);
+        face.setAttribute("stroke-width", "2");
+        clock.append(face);
+        this.hand = document.createElementNS(svgns, "line");
+        this.hand.setAttribute("x1", `${this.size / 2}`);
+        this.hand.setAttribute("y1", `${this.size / 2}`);
+        this.hand.setAttribute("x2", `${this.size / 2}`);
+        this.hand.setAttribute("y2", `${5}`);
+        this.hand.setAttribute("stroke", PURPLE);
+        this.hand.setAttribute("stroke-width", "2");
+        this.hand.setAttribute("stroke-linecap", "round");
+        clock.append(this.hand);
+        this.clockContainer.appendChild(clock);
+    }
+    updateText(time) {
+        const timeToDisplay = this.direction === "up" ? Math.min(time, this.time) : Math.max(this.time - time, 0);
+        this.text.innerText = this.format(timeToDisplay);
+    }
+    format(time) {
+        const minutes = Math.floor(time / 60);
+        const seconds = time % 60;
+        return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+    }
+    update(time) {
+        this.updateText(time);
+        this.updateHand(time);
+        this.checkFinished(time);
+    }
+    checkFinished(time) {
+        if (time >= this.time) {
+            this.finished = true;
+        }
+    }
+    getIsFinished() {
+        return this.finished;
+    }
+    updateHand(time) {
+        // Calculate angle based on time elapsed or remaining
+        let progress = this.direction === "up"
+            ? Math.min(time / this.time, 1)
+            : Math.max(1 - (time / this.time), 0);
+        const angle = progress * 360;
+        if (this.hand) {
+            // Rotate around the center of the SVG (size/2 = 15)
+            this.hand.setAttribute("transform", `rotate(${angle} ${this.size / 2} ${this.size / 2})`);
+        }
+    }
+    destroy() {
+        this.text.parentElement.removeChild(this.text);
+    }
+}
+const getUI = (el, time, direction) => {
+    return new ClockUI(el, time, direction);
+};
+
+
+/***/ }),
+
+/***/ "../salad/components/clock/EditClockComponent.ts":
+/*!*******************************************************!*\
+  !*** ../salad/components/clock/EditClockComponent.ts ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ EditClockComponent)
+/* harmony export */ });
+/* harmony import */ var _AClockComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AClockComponent */ "../salad/components/clock/AClockComponent.ts");
+/* harmony import */ var _ClockUI__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ClockUI */ "../salad/components/clock/ClockUI.ts");
+/* harmony import */ var _root_salad_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @root/salad/utils/domElementFactory */ "../salad/utils/domElementFactory.ts");
+
+
+
+class EditClockComponent extends _AClockComponent__WEBPACK_IMPORTED_MODULE_0__["default"] {
+    constructor() {
+        super(...arguments);
+        this.ui = undefined;
+        this.element = undefined;
+    }
+    onCreated() {
+        super.onCreated();
+        if (this.data.enabled) {
+            this.addUI();
+        }
+    }
+    addUI() {
+        var _a;
+        this.element = (0,_root_salad_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_2__.clock)();
+        const parent = this.instance.getComponent("render").getElement();
+        parent.appendChild(this.element);
+        this.ui = (0,_ClockUI__WEBPACK_IMPORTED_MODULE_1__.getUI)(this.element, this.data.time, this.data.direction);
+        (_a = this.ui) === null || _a === void 0 ? void 0 : _a.update(0);
+    }
+    onDestroyed() {
+        super.onDestroyed();
+        if (this.ui) {
+            this.ui.destroy();
+        }
+    }
+}
+
+
+/***/ }),
+
+/***/ "../salad/components/clock/PlayClockComponent.ts":
+/*!*******************************************************!*\
+  !*** ../salad/components/clock/PlayClockComponent.ts ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ PlayClockComponent)
+/* harmony export */ });
+/* harmony import */ var _AClockComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AClockComponent */ "../salad/components/clock/AClockComponent.ts");
+/* harmony import */ var _root_salad__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @root/salad */ "../salad/index.ts");
+/* harmony import */ var _root_salad_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @root/salad/utils/domElementFactory */ "../salad/utils/domElementFactory.ts");
+/* harmony import */ var _ClockUI__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ClockUI */ "../salad/components/clock/ClockUI.ts");
+/* harmony import */ var _ClockTimer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ClockTimer */ "../salad/components/clock/ClockTimer.ts");
+/* harmony import */ var _animations_readyMadeAnimations__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../animations/readyMadeAnimations */ "../salad/components/animations/readyMadeAnimations.ts");
+
+
+
+
+
+
+const CLOCK_KEY = "__clock__";
+class PlayClockComponent extends _AClockComponent__WEBPACK_IMPORTED_MODULE_0__["default"] {
+    constructor() {
+        super(...arguments);
+        this.ui = undefined;
+        this.element = undefined;
+        this.timer = new _ClockTimer__WEBPACK_IMPORTED_MODULE_4__.ClockTimer();
+        this.animation = undefined;
+    }
+    onCreated() {
+        super.onCreated();
+        this.onEnterFrame = this.onEnterFrame.bind(this);
+        if (this.data.enabled) {
+            this.addUI();
+            this.loadSavedTime();
+            this.addEnterFrameListener();
+        }
+    }
+    onDestroyed() {
+        super.onDestroyed();
+        if (this.ui) {
+            this.ui.destroy();
+        }
+        if (this.timer) {
+            this.timer.destroy();
+        }
+        this.destroyAnimation();
+        this.removeEnterFrameListener();
+    }
+    loadSavedTime() {
+        const activity = this.page.getCurrentActivity();
+        const key = this.getKey();
+        const value = activity.data.getForKey(key);
+        if (value) {
+            const time = parseFloat(value);
+            this.timer.setTime(time);
+            this.updateUI();
+        }
+    }
+    getKey() {
+        return `${CLOCK_KEY}${this.data.name}`;
+    }
+    addEnterFrameListener() {
+        this.page.events.on(_root_salad__WEBPACK_IMPORTED_MODULE_1__["default"].Events.ENTER_FRAME, this.onEnterFrame);
+    }
+    removeEnterFrameListener() {
+        this.page.events.off(_root_salad__WEBPACK_IMPORTED_MODULE_1__["default"].Events.ENTER_FRAME, this.onEnterFrame);
+    }
+    addUI() {
+        this.element = (0,_root_salad_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_2__.clock)();
+        const parent = this.instance.getComponent("render").getElement();
+        parent.appendChild(this.element);
+        this.ui = (0,_ClockUI__WEBPACK_IMPORTED_MODULE_3__.getUI)(this.element, this.data.time, this.data.direction);
+    }
+    updateUI() {
+        var _a;
+        const time = this.timer.getTime();
+        (_a = this.ui) === null || _a === void 0 ? void 0 : _a.update(time);
+    }
+    persist() {
+        const activity = this.page.getCurrentActivity();
+        const key = this.getKey();
+        activity.data.setValueForKey(key, this.timer.getTime());
+    }
+    destroyAnimation() {
+        const animComp = this.instance.getComponent("animation");
+        animComp.stopAnimation();
+        this.animation = undefined;
+    }
+    checkFinished() {
+        var _a;
+        if (((_a = this.ui) === null || _a === void 0 ? void 0 : _a.getIsFinished()) && !this.animation) {
+            const animComp = this.instance.getComponent("animation");
+            const shakeAnim = (0,_animations_readyMadeAnimations__WEBPACK_IMPORTED_MODULE_5__.getReadyMadeAnimationByName)("shake");
+            this.animation = animComp.playAnimation(shakeAnim.props, {
+                duration: 1,
+                repeat: 0
+            });
+        }
+    }
+    onEnterFrame(eventData) {
+        const changed = this.timer.update(eventData.time);
+        if (changed) {
+            this.persist();
+            this.updateUI();
+            this.checkFinished();
+        }
+    }
+}
+
+
+/***/ }),
+
 /***/ "../salad/components/collision/CollisionComponent.ts":
 /*!***********************************************************!*\
   !*** ../salad/components/collision/CollisionComponent.ts ***!
@@ -235981,7 +236425,7 @@ class CollisionComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.ACompo
     getTransformedShape() {
         const transform = this.getInstanceComponent("transform");
         const position = this.getInstanceComponent("position");
-        return this.getTransformedShapeGivenTransforms(position.getPosition(), transform.getScale(), transform.getRotation(), transform.getOriginPoint());
+        return this.getTransformedShapeGivenTransforms(position.getViewPosition(), transform.getScale(), transform.getRotation(), transform.getOriginPoint());
     }
     getDependencies() {
         return ["render", "size", "position", "transform"];
@@ -238003,6 +238447,325 @@ class AHighlightComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComp
 
 /***/ }),
 
+/***/ "../salad/components/highlights/AnimationHighlighters.ts":
+/*!***************************************************************!*\
+  !*** ../salad/components/highlights/AnimationHighlighters.ts ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   map: () => (/* binding */ map)
+/* harmony export */ });
+/* harmony import */ var _animations_readyMadeAnimations__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../animations/readyMadeAnimations */ "../salad/components/animations/readyMadeAnimations.ts");
+
+class AAnimationHighlighter {
+    constructor(options) {
+        this.options = options;
+        const animComp = options.instance.getComponent("animation");
+        animComp.playAnimation(this.getProps(), this.getSettings());
+    }
+    destroy() {
+        const animComp = this.options.instance.getComponent("animation");
+        animComp.stopAnimation();
+    }
+}
+class Shake extends AAnimationHighlighter {
+    getProps() {
+        const shakeAnim = (0,_animations_readyMadeAnimations__WEBPACK_IMPORTED_MODULE_0__.getReadyMadeAnimationByName)("shake");
+        return shakeAnim.props;
+    }
+    getSettings() {
+        return {
+            duration: 1,
+            repeat: 3
+        };
+    }
+}
+class Pulse extends AAnimationHighlighter {
+    getProps() {
+        const AMPLITUDE = 0.015;
+        return {
+            scaleX: `1 + ${AMPLITUDE} * sin(2 * pi * t)`,
+            scaleY: `1 + ${AMPLITUDE} * sin(2 * pi * t)`
+        };
+    }
+    getSettings() {
+        return {
+            duration: 1,
+            repeat: -1
+        };
+    }
+}
+const map = {
+    shake: Shake,
+    pulse: Pulse
+};
+
+
+/***/ }),
+
+/***/ "../salad/components/highlights/ConfettiEffects.ts":
+/*!*********************************************************!*\
+  !*** ../salad/components/highlights/ConfettiEffects.ts ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getConfettiEffect: () => (/* binding */ getConfettiEffect)
+/* harmony export */ });
+const confettiEffects = {
+    butterfly: {
+        gravity: 0.15,
+        drift: 1.8,
+        ticks: 300,
+        decay: 0.97,
+        startVelocity: 8,
+        wobble: 1.2,
+        colors: ["#FFC0CB", "#FFD700", "#9370DB", "#87CEFA"],
+    },
+    dino: {
+        startVelocity: 35,
+        gravity: 1.2,
+        spread: 30,
+        ticks: 100,
+        wobble: 0.1,
+        colors: ["#006400", "#228B22", "#8B4513"],
+    },
+    robot: {
+        startVelocity: 15,
+        gravity: 1.0,
+        drift: 0.1,
+        ticks: 140,
+        decay: 0.85,
+        wobble: 0.05,
+        colors: ["#C0C0C0", "#A9A9A9", "#4682B4", "#5F9EA0"],
+    },
+    wizard: {
+        startVelocity: 18,
+        gravity: 0.3,
+        drift: 1.2,
+        ticks: 200,
+        wobble: 0.8,
+        trail: 3,
+        colors: ["#9370DB", "#8A2BE2", "#4B0082", "#483D8B"],
+    },
+    unicorn: {
+        startVelocity: 25,
+        gravity: 0.4,
+        drift: 1.1,
+        wobble: 0.75,
+        ticks: 220,
+        decay: 0.96,
+        trail: 2,
+        colors: ["#FF69B4", "#DA70D6", "#BA55D3", "#EE82EE"],
+    },
+    bee: {
+        startVelocity: 18,
+        gravity: 0.1,
+        wobble: 2.5,
+        drift: 0.8,
+        ticks: 180,
+        zIndex: 200,
+        colors: ["#FFD700", "#000000"],
+    },
+    castle: {
+        startVelocity: 12,
+        gravity: 1.5,
+        ticks: 120,
+        wobble: 0,
+        decay: 0.85,
+        colors: ["#808080", "#A9A9A9", "#D3D3D3", "#2F4F4F"],
+    },
+    crown: {
+        startVelocity: 16,
+        gravity: 0.7,
+        drift: 0.4,
+        ticks: 160,
+        rotate: true,
+        wobble: 0.2,
+        colors: ["#FFD700", "#FFA500", "#DAA520", "#B8860B"],
+    },
+    dolphin: {
+        startVelocity: 30,
+        gravity: 0.2,
+        drift: 2.0,
+        wobble: 1.0,
+        ticks: 200,
+        angle: 80,
+        spread: 40,
+        colors: ["#00BFFF", "#1E90FF", "#4169E1", "#87CEEB"],
+    },
+    lightning: {
+        startVelocity: 45,
+        gravity: 0.7,
+        drift: 0.5,
+        ticks: 70,
+        decay: 0.80,
+        angle: 100,
+        spread: 20,
+        colors: ["#FFFF00", "#FFFFE0", "#FFFACD", "#FFFFFF"],
+    },
+    crystal: {
+        startVelocity: 12,
+        gravity: 0.9,
+        drift: 0.1,
+        ticks: 150,
+        wobble: 0.1,
+        rotate: true,
+        colors: ["#B0E0E6", "#ADD8E6", "#87CEEB", "#E0FFFF"],
+    },
+    tree: {
+        startVelocity: 10,
+        gravity: 0.7,
+        drift: 0.8,
+        wobble: 0.3,
+        ticks: 220,
+        colors: ["#228B22", "#006400", "#32CD32", "#8B4513"],
+    },
+    present: {
+        startVelocity: 20,
+        gravity: 0.8,
+        ticks: 130,
+        rotate: true,
+        wobble: 0.3,
+        angle: 120,
+        spread: 70,
+        colors: ["#FF0000", "#FF1493", "#4169E1", "#32CD32"],
+    },
+    heart: {
+        particleCount: 24,
+        startVelocity: 12,
+        gravity: 0.2,
+        drift: 0.7,
+        wobble: 1.0,
+        ticks: 240,
+        decay: 0.97,
+        spread: 120,
+        colors: ["#FF69B4", "#DB7093", "#FF1493", "#C71585"],
+    }
+};
+const getConfettiEffect = (effectName) => {
+    const effect = confettiEffects[effectName];
+    return effect;
+};
+
+
+/***/ }),
+
+/***/ "../salad/components/highlights/ConfettiHighlighters.ts":
+/*!**************************************************************!*\
+  !*** ../salad/components/highlights/ConfettiHighlighters.ts ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   map: () => (/* binding */ map)
+/* harmony export */ });
+/* harmony import */ var canvas_confetti__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! canvas-confetti */ "../../../../node_modules/.pnpm/canvas-confetti@1.9.3/node_modules/canvas-confetti/dist/confetti.module.mjs");
+/* harmony import */ var _ConfettiEffects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ConfettiEffects */ "../salad/components/highlights/ConfettiEffects.ts");
+/**
+ * Different ways of highlighting an element
+ */
+
+
+class AConfettiHighlighter {
+    constructor(options) {
+        this.options = options;
+        const customOptions = this.getOptions();
+        const rect = this.options.element.getBoundingClientRect();
+        // in pixels
+        const centre = {
+            x: rect.left + rect.width / 2,
+            y: rect.top + rect.height / 2,
+        };
+        const canvasRect = this.options.canvas.getBoundingClientRect();
+        const relativePoint = {
+            x: centre.x - canvasRect.left,
+            y: centre.y - canvasRect.top,
+        };
+        const origin = {
+            x: relativePoint.x / canvasRect.width,
+            y: relativePoint.y / canvasRect.height,
+        };
+        const defaultOptions = {
+            spread: 360,
+            origin,
+            ticks: 50,
+            gravity: 2,
+            decay: 0.9,
+            startVelocity: 20,
+            particleCount: 20
+        };
+        const confettiOptions = Object.assign(Object.assign({}, defaultOptions), customOptions);
+        if (!AConfettiHighlighter.confetti) {
+            AConfettiHighlighter.confetti = canvas_confetti__WEBPACK_IMPORTED_MODULE_0__["default"].create(this.options.canvas);
+        }
+        //@ts-ignore
+        AConfettiHighlighter.confetti(confettiOptions);
+    }
+    destroy() {
+        if (AConfettiHighlighter.confetti) {
+            // we have to do a global reset
+            AConfettiHighlighter.confetti.reset();
+            AConfettiHighlighter.confetti = undefined;
+        }
+    }
+}
+AConfettiHighlighter.confetti = undefined;
+class Stars extends AConfettiHighlighter {
+    getOptions() {
+        return {
+            scalar: 2,
+            shapes: ["star"],
+            colors: ["#FFE400", "#FFBD00", "#E89400", "#FFCA6C", "#FDFFB8"],
+        };
+    }
+}
+const getClassDefForConfetti = (text, name) => {
+    return class extends AConfettiHighlighter {
+        getOptions() {
+            const scalar = 3;
+            const shape = canvas_confetti__WEBPACK_IMPORTED_MODULE_0__["default"].shapeFromText({ text, scalar });
+            // Default options
+            const defaultOptions = {
+                scalar,
+                shapes: [shape],
+                colors: ["#FFE400", "#FFBD00", "#E89400", "#FFCA6C", "#FDFFB8"]
+            };
+            // Get effect-specific options from the map if available
+            const effectOptions = (0,_ConfettiEffects__WEBPACK_IMPORTED_MODULE_1__.getConfettiEffect)(name) || {};
+            // Combine options with priority: custom > effect > default
+            return Object.assign(Object.assign({}, defaultOptions), effectOptions);
+        }
+    };
+};
+const map = {
+    stars: Stars,
+    unicorns: getClassDefForConfetti("🦄", "unicorns"),
+    dino: getClassDefForConfetti("🦖", "dino"),
+    robot: getClassDefForConfetti("🤖", "robot"),
+    wizard: getClassDefForConfetti("🧙", "wizard"),
+    castle: getClassDefForConfetti("🏰", "castle"),
+    crown: getClassDefForConfetti("👑", "crown"),
+    butterfly: getClassDefForConfetti("🦋", "butterfly"),
+    dolphin: getClassDefForConfetti("🐬", "dolphin"),
+    crystal: getClassDefForConfetti("💎", "crystal"),
+    tree: getClassDefForConfetti("🌳", "tree"),
+    present: getClassDefForConfetti("🎁", "present"),
+    lightning: getClassDefForConfetti("⚡", "lightning"),
+    heart: getClassDefForConfetti("❤️", "heart"),
+    bee: getClassDefForConfetti("🐝", "bee"),
+};
+
+
+/***/ }),
+
 /***/ "../salad/components/highlights/EditHighlightComponent.ts":
 /*!****************************************************************!*\
   !*** ../salad/components/highlights/EditHighlightComponent.ts ***!
@@ -238039,92 +238802,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   makeHighlighter: () => (/* binding */ makeHighlighter)
 /* harmony export */ });
-/* harmony import */ var canvas_confetti__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! canvas-confetti */ "../../../../node_modules/.pnpm/canvas-confetti@1.9.3/node_modules/canvas-confetti/dist/confetti.module.mjs");
-/**
- * Different ways of highlighting an element
- */
-//@ts-ignore
+/* harmony import */ var _ConfettiHighlighters__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ConfettiHighlighters */ "../salad/components/highlights/ConfettiHighlighters.ts");
+/* harmony import */ var _AnimationHighlighters__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AnimationHighlighters */ "../salad/components/highlights/AnimationHighlighters.ts");
 
-class AHighlighter {
-    constructor(element) {
-        this.element = element;
-    }
-}
-class Stars extends AHighlighter {
-    constructor(element) {
-        super(element);
-        this._confetti = undefined;
-        const rect = element.getBoundingClientRect();
-        // in pixels
-        const originPx = {
-            x: rect.left + rect.width / 2,
-            y: rect.top + rect.height / 2,
-        };
-        // from 0 to 1
-        const origin = {
-            x: originPx.x / window.innerWidth,
-            y: originPx.y / window.innerHeight,
-        };
-        this._confetti = (0,canvas_confetti__WEBPACK_IMPORTED_MODULE_0__["default"])({
-            spread: 360,
-            origin,
-            ticks: 50,
-            gravity: 2,
-            decay: 0.9,
-            startVelocity: 20,
-            colors: ["FFE400", "FFBD00", "E89400", "FFCA6C", "FDFFB8"],
-            particleCount: 30,
-            scalar: 2,
-            shapes: ["star"],
+
+class Glow {
+    constructor(options) {
+        this.options = options;
+        Object.assign(options.element.style, {
+            "box-shadow": this.getCSS()
         });
     }
-    destroy() {
-        if (this._confetti) {
-            // we have to do a global reset
-            canvas_confetti__WEBPACK_IMPORTED_MODULE_0__["default"].reset();
-            this._confetti = undefined;
-        }
-    }
-}
-class Shake extends AHighlighter {
-    constructor(element) {
-        super(element);
-        this.element.classList.add("instance-highlight-shake");
+    getCSS() {
+        const colors = ["#48abe0", "#ebecca", "#8a2be2", "#ff1493"];
+        return colors.map((color, i) => {
+            const offset = i + 1;
+            return `0 0 ${offset * 2}px ${offset * 1.5}px ${color}`;
+        }).join(", ");
     }
     destroy() {
-        this.element.classList.remove("instance-highlight-shake");
+        delete this.options.element.style.boxShadow;
     }
 }
-class Glow extends AHighlighter {
-    constructor(element) {
-        super(element);
-        this.element.classList.add("instance-highlight-glow");
-    }
-    destroy() {
-        this.element.classList.remove("instance-highlight-glow");
-    }
-}
-class Pulse extends AHighlighter {
-    constructor(element) {
-        super(element);
-        this.element.classList.add("instance-highlight-pulse");
-    }
-    destroy() {
-        this.element.classList.remove("instance-highlight-pulse");
-    }
-}
-const makeHighlighter = (type, el) => {
-    if (type === "stars") {
-        return new Stars(el);
-    }
-    else if (type === "glow") {
-        return new Glow(el);
-    }
-    else if (type === "shake") {
-        return new Shake(el);
-    }
-    else if (type === "pulse") {
-        return new Pulse(el);
+const highlighterMap = Object.assign(Object.assign(Object.assign({}, _ConfettiHighlighters__WEBPACK_IMPORTED_MODULE_0__.map), _AnimationHighlighters__WEBPACK_IMPORTED_MODULE_1__.map), { glow: Glow });
+const makeHighlighter = (type, instance, canvas) => {
+    const Klass = highlighterMap[type];
+    if (Klass) {
+        const renderComponent = instance.getComponent("render");
+        const element = renderComponent.getElement();
+        return new Klass({
+            element,
+            canvas,
+            instance
+        });
     }
     return undefined;
 };
@@ -238144,8 +238854,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ PlayHighlightComponent)
 /* harmony export */ });
 /* harmony import */ var _AHighlightComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AHighlightComponent */ "../salad/components/highlights/AHighlightComponent.ts");
-/* harmony import */ var _Highlighters__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Highlighters */ "../salad/components/highlights/Highlighters.ts");
-/* harmony import */ var _types_external__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../types/external */ "../salad/types/external.ts");
+/* harmony import */ var _types_external__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../types/external */ "../salad/types/external.ts");
+/* harmony import */ var _Highlighters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Highlighters */ "../salad/components/highlights/Highlighters.ts");
 /**
  * Highlight in play mode
  */
@@ -238166,18 +238876,24 @@ class PlayHighlightComponent extends _AHighlightComponent__WEBPACK_IMPORTED_MODU
      * make the actual highlight
      */
     _update() {
-        const renderComponent = this.getInstanceComponent("render");
-        const el = renderComponent.getElement();
         this._destroyHighlight();
-        this._highlight = (0,_Highlighters__WEBPACK_IMPORTED_MODULE_1__.makeHighlighter)(this.data.type, el);
+        if (this.data.type !== "none") {
+            const layer = this.page.getComponent("layers").getLayerByName("highlight");
+            const canvas = layer.getElement();
+            this._highlight = (0,_Highlighters__WEBPACK_IMPORTED_MODULE_2__.makeHighlighter)(this.data.type, this.instance, canvas);
+            //highlight and then set the highlight type to none so we dont save anything
+            this.data.type = "none";
+        }
     }
     /**
      * lifecycle
      */
     onCreated() {
         super.onCreated();
-        this._update();
         this._addListeners();
+        if (this.data.type !== "none") {
+            this._update();
+        }
     }
     /**
      * lifecycle
@@ -238195,15 +238911,15 @@ class PlayHighlightComponent extends _AHighlightComponent__WEBPACK_IMPORTED_MODU
     }
     _addListeners() {
         if (this.data.onInstanceClick && this.data.onInstanceClick !== "none") {
-            this.instance.events.on(_types_external__WEBPACK_IMPORTED_MODULE_2__.Events.INSTANCE_CLICK, this.onClick);
+            this.instance.events.on(_types_external__WEBPACK_IMPORTED_MODULE_1__.Events.INSTANCE_CLICK, this.onClick);
         }
         if (this.data.onInstanceAccepted && this.data.onInstanceAccepted !== "none") {
-            this.instance.events.on(_types_external__WEBPACK_IMPORTED_MODULE_2__.Events.INSTANCE_ACCEPTED, this.onAccepted);
+            this.instance.events.on(_types_external__WEBPACK_IMPORTED_MODULE_1__.Events.INSTANCE_ACCEPTED, this.onAccepted);
         }
     }
     _removeListeners() {
-        this.instance.events.off(_types_external__WEBPACK_IMPORTED_MODULE_2__.Events.INSTANCE_CLICK, this.onClick);
-        this.instance.events.off(_types_external__WEBPACK_IMPORTED_MODULE_2__.Events.INSTANCE_ACCEPTED, this.onAccepted);
+        this.instance.events.off(_types_external__WEBPACK_IMPORTED_MODULE_1__.Events.INSTANCE_CLICK, this.onClick);
+        this.instance.events.off(_types_external__WEBPACK_IMPORTED_MODULE_1__.Events.INSTANCE_ACCEPTED, this.onAccepted);
     }
     /**
      * in play mode we can change the highlight type and it actually makes the highlight too
@@ -238285,6 +239001,151 @@ class EditHoverComponent extends _AHoverComponent__WEBPACK_IMPORTED_MODULE_0__["
 
 /***/ }),
 
+/***/ "../salad/components/hover/HoverEffects.ts":
+/*!*************************************************!*\
+  !*** ../salad/components/hover/HoverEffects.ts ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getHover: () => (/* binding */ getHover)
+/* harmony export */ });
+/* harmony import */ var _animations_readyMadeAnimations__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../animations/readyMadeAnimations */ "../salad/components/animations/readyMadeAnimations.ts");
+
+class AHover {
+    constructor(instance, element) {
+        this.instance = instance;
+        this.element = element;
+    }
+    destroy() {
+    }
+}
+class AFilterHover extends AHover {
+    constructor(instance, element) {
+        super(instance, element);
+        const filter = this.getFilter();
+        const el = this.element;
+        el.style.filter = filter;
+    }
+    destroy() {
+        const el = this.element;
+        el.style.filter = "none";
+    }
+}
+class BlurHover extends AFilterHover {
+    getFilter() {
+        return "blur(2px)";
+    }
+}
+class GrayscaleHover extends AFilterHover {
+    getFilter() {
+        return "grayscale(0.75)";
+    }
+}
+class YellowShadowHover extends AFilterHover {
+    getFilter() {
+        return "drop-shadow(0 0 5px yellow)";
+    }
+}
+class LightenHover extends AFilterHover {
+    getFilter() {
+        return "brightness(1.15)";
+    }
+}
+class DarkenHover extends AFilterHover {
+    getFilter() {
+        return "brightness(0.85)";
+    }
+}
+class AAnimationHover extends AHover {
+    getSettings() {
+        return {
+            duration: 1,
+            repeat: 0
+        };
+    }
+    constructor(instance, element) {
+        super(instance, element);
+        const animComp = instance.getComponent("animation");
+        animComp.playAnimation(this.getProps(), this.getSettings());
+    }
+    destroy() {
+        const animComp = this.instance.getComponent("animation");
+        animComp.stopAnimation();
+    }
+}
+class YellowShadowShakeHover extends AAnimationHover {
+    constructor(instance, element) {
+        super(instance, element);
+        const el = this.element;
+        el.style.filter = "drop-shadow(0 0 5px yellow)";
+    }
+    getProps() {
+        const shakeAnim = (0,_animations_readyMadeAnimations__WEBPACK_IMPORTED_MODULE_0__.getReadyMadeAnimationByName)("shake");
+        return shakeAnim.props;
+    }
+    getSettings() {
+        return {
+            duration: 1,
+            repeat: 3
+        };
+    }
+    destroy() {
+        super.destroy();
+        const el = this.element;
+        el.style.filter = "none";
+    }
+}
+class FadeInHover extends AAnimationHover {
+    getProps() {
+        const shakeAnim = (0,_animations_readyMadeAnimations__WEBPACK_IMPORTED_MODULE_0__.getReadyMadeAnimationByName)("fadein");
+        return shakeAnim.props;
+    }
+}
+class FadeOutHover extends AAnimationHover {
+    getProps() {
+        const shakeAnim = (0,_animations_readyMadeAnimations__WEBPACK_IMPORTED_MODULE_0__.getReadyMadeAnimationByName)("fadeout");
+        return shakeAnim.props;
+    }
+}
+class ShakeHover extends AAnimationHover {
+    getProps() {
+        const shakeAnim = (0,_animations_readyMadeAnimations__WEBPACK_IMPORTED_MODULE_0__.getReadyMadeAnimationByName)("shake");
+        return shakeAnim.props;
+    }
+    getSettings() {
+        return {
+            duration: 1,
+            repeat: 3
+        };
+    }
+}
+const hoverMap = {
+    lighten: LightenHover,
+    darken: DarkenHover,
+    shake: ShakeHover,
+    blur: BlurHover,
+    yellowshadow: YellowShadowHover,
+    yellowshadowshake: YellowShadowShakeHover,
+    fadein: FadeInHover,
+    fadeout: FadeOutHover,
+    grayscale: GrayscaleHover
+};
+const getHover = (type, instance) => {
+    const Klass = hoverMap[type];
+    if (Klass) {
+        const renderComponent = instance.getComponent("render");
+        const el = renderComponent.getElement();
+        return new Klass(instance, el);
+    }
+    return undefined;
+};
+
+
+/***/ }),
+
 /***/ "../salad/components/hover/PlayHoverComponent.ts":
 /*!*******************************************************!*\
   !*** ../salad/components/hover/PlayHoverComponent.ts ***!
@@ -238298,7 +239159,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _types_external__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../types/external */ "../salad/types/external.ts");
 /* harmony import */ var _AHoverComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AHoverComponent */ "../salad/components/hover/AHoverComponent.ts");
-/* harmony import */ var _schema_schema__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../schema/schema */ "../salad/schema/schema.ts");
+/* harmony import */ var _HoverEffects__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./HoverEffects */ "../salad/components/hover/HoverEffects.ts");
 /**
  * Highlight in play mode
  */
@@ -238323,18 +239184,19 @@ class PlayHoverComponent extends _AHoverComponent__WEBPACK_IMPORTED_MODULE_1__["
     onDestroyed() {
         super.onDestroyed();
         this.removeListeners();
+        this.updateHover(undefined);
     }
     addListeners() {
         this.instance.events.on(_types_external__WEBPACK_IMPORTED_MODULE_0__.Events.INSTANCE_MOUSEOVER, this.onMouseOver);
         this.instance.events.on(_types_external__WEBPACK_IMPORTED_MODULE_0__.Events.INSTANCE_MOUSEOUT, this.onMouseOut);
     }
     updateHover(type) {
-        const el = this.instance.getComponent("render").getElement();
-        _schema_schema__WEBPACK_IMPORTED_MODULE_2__.hoverTypes.forEach((hoverType) => {
-            el.classList.remove("instance-hover-" + hoverType);
-        });
-        if (type) {
-            el.classList.add("instance-hover-" + type);
+        if (this.hover) {
+            this.hover.destroy();
+            this.hover = undefined;
+        }
+        if (type && type !== "none") {
+            this.hover = (0,_HoverEffects__WEBPACK_IMPORTED_MODULE_2__.getHover)(type, this.instance);
         }
     }
     onMouseOver() {
@@ -238519,6 +239381,9 @@ class ImageComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComponent
     getDependencies() {
         return ["render"];
     }
+    getElement() {
+        return this.element;
+    }
     onDestroyed() {
         this._destroyImage();
         super.onDestroyed();
@@ -238534,9 +239399,10 @@ class ImageComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComponent
         }
     }
     _updatePosition() {
+        const css = Object.assign({}, this.data.position);
         this.page.getComponent("domupdate").addCSSUpdate({
             element: this.element,
-            css: Object.assign({}, this.data.position)
+            css
         });
     }
     addImage() {
@@ -238545,15 +239411,17 @@ class ImageComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComponent
             if (!parent) {
                 return;
             }
-            if (this.element) {
-                this._destroyImage();
+            if (!this.element) {
+                this.element = (0,_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__.image)(parent);
             }
-            this.element = (0,_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__.image)(parent);
             const assetManager = this.getAssetManager();
             const src = yield assetManager.getPathForKey(this.data.path);
-            this.element.src = src;
-            this._updatePosition();
-            this._updateShadow();
+            if (this.element) {
+                // it could have been destroyed in the meantime
+                assetManager.loadImg(this.element, src);
+                this._updatePosition();
+                this._updateShadow();
+            }
         });
     }
     // some special stuff for builderstray
@@ -238563,7 +239431,8 @@ class ImageComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComponent
             if (!parent) {
                 return;
             }
-            const resolvedPath = yield this.getAssetManager().getPathForKey(this.data.path);
+            const assetManager = this.getAssetManager();
+            const resolvedPath = yield assetManager.getPathForKey(this.data.path);
             if (this.data.shadow !== "none") {
                 parent.classList.add("instance-shadow-" + this.data.shadow);
                 parent.style.setProperty('--background-image', `url(${resolvedPath})`);
@@ -238577,9 +239446,11 @@ class ImageComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComponent
         });
     }
     _update() {
-        this._destroyImage();
         if (this.data.enabled) {
             this.addImage();
+        }
+        else {
+            this._destroyImage();
         }
     }
     update(data) {
@@ -238696,9 +239567,10 @@ class ALottieComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.ACompone
     }
     _updatePosition() {
         if (this._element) {
+            const css = Object.assign({}, this.data.position);
             this.page.getComponent("domupdate").addCSSUpdate({
                 element: this._element,
-                css: Object.assign({}, this.data.position),
+                css
             });
         }
     }
@@ -238777,7 +239649,6 @@ class EditLottieComponent extends _ALottieComponent__WEBPACK_IMPORTED_MODULE_0__
                 objectFit: "contain",
             });
             this.img.src = src;
-            //this.img.src = src;
             this._element.appendChild(this.img);
             return undefined;
         });
@@ -239222,11 +240093,14 @@ class EditMovementComponent extends _AMovementComponent__WEBPACK_IMPORTED_MODULE
                 const parent = this.getInstanceComponent("render").getElement();
                 parent.appendChild(this._element);
             }
+            const css = {
+                transform: {
+                    rotate: `${this.data.offsetAngle}deg`,
+                }
+            };
             this.page.getComponent("domupdate").addCSSUpdate({
                 element: this._element,
-                css: {
-                    transform: `rotate(${this.data.offsetAngle}deg)`
-                }
+                css
             });
         }
         else {
@@ -239344,20 +240218,20 @@ class PlayMovementComponent extends _AMovementComponent__WEBPACK_IMPORTED_MODULE
 
 /***/ }),
 
-/***/ "../salad/components/movieclip/MovieClipComponent.ts":
-/*!***********************************************************!*\
-  !*** ../salad/components/movieclip/MovieClipComponent.ts ***!
-  \***********************************************************/
+/***/ "../salad/components/movieclip/AMovieClipComponent.ts":
+/*!************************************************************!*\
+  !*** ../salad/components/movieclip/AMovieClipComponent.ts ***!
+  \************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ MovieClipComponent)
+/* harmony export */   "default": () => (/* binding */ AMovieClipComponent)
 /* harmony export */ });
 /* harmony import */ var _AComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../AComponent */ "../salad/components/AComponent.ts");
 
-class MovieClipComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComponent {
+class AMovieClipComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComponent {
     constructor(data, instance, page) {
         super(data, instance, page);
         this.name = "movieclip";
@@ -239365,30 +240239,134 @@ class MovieClipComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.ACompo
     getDependencies() {
         return ["image", "render"];
     }
-    _updateImage() {
+    updateSegmentFrame() {
+        if (this.data.frame > this.data.segmentEnd) {
+            this.data.frame = this.data.segmentStart;
+        }
+        else if (this.data.frame < this.data.segmentStart) {
+            this.data.frame = this.data.segmentStart;
+        }
+        this.data.frame = (this.data.frame) % this.data.paths.length;
+    }
+    updateImage() {
         if (this.data.enabled) {
+            this.updateSegmentFrame();
             const imageComponent = this.getInstanceComponent("image");
             imageComponent.setPath(this.data.paths[this.data.frame]);
         }
     }
     update(data) {
         super.update(data);
-        this._updateImage();
+        this.updateImage();
     }
     nextFrame() {
-        this.data.frame = (this.data.frame + 1) % this.data.paths.length;
-        this._updateImage();
+        this.data.frame = this.data.frame + 1;
+        this.updateImage();
     }
     setPaths(paths) {
         this.data.paths = paths.map((path) => path.trim());
-        this._updateImage();
+        this.updateImage();
+    }
+    setSegmentStart(frame) {
+        this.data.segmentStart = frame;
+        this.updateImage();
+    }
+    setSegmentEnd(frame) {
+        this.data.segmentEnd = frame;
+        this.updateImage();
     }
     setFrame(frame) {
         this.data.frame = frame;
-        this._updateImage();
+        this.updateImage();
     }
     getFrame() {
         return this.data.frame;
+    }
+}
+
+
+/***/ }),
+
+/***/ "../salad/components/movieclip/EditMovieClipComponent.ts":
+/*!***************************************************************!*\
+  !*** ../salad/components/movieclip/EditMovieClipComponent.ts ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ EditMovieClipComponent)
+/* harmony export */ });
+/* harmony import */ var _AMovieClipComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AMovieClipComponent */ "../salad/components/movieclip/AMovieClipComponent.ts");
+
+class EditMovieClipComponent extends _AMovieClipComponent__WEBPACK_IMPORTED_MODULE_0__["default"] {
+}
+
+
+/***/ }),
+
+/***/ "../salad/components/movieclip/PlayMovieClipComponent.ts":
+/*!***************************************************************!*\
+  !*** ../salad/components/movieclip/PlayMovieClipComponent.ts ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ PlayMovieClipComponent)
+/* harmony export */ });
+/* harmony import */ var _AMovieClipComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AMovieClipComponent */ "../salad/components/movieclip/AMovieClipComponent.ts");
+/* harmony import */ var _root_salad__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @root/salad */ "../salad/index.ts");
+
+
+class PlayMovieClipComponent extends _AMovieClipComponent__WEBPACK_IMPORTED_MODULE_0__["default"] {
+    constructor() {
+        super(...arguments);
+        this.time = undefined;
+    }
+    onCreated() {
+        super.onCreated();
+        this.onEnterFrame = this.onEnterFrame.bind(this);
+        if (this.data.autoplay) {
+            this.addEnterFrameListener();
+        }
+        this.updateImage();
+    }
+    onDestroyed() {
+        super.onDestroyed();
+        this.removeEnterFrameListener();
+    }
+    addEnterFrameListener() {
+        this.page.events.on(_root_salad__WEBPACK_IMPORTED_MODULE_1__["default"].Events.ENTER_FRAME, this.onEnterFrame);
+    }
+    removeEnterFrameListener() {
+        this.page.events.off(_root_salad__WEBPACK_IMPORTED_MODULE_1__["default"].Events.ENTER_FRAME, this.onEnterFrame);
+    }
+    setSegmentStart(frame) {
+        this.data.segmentStart = frame;
+        this.data.frame = Math.max(this.data.frame, frame);
+        this.updateImage();
+    }
+    setSegmentEnd(frame) {
+        this.data.segmentEnd = frame;
+        this.data.frame = Math.min(this.data.frame, frame);
+        this.updateImage();
+    }
+    onEnterFrame(eventData) {
+        // first time we get a frame, set the time
+        if (this.time === undefined) {
+            this.time = eventData.time;
+        }
+        // check if we need to update the frame - if the delta time is greater than the interval specified using fps
+        const delta = eventData.time - this.time;
+        const interval = 1000 / this.data.fps;
+        if (delta >= interval) {
+            // update the frame so we can do the next one
+            this.time = eventData.time;
+            this.nextFrame();
+        }
     }
 }
 
@@ -239559,6 +240537,22 @@ class PositionComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.ACompon
             x: Math.round(pos.x / size) * size,
             y: Math.round(pos.y / size) * size,
         });
+    }
+    getViewPosition() {
+        const pos = this.getPosition();
+        const renderComponent = this.getInstanceComponent("render");
+        if (renderComponent.getRenderLayer() === "hud") {
+            const camera = this.page.getComponent("camera");
+            const pos = this.getPosition();
+            const view = camera.getView();
+            return {
+                x: pos.x + view.left,
+                y: pos.y + view.top,
+            };
+        }
+        else {
+            return pos;
+        }
     }
     getGridPosition(round = false) {
         const grid = this.page.getComponent("grid");
@@ -239786,12 +240780,18 @@ class ARenderComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_1__.ACompone
     }
     updateZIndex() {
         const element = this.getElement();
+        const css = {
+            transform: {
+                translateZ: `${this.data.zIndex}px`,
+            }
+        };
         this.page.getComponent("domupdate").addCSSUpdate({
             element,
-            css: {
-                zIndex: this.data.zIndex,
-            },
+            css,
         });
+    }
+    getRenderLayer() {
+        return this.data.renderLayer;
     }
     setLayoutPaint(layoutPaint) {
         this.data.layoutPaint = layoutPaint;
@@ -239817,9 +240817,9 @@ class ARenderComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_1__.ACompone
     }
     update(data) {
         super.update(data);
-        this.setZIndex(data.zIndex);
-        this.setOpacity(data.opacity);
-        this.setLayoutPaint(data.layoutPaint);
+        this.updateZIndex();
+        this.updateOpacity();
+        this.updateLayoutPaint();
     }
     setOpacity(opacity) {
         this.data.opacity = opacity;
@@ -239855,10 +240855,15 @@ class ARenderComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_1__.ACompone
      */
     onCreated() {
         this._element = (0,_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_0__.instance)();
-        this.page.getComponent("layers").addChildToLayer(this._element, "instances");
+        this.addToLayer();
         this.updateZIndex();
         this.updateOpacity();
         this.updateLayoutPaint();
+    }
+    addToLayer() {
+        const layerName = "instances";
+        const layersComp = this.page.getComponent("layers");
+        layersComp.addChildToLayer(this._element, layerName);
     }
     /**
      * lifecycle - onDestroyed
@@ -239945,6 +240950,11 @@ class PlayRenderComponent extends _ARenderComponent__WEBPACK_IMPORTED_MODULE_0__
             }
         }
         return true;
+    }
+    addToLayer() {
+        const layerName = this.data.renderLayer === "instances" ? "instances" : "instances-hud";
+        const layersComp = this.page.getComponent("layers");
+        layersComp.addChildToLayer(this._element, layerName);
     }
     onCreated() {
         var _a, _b;
@@ -240050,53 +241060,62 @@ const guard = (val, min, max) => Math.max(min, Math.min(max, val));
 class Handle {
     constructor(instance) {
         this.instance = instance;
+        this.scale = 1;
         const parent = this.instance.getComponent("render").getElement();
         this.element = (0,_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__.rotateHandle)(parent);
         const size = this.instance.getComponent("size").getSize();
         const minSize = Math.min(size.width, size.height);
         // scale the blob so it looks good on small objects
-        let scale = 1;
         if (minSize < 100) {
-            scale = 0.75;
+            this.scale = 0.75;
         }
-        this.handlePosition = this.instance.getComponent("rotateable").getHandlePosition();
-        const pos = this.getBestHandlePosition();
+        const userDefinedHandlePosition = this.instance.getComponent("rotateable").getHandlePosition();
+        let pos;
+        // is it valid?
+        if (userDefinedHandlePosition && (userDefinedHandlePosition.x !== 0 || userDefinedHandlePosition.y !== 0)) {
+            pos = userDefinedHandlePosition;
+        }
+        else {
+            pos = this.getBestHandlePosition();
+        }
         Object.assign(this.element.style, {
             left: `${pos.x}px`,
             top: `${pos.y}px`,
-            transform: `scale(${scale})`,
+            marginLeft: `${-_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__.HANDLE_SIZE / 2}px`,
+            marginTop: `${-_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__.HANDLE_SIZE / 2}px`,
+            transform: `scale(${this.scale})`,
+            transformOrigin: "center"
         });
     }
     getBestHandlePosition() {
-        if (this.handlePosition && this.handlePosition.x !== 0 && this.handlePosition.y !== 0) {
-            return this.handlePosition;
+        const transComp = this.instance.getComponent("transform");
+        const sizeComp = this.instance.getComponent("size");
+        // put the blob on a corner furthest from the origin
+        const size = sizeComp.getSize();
+        const corners = (0,_utils_PolygonUtils__WEBPACK_IMPORTED_MODULE_0__.getRect)(size.width, size.height);
+        const originPoint = transComp.getOriginPoint();
+        const distances = corners.map(corner => Math.sqrt(Math.pow((originPoint.x - corner.x), 2) + Math.pow((originPoint.y - corner.y), 2)));
+        const uniq = [
+            ...new Set(distances)
+        ];
+        let bestIndex;
+        if (uniq.length === 1) {
+            // choose bottom-right because it looks good
+            bestIndex = 2;
         }
         else {
-            const transComp = this.instance.getComponent("transform");
-            const sizeComp = this.instance.getComponent("size");
-            // put the blob on a corner furthest from the origin
-            const size = sizeComp.getSize();
-            const corners = (0,_utils_PolygonUtils__WEBPACK_IMPORTED_MODULE_0__.getRect)(size.width, size.height);
-            const originPoint = transComp.getOriginPoint();
-            const distances = corners.map(corner => Math.sqrt(Math.pow((originPoint.x - corner.x), 2) + Math.pow((originPoint.y - corner.y), 2)));
-            const uniq = [...new Set(distances)];
-            let bestIndex;
-            if (uniq.length === 1) {
-                // choose bottom-right because it looks good
-                bestIndex = 2;
-            }
-            else {
-                // get the maximum distance from the centre
-                const maxDist = Math.max(...distances);
-                bestIndex = distances.indexOf(maxDist);
-            }
-            const corner = corners[bestIndex];
-            const handlePos = {
-                x: guard(corner.x, _utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__.HANDLE_SIZE / 2, size.width - _utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__.HANDLE_SIZE),
-                y: guard(corner.y, _utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__.HANDLE_SIZE / 2, size.height - _utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__.HANDLE_SIZE)
-            };
-            return handlePos;
+            // get the maximum distance from the centre
+            const maxDist = Math.max(...distances);
+            bestIndex = distances.indexOf(maxDist);
         }
+        const corner = corners[bestIndex];
+        const displace = _utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__.HANDLE_SIZE * this.scale;
+        const x = corner.x === 0 ? displace : size.width - displace;
+        const y = corner.y === 0 ? displace : size.height - displace;
+        return {
+            x,
+            y
+        };
     }
     getWasHit(pos) {
         const handleRect = this.element.getBoundingClientRect();
@@ -240730,12 +241749,13 @@ class SizeComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComponent 
      */
     updateElementSize() {
         const element = this.getInstanceComponent("render").getElement();
+        const css = {
+            width: `${this.data.width}px`,
+            height: `${this.data.height}px`,
+        };
         this.page.getComponent("domupdate").addCSSUpdate({
             element,
-            css: {
-                width: `${this.data.width}px`,
-                height: `${this.data.height}px`,
-            }
+            css
         });
     }
     onCreated() {
@@ -240918,6 +241938,9 @@ class ASpawnComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComponen
     setName(name) {
         this.data.name = name;
     }
+    getSpawnParent() {
+        return this.data.spawnParent;
+    }
 }
 
 
@@ -241077,14 +242100,23 @@ class Spawner {
      * @returns
      */
     getSchemaForClone() {
-        return this._instance.toSchema();
+        const suffix = this._data.suffix || "";
+        const schema = this._instance.toSchema();
+        schema.identity.displayName += suffix;
+        return schema;
     }
     getSchemaForName(instanceName) {
         const instance = this._page.instances.getInstanceByName(instanceName);
-        return instance ? instance.toSchema() : undefined;
+        if (!instance) {
+            console.warn(`Instance ${instanceName} not found`);
+            return undefined;
+        }
+        const suffix = this._data.suffix || "";
+        const schema = instance.toSchema();
+        schema.identity.displayName += suffix;
+        return schema;
     }
     getSpawnedInstance() {
-        let instance = undefined;
         let schema = undefined;
         if (this._data.type === "clone") {
             schema = this.getSchemaForClone();
@@ -241093,7 +242125,7 @@ class Spawner {
             schema = this.getSchemaForName(this._data.name);
         }
         if (schema) {
-            schema.spawn = Object.assign(Object.assign({}, schema.spawn), { type: "none" });
+            schema.spawn = Object.assign(Object.assign({}, schema.spawn), { type: "none", spawnParent: this._instance.getId() });
             schema.draggable = Object.assign(Object.assign({}, schema.draggable), { enabled: true });
             return this._page.instances.addInstanceUsingSchema(schema);
         }
@@ -241795,12 +242827,13 @@ class TransformComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.ACompo
      * @returns
      */
     getCSS() {
-        const rot = `rotate(${this.data.rotation}deg)`;
-        const scale = `scale(${this.data.scale.x}, ${this.data.scale.y})`;
-        const skew = `skew(${this.data.skew}deg)`;
-        const transform = `${rot} ${scale} ${skew}`;
         return {
-            transform,
+            transform: {
+                rotate: `${this.data.rotation}deg`,
+                scaleX: this.data.scale.x,
+                scaleY: this.data.scale.y,
+                skew: `${this.data.skew}deg`,
+            },
             transformOrigin: this.getOrigin(),
         };
     }
@@ -241814,7 +242847,8 @@ class TransformComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.ACompo
      * @param world
      */
     _updateElement() {
-        const element = this.getInstanceComponent("render").getElement();
+        const renderComp = this.getInstanceComponent("render");
+        const element = renderComp.getElement();
         if (element) {
             const css = this.getCSS();
             this.page.getComponent("domupdate").addCSSUpdate({
@@ -242364,6 +243398,9 @@ const defaultPageSchema = {
     data: {
         value: {}
     },
+    highlight: {
+        type: "none"
+    },
     events: {},
     instances: {},
     layers: {},
@@ -242630,6 +243667,7 @@ const defaultSchema = {
         enabled: false,
         state: "enabled",
         position: {},
+        role: "default",
         type: "purple",
         arrow: {
             x: 0,
@@ -242670,6 +243708,7 @@ const defaultSchema = {
         mouseEnabled: true,
         layoutPaint: true,
         opacity: 1,
+        renderLayer: "instances"
     },
     video: {
         enabled: false,
@@ -242683,14 +243722,26 @@ const defaultSchema = {
         position: {},
         shadow: "none"
     },
+    clock: {
+        enabled: false,
+        direction: "down",
+        name: "clock1",
+        time: 300
+    },
     movieclip: {
         enabled: false,
         paths: [],
         frame: 0,
+        autoplay: false,
+        segmentStart: 0,
+        segmentEnd: 1024,
+        fps: 12,
     },
     spawn: {
         type: "none",
         name: "",
+        suffix: "",
+        spawnParent: "",
     },
     rotateable: {
         enabled: false,
@@ -243158,6 +244209,7 @@ __webpack_require__.r(__webpack_exports__);
  * @returns
  */
 const getMoveable = (target, container, moveableOptions, dragOptions) => {
+    console.log("moveableOptions", moveableOptions);
     const moveable = new moveable__WEBPACK_IMPORTED_MODULE_0__["default"](container, Object.assign({ target,
         container }, moveableOptions))
         .on("click", dragOptions.onClick)
@@ -243597,9 +244649,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _undo_PlayPageUndoComponent__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./undo/PlayPageUndoComponent */ "../salad/pageComponents/undo/PlayPageUndoComponent.ts");
 /* harmony import */ var _keyboard_EditPageKeyboardComponent__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./keyboard/EditPageKeyboardComponent */ "../salad/pageComponents/keyboard/EditPageKeyboardComponent.ts");
 /* harmony import */ var _keyboard_PlayPageKeyboardComponent__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./keyboard/PlayPageKeyboardComponent */ "../salad/pageComponents/keyboard/PlayPageKeyboardComponent.ts");
+/* harmony import */ var _highlight_PlayPageHighlightComponent__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./highlight/PlayPageHighlightComponent */ "../salad/pageComponents/highlight/PlayPageHighlightComponent.ts");
+/* harmony import */ var _highlight_EditPageHighlightComponent__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./highlight/EditPageHighlightComponent */ "../salad/pageComponents/highlight/EditPageHighlightComponent.ts");
 /**
  * This file contains the factories for creating the page components.
  */
+
+
 
 
 
@@ -243657,8 +244713,8 @@ const defaultMap = {
     settings: _settings_PageSettingsComponent__WEBPACK_IMPORTED_MODULE_35__["default"],
     layout: _layout_PageLayoutComponent__WEBPACK_IMPORTED_MODULE_12__["default"],
 };
-const editMap = Object.assign(Object.assign({}, defaultMap), { collisions: _collisions_EditPageCollisionsComponent__WEBPACK_IMPORTED_MODULE_16__["default"], sound: _sound_EditPageSoundComponent__WEBPACK_IMPORTED_MODULE_4__["default"], instances: _instances_EditInstancesComponent__WEBPACK_IMPORTED_MODULE_8__["default"], camera: _camera_EditCameraComponent__WEBPACK_IMPORTED_MODULE_1__["default"], domupdate: _domupdate_EditDomUpdateComponent__WEBPACK_IMPORTED_MODULE_24__["default"], ticker: _ticker_EditTickerComponent__WEBPACK_IMPORTED_MODULE_14__["default"], grid: _grid_EditGridComponent__WEBPACK_IMPORTED_MODULE_20__["default"], drawing: _drawing_EditPageDrawingComponent__WEBPACK_IMPORTED_MODULE_32__["default"], events: _events_EditEventsComponent__WEBPACK_IMPORTED_MODULE_28__["default"], ui: _ui_EditUIComponent__WEBPACK_IMPORTED_MODULE_18__["default"], undo: _undo_EditPageUndoComponent__WEBPACK_IMPORTED_MODULE_36__["default"], keyboard: _keyboard_EditPageKeyboardComponent__WEBPACK_IMPORTED_MODULE_38__["default"] });
-const playMap = Object.assign(Object.assign({}, defaultMap), { collisions: _collisions_PlayPageCollisionsComponent__WEBPACK_IMPORTED_MODULE_17__["default"], instances: _instances_PlayInstancesComponent__WEBPACK_IMPORTED_MODULE_7__["default"], sound: _sound_PlayPageSoundComponent__WEBPACK_IMPORTED_MODULE_5__["default"], domupdate: _domupdate_PlayDomUpdateComponent__WEBPACK_IMPORTED_MODULE_25__["default"], ticker: _ticker_PlayTickerComponent__WEBPACK_IMPORTED_MODULE_13__["default"], camera: _camera_PlayCameraComponent__WEBPACK_IMPORTED_MODULE_0__["default"], grid: _grid_PlayGridComponent__WEBPACK_IMPORTED_MODULE_21__["default"], drawing: _drawing_PlayPageDrawingComponent__WEBPACK_IMPORTED_MODULE_31__["default"], events: _events_PlayEventsComponent__WEBPACK_IMPORTED_MODULE_30__["default"], ui: _ui_PlayUIComponent__WEBPACK_IMPORTED_MODULE_19__["default"], undo: _undo_PlayPageUndoComponent__WEBPACK_IMPORTED_MODULE_37__["default"], keyboard: _keyboard_PlayPageKeyboardComponent__WEBPACK_IMPORTED_MODULE_39__["default"] });
+const editMap = Object.assign(Object.assign({}, defaultMap), { collisions: _collisions_EditPageCollisionsComponent__WEBPACK_IMPORTED_MODULE_16__["default"], sound: _sound_EditPageSoundComponent__WEBPACK_IMPORTED_MODULE_4__["default"], instances: _instances_EditInstancesComponent__WEBPACK_IMPORTED_MODULE_8__["default"], camera: _camera_EditCameraComponent__WEBPACK_IMPORTED_MODULE_1__["default"], domupdate: _domupdate_EditDomUpdateComponent__WEBPACK_IMPORTED_MODULE_24__["default"], ticker: _ticker_EditTickerComponent__WEBPACK_IMPORTED_MODULE_14__["default"], grid: _grid_EditGridComponent__WEBPACK_IMPORTED_MODULE_20__["default"], drawing: _drawing_EditPageDrawingComponent__WEBPACK_IMPORTED_MODULE_32__["default"], events: _events_EditEventsComponent__WEBPACK_IMPORTED_MODULE_28__["default"], highlight: _highlight_EditPageHighlightComponent__WEBPACK_IMPORTED_MODULE_41__["default"], ui: _ui_EditUIComponent__WEBPACK_IMPORTED_MODULE_18__["default"], undo: _undo_EditPageUndoComponent__WEBPACK_IMPORTED_MODULE_36__["default"], keyboard: _keyboard_EditPageKeyboardComponent__WEBPACK_IMPORTED_MODULE_38__["default"] });
+const playMap = Object.assign(Object.assign({}, defaultMap), { collisions: _collisions_PlayPageCollisionsComponent__WEBPACK_IMPORTED_MODULE_17__["default"], instances: _instances_PlayInstancesComponent__WEBPACK_IMPORTED_MODULE_7__["default"], sound: _sound_PlayPageSoundComponent__WEBPACK_IMPORTED_MODULE_5__["default"], domupdate: _domupdate_PlayDomUpdateComponent__WEBPACK_IMPORTED_MODULE_25__["default"], ticker: _ticker_PlayTickerComponent__WEBPACK_IMPORTED_MODULE_13__["default"], camera: _camera_PlayCameraComponent__WEBPACK_IMPORTED_MODULE_0__["default"], grid: _grid_PlayGridComponent__WEBPACK_IMPORTED_MODULE_21__["default"], drawing: _drawing_PlayPageDrawingComponent__WEBPACK_IMPORTED_MODULE_31__["default"], highlight: _highlight_PlayPageHighlightComponent__WEBPACK_IMPORTED_MODULE_40__["default"], events: _events_PlayEventsComponent__WEBPACK_IMPORTED_MODULE_30__["default"], ui: _ui_PlayUIComponent__WEBPACK_IMPORTED_MODULE_19__["default"], undo: _undo_PlayPageUndoComponent__WEBPACK_IMPORTED_MODULE_37__["default"], keyboard: _keyboard_PlayPageKeyboardComponent__WEBPACK_IMPORTED_MODULE_39__["default"] });
 const getDefaultPageComponentFactory = (mode) => {
     return (mode === "edit") ? (0,_PageComponentFactory__WEBPACK_IMPORTED_MODULE_34__.createPageComponentFactory)(editMap) : (0,_PageComponentFactory__WEBPACK_IMPORTED_MODULE_34__.createPageComponentFactory)(playMap);
 };
@@ -243767,6 +244823,11 @@ class PageBackgroundComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0
             type: "full",
         });
     }
+    onDestroyed() {
+        const layerComp = this.getPageComponent("layers");
+        layerComp.removeLayer("background");
+        super.onDestroyed();
+    }
     getDependencies() {
         return ["layout", "layers"];
     }
@@ -243866,6 +244927,8 @@ class ACameraComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.APag
     onDestroyed() {
         super.onDestroyed();
         this.killTween();
+        const layerComp = this.getPageComponent("layers");
+        layerComp.removeLayer("camera");
         if (this.panner) {
             this.panner.destroy();
             this.panner = undefined;
@@ -244700,18 +245763,13 @@ if(typeof(onCreated) === 'function'){
 }
 `;
 class CodeGenerator {
-    getFunctionToExecute(transpiledContent, activityContent, hasRunOnce) {
+    getFunctionToExecute(transpiledContent, hasRunOnce) {
         if (!transpiledContent) {
             return new Function("getFunctionToExecute", "");
         }
         let jsCode = transpiledContent;
-        const GLOBALS = `
-${activityContent || 'const getGlobals = ()=>{}'}
-const GLOBALS = getGlobals();
-`;
         jsCode = `
 ${NAMESPACE}
-${GLOBALS}
 ${jsCode}
 ${hasRunOnce ? "" : CALL_FUNCTION_ONCE}
 ${CALL_FUNCTION}
@@ -244745,9 +245803,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function getFunctionToExecute(transpiledContent, activityContent, hasRunOnce) {
-    return new _CodeGenerator__WEBPACK_IMPORTED_MODULE_1__.CodeGenerator().getFunctionToExecute(transpiledContent, activityContent, hasRunOnce);
-}
 class CodeRunnerComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.APageComponent {
     constructor(data, page) {
         super(data, page);
@@ -244756,10 +245811,12 @@ class CodeRunnerComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.A
     getDependencies() {
         return ["script"];
     }
-    getGlobalScript(page) {
-        var _a;
-        const activity = page.getCurrentActivity();
-        return ((_a = activity === null || activity === void 0 ? void 0 : activity.script) === null || _a === void 0 ? void 0 : _a.getTranspiledCode()) || "";
+    runScript(tsCode) {
+        const activity = this.page.getCurrentActivity();
+        const transpiledCode = ___WEBPACK_IMPORTED_MODULE_2__["default"].Utils.Code.transpileCode(tsCode);
+        const f = new _CodeGenerator__WEBPACK_IMPORTED_MODULE_1__.CodeGenerator().getFunctionToExecute(transpiledCode, false);
+        // 'this' = page
+        f.apply(this.page, [activity]);
     }
     /**
      * Get the script component of an instance, compile it to JS and execute it
@@ -244769,11 +245826,10 @@ class CodeRunnerComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.A
         const comp = instance.getComponent("script");
         if (comp) {
             const activity = page.getCurrentActivity();
-            const globals = this.getGlobalScript(page);
             const code = comp.getContent();
             const transpiledCode = comp.getTranspiledCode() || ___WEBPACK_IMPORTED_MODULE_2__["default"].Utils.Code.transpileCode(code);
             const hasRunOnce = comp.getHasRunOnce();
-            const f = getFunctionToExecute(transpiledCode, globals, hasRunOnce);
+            const f = new _CodeGenerator__WEBPACK_IMPORTED_MODULE_1__.CodeGenerator().getFunctionToExecute(transpiledCode, hasRunOnce);
             // 'this' = the instance, page is the 2nd argument
             f.apply(instance, [this.page, activity]);
             comp.setHasRunOnce();
@@ -244786,11 +245842,10 @@ class CodeRunnerComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.A
         const comp = this.getPageComponent("script");
         if (comp) {
             const activity = this.page.getCurrentActivity();
-            const globals = this.getGlobalScript(this.page);
             const code = comp.getContent();
             const transpiledCode = comp.getTranspiledCode() || ___WEBPACK_IMPORTED_MODULE_2__["default"].Utils.Code.transpileCode(code);
             const hasRunOnce = comp.getHasRunOnce();
-            const f = getFunctionToExecute(transpiledCode, globals, hasRunOnce);
+            const f = new _CodeGenerator__WEBPACK_IMPORTED_MODULE_1__.CodeGenerator().getFunctionToExecute(transpiledCode, hasRunOnce);
             // 'this' = page
             f.apply(this.page, [activity]);
             comp.setHasRunOnce();
@@ -245044,8 +246099,9 @@ class PlayPageCollisionsComponent extends _APageComponent__WEBPACK_IMPORTED_MODU
         const instances = this.page.instances.getAllInstances();
         const groupedInstances = {};
         instances.forEach((instance) => {
+            const canCollide = instance.getComponent("render").getRenderLayer() === "instances";
             const groupName = (instance.getComponent("collision").getGroup() || "").trim();
-            if (groupName.length >= 1) {
+            if (canCollide && groupName.length >= 1) {
                 // a valid group
                 const currentGroup = groupedInstances[groupName];
                 groupedInstances[groupName] =
@@ -245461,9 +246517,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   ADomUpdateComponent: () => (/* binding */ ADomUpdateComponent)
 /* harmony export */ });
 /* harmony import */ var _APageComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../APageComponent */ "../salad/pageComponents/APageComponent.ts");
-/**
- * update the dom. Immediately in edit mode, using the render loop in play mode
- */
+/* harmony import */ var _CSSApplication__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CSSApplication */ "../salad/pageComponents/domupdate/CSSApplication.ts");
+/* harmony import */ var _CSSMerge__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CSSMerge */ "../salad/pageComponents/domupdate/CSSMerge.ts");
+
+
 
 class ADomUpdateComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.APageComponent {
     constructor(data, page) {
@@ -245474,32 +246531,160 @@ class ADomUpdateComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.A
     }
     addCSSUpdate(update) {
         const currentValue = this.updateMap.get(update.element);
-        this.updateMap.set(update.element, Object.assign(Object.assign({}, currentValue), update.css));
+        const merged = (0,_CSSMerge__WEBPACK_IMPORTED_MODULE_2__.mergeCSS)((currentValue === null || currentValue === void 0 ? void 0 : currentValue.css) || {}, update.css);
+        this.updateMap.set(update.element, {
+            element: update.element,
+            css: merged
+        });
     }
     addAppend(callback) {
         this.appendCallbacks.push(callback);
     }
     flushCSS() {
-        // apply all css updates
-        for (let [element, value] of this.updateMap) {
+        // Convert to array for faster iteration
+        const updates = Array.from(this.updateMap);
+        const updateCount = updates.length;
+        for (let i = 0; i < updateCount; i++) {
+            const [element, value] = updates[i];
             if (element) {
-                Object.assign(element.style, value);
+                (0,_CSSApplication__WEBPACK_IMPORTED_MODULE_1__.applyCSS)(element, value.css);
             }
         }
         this.updateMap.clear();
     }
     flushAppend() {
-        // apply all append callbacks. Eg. adding child nodes
-        this.appendCallbacks.forEach((callback) => {
-            callback();
-        });
-        this.appendCallbacks = [];
+        const callbacks = this.appendCallbacks;
+        const count = callbacks.length;
+        for (let i = 0; i < count; i++) {
+            callbacks[i]();
+        }
+        this.appendCallbacks.length = 0;
     }
     flush() {
         this.flushCSS();
         this.flushAppend();
     }
 }
+
+
+/***/ }),
+
+/***/ "../salad/pageComponents/domupdate/CSSApplication.ts":
+/*!***********************************************************!*\
+  !*** ../salad/pageComponents/domupdate/CSSApplication.ts ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   applyCSS: () => (/* binding */ applyCSS)
+/* harmony export */ });
+// check if updates actually changed anything
+const mapElementToStyles = new WeakMap();
+// store the transform state for each element
+const mapElementToTransform = new WeakMap();
+const applyTransform = (element, transform) => {
+    // Get or initialize transform state
+    let state = mapElementToTransform.get(element);
+    if (!state) {
+        state = {
+            rotate: "0deg",
+            scaleX: 1,
+            scaleY: 1,
+            skew: "0deg",
+            translateZ: "0px"
+        };
+        mapElementToTransform.set(element, state);
+    }
+    // Only update properties that are explicitly set
+    for (const key in transform) {
+        //@ts-ignore
+        if (transform[key] !== undefined) {
+            //@ts-ignore
+            state[key] = transform[key];
+        }
+    }
+    // Generate transform string from complete state
+    return `rotate(${state.rotate || 0}) scale(${state.scaleX || 1}, ${state.scaleY || 1}) skew(${state.skew || 0}) translateZ(${state.translateZ || 0})`;
+};
+const applyCSS = (element, css) => {
+    const finalCSS = {};
+    // Handle regular CSS properties
+    for (const key in css) {
+        if (key !== 'transform') {
+            //@ts-ignore
+            finalCSS[key] = css[key];
+        }
+    }
+    // Handle transform independently
+    if (css.transform) {
+        finalCSS.transform = applyTransform(element, css.transform);
+    }
+    let styleCache = mapElementToStyles.get(element);
+    if (!styleCache) {
+        styleCache = {};
+        mapElementToStyles.set(element, styleCache);
+    }
+    for (const key in finalCSS) {
+        //@ts-ignore
+        const newValue = finalCSS[key];
+        if (styleCache[key] !== newValue) {
+            element.style[key] = newValue;
+            styleCache[key] = newValue;
+        }
+    }
+};
+
+
+/***/ }),
+
+/***/ "../salad/pageComponents/domupdate/CSSMerge.ts":
+/*!*****************************************************!*\
+  !*** ../salad/pageComponents/domupdate/CSSMerge.ts ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   mergeCSS: () => (/* binding */ mergeCSS)
+/* harmony export */ });
+// Optimized merge function
+const mergeCSS = (currentValue, newValue) => {
+    if (!currentValue) {
+        return newValue;
+    }
+    const result = {};
+    for (const key in currentValue) {
+        if (key === 'transform') {
+            continue;
+        }
+        result[key] = currentValue[key];
+    }
+    for (const key in newValue) {
+        if (key === 'transform') {
+            continue;
+        }
+        result[key] = newValue[key];
+    }
+    if (currentValue.transform || newValue.transform) {
+        result.transform = {};
+    }
+    if (currentValue.transform) {
+        const currentTransform = currentValue.transform;
+        for (const key in currentTransform) {
+            result.transform[key] = currentTransform[key];
+        }
+    }
+    if (newValue.transform) {
+        const newTransform = newValue.transform;
+        for (const key in newTransform) {
+            result.transform[key] = newTransform[key];
+        }
+    }
+    return result;
+};
 
 
 /***/ }),
@@ -245772,7 +246957,13 @@ class DroppableHandler extends _types__WEBPACK_IMPORTED_MODULE_0__.ADropHandler 
     onFail() {
         const dragComponent = this.droppedInstance.getComponent("draggable");
         if (dragComponent.getSnapsBackOnFail()) {
-            dragComponent.resetPosition();
+            const spawnComponent = this.droppedInstance.getComponent("spawn");
+            if (spawnComponent.getSpawnParent()) {
+                this.page.instances.destroyInstance(this.droppedInstance);
+            }
+            else {
+                dragComponent.resetPosition();
+            }
         }
     }
 }
@@ -246028,6 +247219,8 @@ class PlayPageDrawingComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_
         super.onDestroyed();
         this.deactivate();
         //stop listening and destroy
+        const layerComp = this.getPageComponent("layers");
+        layerComp.removeLayer("drawing");
         this.page.events.off(_types_external__WEBPACK_IMPORTED_MODULE_1__.Events.DRAWING_TOOL_CHANGE, this.onToolSettingsChange);
         if (this.drawing) {
             this.drawing.destroy();
@@ -246174,7 +247367,7 @@ class SimpleCanvasDrawing {
                     ctx.drawImage(image, 0, 0, this.drawingArea.canvas.width, this.drawingArea.canvas.height);
                 };
                 const src = yield this.assetManager.getPathForKey(key);
-                image.src = src;
+                this.assetManager.loadImg(image, src);
             }
         });
     }
@@ -247111,6 +248304,9 @@ class AEventsComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.APag
     getPointerPosition() {
         return this.pointerEventHandler.getCurrentPos();
     }
+    isKeyPressed(code) {
+        return false;
+    }
 }
 
 
@@ -247171,6 +248367,7 @@ __webpack_require__.r(__webpack_exports__);
 class KeyboardHandler extends _utils_TypedEventEmitter__WEBPACK_IMPORTED_MODULE_0__.TypedEventEmitter {
     constructor() {
         super();
+        this.pressedKeyCodes = new Set();
         this.onKeyDown = this.onKeyDown.bind(this);
         this.onKeyUp = this.onKeyUp.bind(this);
         document.addEventListener("keydown", this.onKeyDown);
@@ -247180,13 +248377,19 @@ class KeyboardHandler extends _utils_TypedEventEmitter__WEBPACK_IMPORTED_MODULE_
         document.removeEventListener("keydown", this.onKeyDown);
         document.removeEventListener("keyup", this.onKeyUp);
     }
+    isKeyPressed(code) {
+        return this.pressedKeyCodes.has(code);
+    }
     onKeyDown(e) {
         const { key, code } = e;
-        this.emitEvent("keyDown", { key, code });
+        const first = !this.pressedKeyCodes.has(code);
+        this.pressedKeyCodes.add(code);
+        this.emitEvent("keyDown", { key, code, first });
     }
     onKeyUp(e) {
         const { key, code } = e;
-        this.emitEvent("keyUp", { key, code });
+        this.pressedKeyCodes.delete(code);
+        this.emitEvent("keyUp", { key, code, first: true });
     }
     emitEvent(type, e) {
         this.emit(type, e);
@@ -247290,13 +248493,18 @@ class PlayEventsComponent extends _AEventsComponent__WEBPACK_IMPORTED_MODULE_1__
         this.page.events.emit(_types_external__WEBPACK_IMPORTED_MODULE_0__.Events.KEY_DOWN, {
             code: e.code,
             key: e.key,
+            first: e.first,
         });
     }
     onKeyUp(e) {
         this.page.events.emit(_types_external__WEBPACK_IMPORTED_MODULE_0__.Events.KEY_UP, {
             code: e.code,
             key: e.key,
+            first: e.first,
         });
+    }
+    isKeyPressed(code) {
+        return this.keyboardHandler.isKeyPressed(code);
     }
     /**
      * lifecycle
@@ -247687,7 +248895,7 @@ class HitTestManager {
             const renderComp = instance.getComponent("render");
             if (renderComp.getRespondsToMouseEvents()) {
                 const posComp = instance.getComponent("position");
-                const pos = posComp.getPosition();
+                const pos = posComp.getViewPosition();
                 // perf optimisation - get the bounding circle of the instance - this is the smallest circle that definitely contains the instance regardless of rotation
                 const transComp = instance.getComponent("transform");
                 const circle = transComp.getMaximalBoundingCircle(pos);
@@ -247908,6 +249116,125 @@ class PlayGridComponent extends _AGridComponent__WEBPACK_IMPORTED_MODULE_0__["de
 
 /***/ }),
 
+/***/ "../salad/pageComponents/highlight/EditPageHighlightComponent.ts":
+/*!***********************************************************************!*\
+  !*** ../salad/pageComponents/highlight/EditPageHighlightComponent.ts ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ EditPageHighlightComponent)
+/* harmony export */ });
+/* harmony import */ var _APageComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../APageComponent */ "../salad/pageComponents/APageComponent.ts");
+
+class EditPageHighlightComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.APageComponent {
+    constructor(data, page) {
+        super(data, page);
+        this.name = "highlight";
+    }
+    onCreated() {
+        super.onCreated();
+    }
+    setHighlight(type) {
+        // nothing
+    }
+}
+
+
+/***/ }),
+
+/***/ "../salad/pageComponents/highlight/PageHighlighters.ts":
+/*!*************************************************************!*\
+  !*** ../salad/pageComponents/highlight/PageHighlighters.ts ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   makeHighlighter: () => (/* binding */ makeHighlighter)
+/* harmony export */ });
+/* harmony import */ var _root_salad_components_highlights_ConfettiHighlighters__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @root/salad/components/highlights/ConfettiHighlighters */ "../salad/components/highlights/ConfettiHighlighters.ts");
+
+const highlighterMap = Object.assign({}, _root_salad_components_highlights_ConfettiHighlighters__WEBPACK_IMPORTED_MODULE_0__.map);
+const makeHighlighter = (type, canvas) => {
+    const Klass = highlighterMap[type];
+    if (Klass) {
+        return new Klass({
+            canvas,
+            element: canvas
+        });
+    }
+    return undefined;
+};
+
+
+/***/ }),
+
+/***/ "../salad/pageComponents/highlight/PlayPageHighlightComponent.ts":
+/*!***********************************************************************!*\
+  !*** ../salad/pageComponents/highlight/PlayPageHighlightComponent.ts ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ PlayPageHighlightComponent)
+/* harmony export */ });
+/* harmony import */ var _APageComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../APageComponent */ "../salad/pageComponents/APageComponent.ts");
+/* harmony import */ var _utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/domElementFactory */ "../salad/utils/domElementFactory.ts");
+/* harmony import */ var _PageHighlighters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PageHighlighters */ "../salad/pageComponents/highlight/PageHighlighters.ts");
+
+
+
+class PlayPageHighlightComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.APageComponent {
+    constructor(data, page) {
+        super(data, page);
+        this.name = "highlight";
+    }
+    onCreated() {
+        super.onCreated();
+        this._element = (0,_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__.highlightCanvas)();
+        const layerComp = this.getPageComponent("layers");
+        layerComp.initLayer("highlight", this._element, {
+            type: "unscaled",
+        });
+        if (this.data.type !== "none") {
+            this._update();
+        }
+    }
+    onDestroyed() {
+        this._destroyHighlight();
+        const layerComp = this.getPageComponent("layers");
+        layerComp.removeLayer("highlight");
+        super.onDestroyed();
+    }
+    _update() {
+        this._destroyHighlight();
+        if (this.data.type !== "none") {
+            this._highlight = (0,_PageHighlighters__WEBPACK_IMPORTED_MODULE_2__.makeHighlighter)(this.data.type, this._element);
+            //highlight and then set the highlight type to none so we dont save anything
+            this.data.type = "none";
+        }
+    }
+    setHighlight(type) {
+        this.data.type = type;
+        this._update();
+    }
+    _destroyHighlight() {
+        if (this._highlight) {
+            this._highlight.destroy();
+            this._highlight = null;
+        }
+    }
+}
+
+
+/***/ }),
+
 /***/ "../salad/pageComponents/identity/PageIdentityComponent.ts":
 /*!*****************************************************************!*\
   !*** ../salad/pageComponents/identity/PageIdentityComponent.ts ***!
@@ -247957,6 +249284,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_domElementFactory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/domElementFactory */ "../salad/utils/domElementFactory.ts");
 /* harmony import */ var _utils_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/utils */ "../salad/utils/utils.ts");
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../.. */ "../salad/index.ts");
+/* harmony import */ var _NameNonDupe__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./NameNonDupe */ "../salad/pageComponents/instances/NameNonDupe.ts");
+
 
 
 
@@ -247972,25 +249301,9 @@ class AInstancesComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.A
          */
         this._instances = [];
         this.name = "instances";
-        /**
-         * eg.
-         * shape_5 -> shape_6 unless there is already a shape_6, in which case _7 etc
-         * shape -> shape_1
-         */
-        this.getNonDuplicateName = (name) => {
-            let baseName = name;
-            let suffix = 1;
-            const matches = name.match(/(.+)_([0-9]+)/);
-            if (matches) {
-                baseName = matches[1];
-                suffix = parseInt(matches[2]);
-            }
-            while (!!this.getInstanceByName(`${baseName}_${suffix}`)) {
-                suffix++;
-            }
-            return `${baseName}_${suffix}`;
-        };
+        this._container = (0,_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_3__.instancesContainer)();
         this._element = (0,_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_3__.instances)();
+        this._elementStatic = (0,_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_3__.instancesStatic)();
         this._builder = (0,_utils_InstanceBuilder__WEBPACK_IMPORTED_MODULE_2__.getInstanceBuilder)(page, page.getComponentFactory(), page.getDefaultSchema());
         this.destroyInstance = this.destroyInstance.bind(this);
         this.addInstance = this.addInstance.bind(this);
@@ -248005,9 +249318,22 @@ class AInstancesComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.A
     onCreated() {
         super.onCreated();
         const layerComp = this.getPageComponent("layers");
+        layerComp.initLayer("instances-container", this._container, {
+            type: "container",
+        });
         layerComp.initLayer("instances", this._element, {
             type: "full",
-        });
+        }, "instances-container");
+        layerComp.initLayer("instances-hud", this._elementStatic, {
+            type: "hud",
+        }, "instances-container");
+    }
+    onDestroyed() {
+        const layerComp = this.getPageComponent("layers");
+        layerComp.removeLayer("instances-container");
+        layerComp.removeLayer("instances");
+        layerComp.removeLayer("instances-hud");
+        super.onDestroyed();
     }
     /**
      * make an html element
@@ -248031,6 +249357,7 @@ class AInstancesComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.A
                 target: instance,
             });
         });
+        return instances;
     }
     /**
      * Get all data for all instances
@@ -248076,6 +249403,7 @@ class AInstancesComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.A
         if (instance) {
             this.destroyInstance(instance);
         }
+        return !!instance;
     }
     /**
      * remove all instances
@@ -248092,7 +249420,9 @@ class AInstancesComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.A
      * @returns
      */
     getInstanceByName(name) {
-        return this._instances.find((instance) => instance.getName() === name);
+        return this._instances.find((instance) => {
+            return instance.getName() === name;
+        });
     }
     /**
      * Get instance by id
@@ -248101,6 +249431,18 @@ class AInstancesComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.A
     getInstanceById(id) {
         return this._instances.find((instance) => instance.getId() === id);
     }
+    /**
+     * eg.
+     * shape_5 -> shape_6 unless there is already a shape_6, in which case _7 etc
+     * shape -> shape_1
+     */
+    getNonDuplicateName(name) {
+        const names = this._instances.map((instance) => {
+            return instance.getName();
+        });
+        return new _NameNonDupe__WEBPACK_IMPORTED_MODULE_6__.NameNonDupe(names).getNonDuplicateName(name);
+    }
+    ;
     /**
      * Clone an instance and return it
      * @param instance
@@ -248144,6 +249486,7 @@ class AInstancesComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.A
      * @returns
      */
     addInstanceUsingSchema(schema) {
+        console.log("addInstanceUsingSchema", schema);
         const instance = this._builder.buildInstanceUsingSchema(schema);
         // add it to the world
         this.addInstance(instance);
@@ -248212,6 +249555,7 @@ class AInstancesComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.A
     /**
      * Get all layers info
      * eg. name, depth, instance - shown in the UI for moving elements up and down
+     * Sorted so that the first one is the topmost (highest zIndex)
      * @returns layer info
      */
     getLayers() {
@@ -248232,35 +249576,54 @@ class AInstancesComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.A
         return layers;
     }
     bringToFront(selectedInstance) {
+        const renderComp = selectedInstance.getComponent("render");
         const instances = this.getAllInstances();
         const zIndices = instances.map((instance) => {
             const renderComponent = instance.getComponent("render");
             return renderComponent.getZIndex();
         });
         const maxZIndex = Math.max(...zIndices);
-        selectedInstance.getComponent("render").setZIndex(maxZIndex + 1);
+        const currentZIndex = renderComp.getZIndex();
+        const numWithMaxZIndex = zIndices.filter((zIndex) => {
+            return zIndex === maxZIndex;
+        }).length;
+        if (currentZIndex >= maxZIndex && numWithMaxZIndex === 1) {
+            // it is already the one at the top
+            return;
+        }
+        else {
+            renderComp.setZIndex(maxZIndex + 1);
+        }
     }
     sendToBack(selectedInstance) {
-        const MIN_ALLOWED_Z_INDEX = 1;
+        const MIN_ALLOWED_Z_INDEX = 0;
+        const currentZIndex = selectedInstance.getComponent("render").getZIndex();
         const instances = this.page.instances.getAllInstances();
         const zIndices = instances.map((instance) => {
             const renderComponent = instance.getComponent("render");
             return renderComponent.getZIndex();
         });
         const minZIndex = Math.min(...zIndices);
-        if (minZIndex >= MIN_ALLOWED_Z_INDEX + 1) {
+        const numWithMinZIndex = zIndices.filter((zIndex) => {
+            return zIndex === minZIndex;
+        }).length;
+        if (currentZIndex === minZIndex && numWithMinZIndex === 1) {
+            // it is already the one at the bottom
+            return;
+        }
+        else if (minZIndex - 1 >= MIN_ALLOWED_Z_INDEX) {
             // ok to set it as "min - 1"
             selectedInstance.getComponent("render").setZIndex(minZIndex - 1);
         }
         else {
-            // we need to re-arrange them all, I dont want any going below 1
+            // uh oh, we need to re-arrange them all, I dont want any going below 1
             const instancesSortedByZIndex = instances.sort((instanceA, instanceB) => {
                 const zA = instanceA.getComponent("render").getZIndex();
                 const zB = instanceB.getComponent("render").getZIndex();
                 return zA > zB ? 1 : zA === zB ? 0 : -1;
             });
             let newIndex = MIN_ALLOWED_Z_INDEX + 1;
-            instancesSortedByZIndex.forEach((instance, index) => {
+            instancesSortedByZIndex.forEach((instance) => {
                 let indexToUse;
                 if (instance === selectedInstance) {
                     indexToUse = MIN_ALLOWED_Z_INDEX;
@@ -248294,6 +249657,43 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _AInstancesComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AInstancesComponent */ "../salad/pageComponents/instances/AInstancesComponent.ts");
 
 class EditInstancesComponent extends _AInstancesComponent__WEBPACK_IMPORTED_MODULE_0__["default"] {
+}
+
+
+/***/ }),
+
+/***/ "../salad/pageComponents/instances/NameNonDupe.ts":
+/*!********************************************************!*\
+  !*** ../salad/pageComponents/instances/NameNonDupe.ts ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   NameNonDupe: () => (/* binding */ NameNonDupe)
+/* harmony export */ });
+class NameNonDupe {
+    constructor(names) {
+        this.names = names;
+    }
+    getNonDuplicateName(name) {
+        if (!this.names.includes(name)) {
+            return name;
+        }
+        let baseName = name;
+        let suffix = 1;
+        const matchesNumberAtTheEnd = name.match(/^(.+)_([0-9]+)$/);
+        if (matchesNumberAtTheEnd) {
+            baseName = matchesNumberAtTheEnd[1];
+            suffix = parseInt(matchesNumberAtTheEnd[2]); // the number
+        }
+        while (this.names.includes(`${baseName}_${suffix}`)) {
+            suffix++;
+        }
+        return `${baseName}_${suffix}`;
+    }
+    ;
 }
 
 
@@ -248423,30 +249823,19 @@ class EditPageKeyboardComponent extends _APageKeyboardComponent__WEBPACK_IMPORTE
 
 /***/ }),
 
-/***/ "../salad/pageComponents/keyboard/KeyboardButtons.ts":
-/*!***********************************************************!*\
-  !*** ../salad/pageComponents/keyboard/KeyboardButtons.ts ***!
-  \***********************************************************/
+/***/ "../salad/pageComponents/keyboard/KeyCodes.ts":
+/*!****************************************************!*\
+  !*** ../salad/pageComponents/keyboard/KeyCodes.ts ***!
+  \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   getButtons: () => (/* binding */ getButtons)
+/* harmony export */   KeyCodes: () => (/* binding */ KeyCodes)
 /* harmony export */ });
-/* harmony import */ var _types_external__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../types/external */ "../salad/types/external.ts");
-
-class KeyboardButtons {
-    constructor(el, page, keys) {
-        this.el = el;
-        this.page = page;
-        this.keys = keys;
-        this.buttons = [];
-        this.onDown = this.onDown.bind(this);
-        this.onUp = this.onUp.bind(this);
-        this.render();
-    }
-    getCode(k) {
+class KeyCodes {
+    static getCode(k) {
         // Handle single letters (both uppercase and lowercase)
         if (k.length === 1 && ((k >= 'a' && k <= 'z') || (k >= 'A' && k <= 'Z'))) {
             // The code is always the same for both 'a' and 'A' (KeyA)
@@ -248467,7 +249856,7 @@ class KeyboardButtons {
             default: return k;
         }
     }
-    getKey(k) {
+    static getKey(k) {
         // Get the key value (which might differ from code)
         switch (k) {
             case "Space": return " ";
@@ -248478,7 +249867,7 @@ class KeyboardButtons {
             default: return k; // Return the key as is (preserves case for letters)
         }
     }
-    getDisplayText(k) {
+    static getDisplayText(k) {
         // For special keys, we might want to show a symbol instead of the full name
         const map = {
             "ArrowUp": "↑",
@@ -248490,10 +249879,42 @@ class KeyboardButtons {
         };
         return (k in map ? map[k] : k);
     }
+}
+
+
+/***/ }),
+
+/***/ "../salad/pageComponents/keyboard/KeyboardButtons.ts":
+/*!***********************************************************!*\
+  !*** ../salad/pageComponents/keyboard/KeyboardButtons.ts ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getButtons: () => (/* binding */ getButtons)
+/* harmony export */ });
+/* harmony import */ var _types_external__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../types/external */ "../salad/types/external.ts");
+/* harmony import */ var _KeyCodes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./KeyCodes */ "../salad/pageComponents/keyboard/KeyCodes.ts");
+
+
+class KeyboardButtons {
+    constructor(el, position, page, keys) {
+        this.el = el;
+        this.position = position;
+        this.page = page;
+        this.keys = keys;
+        this.buttons = [];
+        this.onDown = this.onDown.bind(this);
+        this.onUp = this.onUp.bind(this);
+        this.render();
+    }
     getEventData(key) {
         return {
-            key: this.getKey(key),
-            code: this.getCode(key)
+            key: _KeyCodes__WEBPACK_IMPORTED_MODULE_1__.KeyCodes.getKey(key),
+            code: _KeyCodes__WEBPACK_IMPORTED_MODULE_1__.KeyCodes.getCode(key),
+            first: true
         };
     }
     onDown(e) {
@@ -248509,15 +249930,19 @@ class KeyboardButtons {
         this.page.events.emit(_types_external__WEBPACK_IMPORTED_MODULE_0__.Events.KEY_UP, this.getEventData(key));
     }
     render() {
+        this.container = document.createElement("div");
+        this.container.classList.add("keyboard-buttons");
+        this.container.classList.add(`keyboard-buttons-${this.position}`);
+        this.el.append(this.container);
         this.keys.forEach(k => {
             const button = document.createElement("button");
-            button.innerText = this.getDisplayText(k);
+            button.innerText = _KeyCodes__WEBPACK_IMPORTED_MODULE_1__.KeyCodes.getDisplayText(k);
             this.el.append(button);
             this.buttons.push(button);
             button.id = "button-" + k;
             button.addEventListener("pointerdown", this.onDown);
             button.addEventListener("pointerup", this.onUp);
-            this.el.append(button);
+            this.container.append(button);
         });
     }
     destroy() {
@@ -248528,8 +249953,8 @@ class KeyboardButtons {
         this.buttons = [];
     }
 }
-const getButtons = (el, page, keys) => {
-    return new KeyboardButtons(el, page, keys);
+const getButtons = (el, position, page, keys) => {
+    return new KeyboardButtons(el, position, page, keys);
 };
 
 
@@ -248612,7 +250037,7 @@ class PlayPageKeyboardComponent extends _APageKeyboardComponent__WEBPACK_IMPORTE
             const keys = this.data.keys
                 .split(",")
                 .map((key) => key.trim());
-            this._buttons = (0,_KeyboardButtons__WEBPACK_IMPORTED_MODULE_2__.getButtons)(this.element, this.page, keys);
+            this._buttons = (0,_KeyboardButtons__WEBPACK_IMPORTED_MODULE_2__.getButtons)(this.element, this.data.position, this.page, keys);
         }
     }
     onDestroyed() {
@@ -248620,6 +250045,9 @@ class PlayPageKeyboardComponent extends _APageKeyboardComponent__WEBPACK_IMPORTE
             this._buttons.destroy();
             this._buttons = undefined;
         }
+        const layerComp = this.getPageComponent("layers");
+        layerComp.removeLayer("keyboard");
+        super.onDestroyed();
     }
 }
 
@@ -248645,11 +250073,11 @@ class PageLayersComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.A
     constructor(data, page) {
         super(data, page);
         // array of layers
-        this._pageLayers = [];
+        this._pageLayers = new Map();
         this.name = "layers";
     }
     getLayerByName(name) {
-        return this._pageLayers.find((layer) => layer.name === name);
+        return this._pageLayers.get(name);
     }
     /**
      * loop through all layers and update their position and size
@@ -248657,8 +250085,7 @@ class PageLayersComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.A
      * @param offset
      */
     showView(view, globalScale) {
-        let layers = Object.values(this._pageLayers);
-        layers.forEach((layer) => {
+        this._pageLayers.forEach((layer) => {
             layer.showView(view, globalScale);
         });
     }
@@ -248669,20 +250096,32 @@ class PageLayersComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.A
      * @param props
      * @returns
      */
-    initLayer(name, element, props) {
-        const container = this.page.getPageContainer();
-        if (this._pageLayers.find((layer) => layer.name === name)) {
+    initLayer(name, element, props, parentLayerName) {
+        if (this._pageLayers.get(name)) {
             throw new Error("layer exists");
+        }
+        const getContainer = () => {
+            if (parentLayerName) {
+                const layer = this._pageLayers.get(parentLayerName);
+                return layer === null || layer === void 0 ? void 0 : layer.getElement();
+            }
+            else {
+                return this.page.getPageContainer();
+            }
+        };
+        const container = getContainer();
+        if (!container) {
+            throw new Error("container not found");
         }
         else {
             const layer = (0,_pagelayers_PageLayers__WEBPACK_IMPORTED_MODULE_1__.getPageLayer)(name, element, this.page, props);
-            this._pageLayers.push(layer);
+            this._pageLayers.set(name, layer);
             container.appendChild(element);
         }
     }
     addChildToLayer(child, layerName) {
         const dom = this.page.getComponent("domupdate");
-        const layer = this._pageLayers.find((layer) => layer.name === layerName);
+        const layer = this._pageLayers.get(layerName);
         if (layer) {
             dom.addAppend(() => {
                 layer.add(child);
@@ -248692,17 +250131,27 @@ class PageLayersComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.A
             throw new Error("layer not found");
         }
     }
+    removeLayer(name) {
+        const layer = this._pageLayers.get(name);
+        if (layer) {
+            const el = layer.getElement();
+            if (el.parentElement) {
+                el.parentElement.removeChild(el);
+            }
+            layer.destroy();
+            this._pageLayers.delete(name);
+        }
+    }
     /**
      * empty all layers and remove them all
      */
     onDestroyed() {
         super.onDestroyed();
-        const container = this.page.getPageContainer();
-        this._pageLayers.forEach((layer) => {
-            container.removeChild(layer.getElement());
-            layer.destroy();
+        const names = Array.from(this._pageLayers.keys());
+        names.forEach((name) => {
+            this.removeLayer(name);
         });
-        this._pageLayers = [];
+        this._pageLayers = new Map();
     }
 }
 
@@ -248731,8 +250180,8 @@ class APageLayer {
     }
     setLayerSize(size) {
         Object.assign(this.element.style, {
-            width: `${size.width}px`,
-            height: `${size.height}px`,
+            width: `${Math.round(size.width)}px`,
+            height: `${Math.round(size.height)}px`,
         });
     }
     /**
@@ -248750,6 +250199,33 @@ class APageLayer {
             this.element.removeChild(this.element.lastChild);
         }
         this.page = undefined;
+    }
+}
+
+
+/***/ }),
+
+/***/ "../salad/pageComponents/layers/pagelayers/ContainerPageLayer.ts":
+/*!***********************************************************************!*\
+  !*** ../salad/pageComponents/layers/pagelayers/ContainerPageLayer.ts ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ContainerPageLayer: () => (/* binding */ ContainerPageLayer)
+/* harmony export */ });
+/* harmony import */ var _APageLayer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./APageLayer */ "../salad/pageComponents/layers/pagelayers/APageLayer.ts");
+/**
+ * page layers component
+ */
+
+class ContainerPageLayer extends _APageLayer__WEBPACK_IMPORTED_MODULE_0__.APageLayer {
+    showView(view, globalScale) {
+        //const bgComp = this.page!.getComponent("background");
+        //const bgSize = bgComp.getSize();
+        //this.setLayerSize(bgSize);
     }
 }
 
@@ -248785,6 +250261,35 @@ class FullPageLayer extends _APageLayer__WEBPACK_IMPORTED_MODULE_0__.APageLayer 
 
 /***/ }),
 
+/***/ "../salad/pageComponents/layers/pagelayers/HUDPageLayer.ts":
+/*!*****************************************************************!*\
+  !*** ../salad/pageComponents/layers/pagelayers/HUDPageLayer.ts ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   HUDPageLayer: () => (/* binding */ HUDPageLayer)
+/* harmony export */ });
+/* harmony import */ var _APageLayer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./APageLayer */ "../salad/pageComponents/layers/pagelayers/APageLayer.ts");
+/**
+ * page layers component
+ */
+
+class HUDPageLayer extends _APageLayer__WEBPACK_IMPORTED_MODULE_0__.APageLayer {
+    showView(view, globalScale) {
+        const bgComp = this.page.getComponent("background");
+        const bgSize = bgComp.getSize();
+        const transform = `scale(${globalScale})`;
+        this.setLayerSize(bgSize);
+        this.element.style.transform = transform;
+    }
+}
+
+
+/***/ }),
+
 /***/ "../salad/pageComponents/layers/pagelayers/PageLayers.ts":
 /*!***************************************************************!*\
   !*** ../salad/pageComponents/layers/pagelayers/PageLayers.ts ***!
@@ -248798,18 +250303,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _FullPageLayer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FullPageLayer */ "../salad/pageComponents/layers/pagelayers/FullPageLayer.ts");
 /* harmony import */ var _UIPageLayer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UIPageLayer */ "../salad/pageComponents/layers/pagelayers/UIPageLayer.ts");
+/* harmony import */ var _UnscaledPageLayer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./UnscaledPageLayer */ "../salad/pageComponents/layers/pagelayers/UnscaledPageLayer.ts");
+/* harmony import */ var _HUDPageLayer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./HUDPageLayer */ "../salad/pageComponents/layers/pagelayers/HUDPageLayer.ts");
+/* harmony import */ var _ContainerPageLayer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ContainerPageLayer */ "../salad/pageComponents/layers/pagelayers/ContainerPageLayer.ts");
 /**
  * Different kinds of layers.
  * Some fill the whole screen, some are UI layers and match the camera
  */
 
 
+
+
+
+const map = {
+    ui: _UIPageLayer__WEBPACK_IMPORTED_MODULE_1__.UIPageLayer,
+    full: _FullPageLayer__WEBPACK_IMPORTED_MODULE_0__.FullPageLayer,
+    unscaled: _UnscaledPageLayer__WEBPACK_IMPORTED_MODULE_2__.UnscaledPageLayer,
+    hud: _HUDPageLayer__WEBPACK_IMPORTED_MODULE_3__.HUDPageLayer,
+    container: _ContainerPageLayer__WEBPACK_IMPORTED_MODULE_4__.ContainerPageLayer // contains other ones
+};
 const getPageLayer = (name, element, page, props) => {
-    if (props.type === "ui") {
-        return new _UIPageLayer__WEBPACK_IMPORTED_MODULE_1__.UIPageLayer(name, element, page);
+    const Klass = map[props.type];
+    if (Klass) {
+        return new Klass(name, element, page);
     }
     else {
-        return new _FullPageLayer__WEBPACK_IMPORTED_MODULE_0__.FullPageLayer(name, element, page);
+        throw new Error(`Unknown layer type: ${props.type}`);
     }
 };
 
@@ -248835,6 +250354,40 @@ class UIPageLayer extends _APageLayer__WEBPACK_IMPORTED_MODULE_0__.APageLayer {
             width: view.width * globalScale,
             height: view.height * globalScale,
         });
+    }
+}
+
+
+/***/ }),
+
+/***/ "../salad/pageComponents/layers/pagelayers/UnscaledPageLayer.ts":
+/*!**********************************************************************!*\
+  !*** ../salad/pageComponents/layers/pagelayers/UnscaledPageLayer.ts ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   UnscaledPageLayer: () => (/* binding */ UnscaledPageLayer)
+/* harmony export */ });
+/* harmony import */ var _APageLayer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./APageLayer */ "../salad/pageComponents/layers/pagelayers/APageLayer.ts");
+/**
+ * page layers component
+ */
+
+class UnscaledPageLayer extends _APageLayer__WEBPACK_IMPORTED_MODULE_0__.APageLayer {
+    showView(view, globalScale) {
+        const scaledSize = {
+            width: Math.round(view.width * globalScale),
+            height: Math.round(view.height * globalScale)
+        };
+        this.setLayerSize(scaledSize);
+        if (this.element.tagName.toLowerCase() === "canvas") {
+            const el = this.element;
+            el.width = scaledSize.width;
+            el.height = scaledSize.height;
+        }
     }
 }
 
@@ -249677,6 +251230,9 @@ class ATickerComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.APag
     getIsRunning() {
         return false;
     }
+    setTimeNow(time) {
+        // not needed in edit mode
+    }
 }
 
 
@@ -249838,10 +251394,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _types_external__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../types/external */ "../salad/types/external.ts");
 /* harmony import */ var _Log__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Log */ "../salad/pageComponents/ticker/Log.ts");
 /* harmony import */ var _ATickerComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ATickerComponent */ "../salad/pageComponents/ticker/ATickerComponent.ts");
+/* harmony import */ var _TimeUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TimeUtils */ "../salad/pageComponents/ticker/TimeUtils.ts");
 /**
  * ticker component
  * handles frame updates
  */
+
 
 
 
@@ -249851,12 +251409,15 @@ class PlayTickerComponent extends _ATickerComponent__WEBPACK_IMPORTED_MODULE_2__
         // when did the page start?
         this._startTime = undefined;
         this._stopTime = 0;
-        // return value of requestAnimationFrame
-        this._animationFrame = undefined;
         // is it running (could be paused)
         this._running = false;
+        // the time provider - get the time now. Mockable in tests
+        this._timeUtils = (0,_TimeUtils__WEBPACK_IMPORTED_MODULE_3__.getTimeUtils)();
         this.tick = this.tick.bind(this);
         this.logger = new _Log__WEBPACK_IMPORTED_MODULE_1__.Logger(this);
+    }
+    setTimeNow(time) {
+        this._timeUtils.setTimeNow(time);
     }
     /**
      * Stop ticking
@@ -249865,8 +251426,7 @@ class PlayTickerComponent extends _ATickerComponent__WEBPACK_IMPORTED_MODULE_2__
         this._running = false;
         this._stopTime = this.getActivityTime();
         this._startTime = undefined;
-        window.cancelAnimationFrame(this._animationFrame);
-        this._animationFrame = undefined;
+        this._timeUtils.stop();
     }
     /**
      * Start ticking
@@ -249874,10 +251434,8 @@ class PlayTickerComponent extends _ATickerComponent__WEBPACK_IMPORTED_MODULE_2__
     start() {
         if (!this._running) {
             this._running = true;
-            this._startTime = Date.now();
-            if (!window.isJestEnvironment) {
-                this._animationFrame = window.requestAnimationFrame(this.tick);
-            }
+            this._startTime = this._timeUtils.getTimeNow();
+            this._timeUtils.raf(this.tick);
         }
     }
     /**
@@ -249885,7 +251443,8 @@ class PlayTickerComponent extends _ATickerComponent__WEBPACK_IMPORTED_MODULE_2__
      * @returns
      */
     getActivityTime() {
-        return Date.now() - this._startTime + this._stopTime;
+        const now = this._timeUtils.getTimeNow();
+        return now - this._startTime + this._stopTime;
     }
     onCreated() {
         this.logger.createUI();
@@ -249910,10 +251469,7 @@ class PlayTickerComponent extends _ATickerComponent__WEBPACK_IMPORTED_MODULE_2__
             this.page.events.emit(_types_external__WEBPACK_IMPORTED_MODULE_0__.Events.ENTER_FRAME, {
                 time
             });
-            if (!window.isJestEnvironment) {
-                //in jest you have to call 'tick' yourself
-                this._animationFrame = window.requestAnimationFrame(this.tick);
-            }
+            this._timeUtils.raf(this.tick);
             this.logger.logTime(time);
         }
         else {
@@ -249924,6 +251480,45 @@ class PlayTickerComponent extends _ATickerComponent__WEBPACK_IMPORTED_MODULE_2__
         return this._running;
     }
 }
+
+
+/***/ }),
+
+/***/ "../salad/pageComponents/ticker/TimeUtils.ts":
+/*!***************************************************!*\
+  !*** ../salad/pageComponents/ticker/TimeUtils.ts ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getTimeUtils: () => (/* binding */ getTimeUtils)
+/* harmony export */ });
+class TimeUtils {
+    constructor() {
+        // return value of requestAnimationFrame
+        this._animationFrame = undefined;
+    }
+    getTimeNow() {
+        return Date.now();
+    }
+    raf(fn) {
+        this._animationFrame = window.requestAnimationFrame(fn);
+    }
+    stop() {
+        if (this._animationFrame) {
+            window.cancelAnimationFrame(this._animationFrame);
+            this._animationFrame = undefined;
+        }
+    }
+    setTimeNow(time) {
+        throw new Error("Only use in tests");
+    }
+}
+const getTimeUtils = () => {
+    return new TimeUtils();
+};
 
 
 /***/ }),
@@ -250387,6 +251982,8 @@ class PlayUIComponent extends _AUIComponent__WEBPACK_IMPORTED_MODULE_0__["defaul
      * stop listening
      */
     onDestroyed() {
+        const layerComp = this.getPageComponent("layers");
+        layerComp.removeLayer("ui");
         super.onDestroyed();
         if (this._scrollHandler) {
             this._scrollHandler.destroy();
@@ -250858,6 +252455,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   cameraStartPositions: () => (/* binding */ cameraStartPositions),
 /* harmony export */   keyboardPositions: () => (/* binding */ keyboardPositions),
 /* harmony export */   keyboardShowTypes: () => (/* binding */ keyboardShowTypes),
+/* harmony export */   pageHighlightTypes: () => (/* binding */ pageHighlightTypes),
 /* harmony export */   transitionTypes: () => (/* binding */ transitionTypes),
 /* harmony export */   uiPageNextTypes: () => (/* binding */ uiPageNextTypes),
 /* harmony export */   uiPagePrevTypes: () => (/* binding */ uiPagePrevTypes),
@@ -250874,6 +252472,7 @@ const allPageComponentNames = [
     "screenbackground",
     "modalslist",
     "dragndrop",
+    "highlight",
     "domupdate",
     "data",
     "ticker",
@@ -250918,6 +252517,24 @@ const keyboardPositions = [
     "top",
     "bottom",
 ];
+const pageHighlightTypes = [
+    "none",
+    "stars",
+    "unicorns",
+    "heart",
+    "dino",
+    "robot",
+    "bee",
+    "wizard",
+    "castle",
+    "crown",
+    "butterfly",
+    "dolphin",
+    "lightning",
+    "crystal",
+    "tree",
+    "present",
+];
 
 
 /***/ }),
@@ -250932,6 +252549,7 @@ const keyboardPositions = [
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   allComponentNames: () => (/* binding */ allComponentNames),
+/* harmony export */   buttonRoles: () => (/* binding */ buttonRoles),
 /* harmony export */   buttonTypes: () => (/* binding */ buttonTypes),
 /* harmony export */   childPositionKeys: () => (/* binding */ childPositionKeys),
 /* harmony export */   collisionShapeTypes: () => (/* binding */ collisionShapeTypes),
@@ -250967,6 +252585,7 @@ const allComponentNames = [
     "navigation",
     "velocity",
     "angularvelocity",
+    "clock",
     "movement",
     "group",
     "spawn",
@@ -250995,7 +252614,27 @@ const allComponentNames = [
     "script",
     "gamecontrol",
 ];
-const highlightTypes = ["none", "glow", "stars", "shake", "pulse"];
+const highlightTypes = [
+    "none",
+    "glow",
+    "stars",
+    "shake",
+    "pulse",
+    "unicorns",
+    "heart",
+    "dino",
+    "robot",
+    "bee",
+    "wizard",
+    "castle",
+    "crown",
+    "butterfly",
+    "dolphin",
+    "lightning",
+    "crystal",
+    "tree",
+    "present",
+];
 const hoverTypes = [
     "none",
     "lighten",
@@ -251059,6 +252698,10 @@ const buttonTypes = [
     "blue",
     "transparent_white",
     "transparent_black",
+];
+const buttonRoles = [
+    "default",
+    "sound"
 ];
 const dialogTypes = ["none", "info", "welldone"];
 const matchMovementTypes = [
@@ -251732,18 +253375,17 @@ class InstanceBuilder {
         this.defaultSchema = defaultSchema;
     }
     build(schema) {
-        if (!schema.identity || !schema.identity.displayName) {
+        var _a;
+        if (!((_a = schema.identity) === null || _a === void 0 ? void 0 : _a.displayName)) {
             throw new Error("Please ensure you specify identity.displayName");
         }
         const name = schema.identity.displayName;
+        const displayName = this.page.getComponent("instances").getNonDuplicateName(name);
+        schema.identity.displayName = displayName;
         const id = _index__WEBPACK_IMPORTED_MODULE_2__["default"].Utils.getUUID();
         const instance = (0,_world_Instance__WEBPACK_IMPORTED_MODULE_0__.getInstance)(id);
         const merged = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.mergeDefaultsIntoSchema)(this.defaultSchema, schema);
         const components = this.factory.buildAllComponents(merged, instance, this.page);
-        const displayName = this.page.getComponent("instances").getNonDuplicateName(name);
-        components.identity.update({
-            displayName,
-        });
         instance.setComponents(components);
         return instance;
     }
@@ -252174,6 +253816,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   camera: () => (/* binding */ camera),
 /* harmony export */   cameraElement: () => (/* binding */ cameraElement),
 /* harmony export */   canvas: () => (/* binding */ canvas),
+/* harmony export */   clock: () => (/* binding */ clock),
 /* harmony export */   cover: () => (/* binding */ cover),
 /* harmony export */   debug: () => (/* binding */ debug),
 /* harmony export */   draggableIndicator: () => (/* binding */ draggableIndicator),
@@ -252183,10 +253826,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   droppable: () => (/* binding */ droppable),
 /* harmony export */   droppableCounter: () => (/* binding */ droppableCounter),
 /* harmony export */   grid: () => (/* binding */ grid),
+/* harmony export */   highlightCanvas: () => (/* binding */ highlightCanvas),
 /* harmony export */   identity: () => (/* binding */ identity),
 /* harmony export */   image: () => (/* binding */ image),
 /* harmony export */   instance: () => (/* binding */ instance),
 /* harmony export */   instances: () => (/* binding */ instances),
+/* harmony export */   instancesContainer: () => (/* binding */ instancesContainer),
+/* harmony export */   instancesStatic: () => (/* binding */ instancesStatic),
 /* harmony export */   keyboard: () => (/* binding */ keyboard),
 /* harmony export */   lottieContainer: () => (/* binding */ lottieContainer),
 /* harmony export */   material: () => (/* binding */ material),
@@ -252214,9 +253860,19 @@ const image = (parent) => {
     el.classList.add("component", "component-image", "component-child");
     return el;
 };
+const highlightCanvas = () => {
+    const el = document.createElement("canvas");
+    el.classList.add("layer", "layer-highlight");
+    return el;
+};
 const keyboard = () => {
     const container = document.createElement("div");
     container.classList.add("layer", "layer-keyboard");
+    return container;
+};
+const clock = () => {
+    const container = document.createElement("div");
+    container.classList.add("component", "component-clock");
     return container;
 };
 const rotateHandle = (parent) => {
@@ -252382,9 +254038,19 @@ const instance = () => {
     el.classList.add("instance");
     return el;
 };
+const instancesContainer = () => {
+    const container = document.createElement("div");
+    container.classList.add("layer", "layer-instances-container");
+    return container;
+};
 const instances = () => {
     const container = document.createElement("div");
     container.classList.add("layer", "layer-instances");
+    return container;
+};
+const instancesStatic = () => {
+    const container = document.createElement("div");
+    container.classList.add("layer", "layer-instances-hud");
     return container;
 };
 const shape = (parent, options) => {
@@ -252758,25 +254424,75 @@ const isAxisAlignedRect = (poly) => {
     if (poly.length !== 4) {
         return false;
     }
-    const uniqueX = new Set(poly.map(p => p.x));
-    if (uniqueX.size !== 2) {
-        return false;
+    let minX = poly[0].x;
+    let maxX = poly[0].x;
+    let minY = poly[0].y;
+    let maxY = poly[0].y;
+    for (let i = 1; i < 4; i++) {
+        const x = poly[i].x;
+        const y = poly[i].y;
+        if (x < minX) {
+            minX = x;
+        }
+        else if (x > maxX) {
+            maxX = x;
+        }
+        if (y < minY) {
+            minY = y;
+        }
+        else if (y > maxY) {
+            maxY = y;
+        }
     }
-    const uniqueY = new Set(poly.map(p => p.y));
-    return uniqueY.size === 2;
+    // Track if we've seen min and max values
+    let hasMinX = false;
+    let hasMaxX = false;
+    let hasMinY = false;
+    let hasMaxY = false;
+    for (let i = 0; i < 4; i++) {
+        if (poly[i].x === minX) {
+            hasMinX = true;
+        }
+        else if (poly[i].x === maxX) {
+            hasMaxX = true;
+        }
+        else {
+            return false;
+        }
+        if (poly[i].y === minY) {
+            hasMinY = true;
+        }
+        else if (poly[i].y === maxY) {
+            hasMaxY = true;
+        }
+        else {
+            return false;
+        }
+    }
+    return hasMinX && hasMaxX && hasMinY && hasMaxY;
 };
 const toAxisAlignedRect = (poly) => {
     if (!isAxisAlignedRect(poly)) {
         return undefined;
     }
-    const xValues = poly.map(p => p.x);
-    const yValues = poly.map(p => p.y);
-    return {
-        minX: Math.min(...xValues),
-        minY: Math.min(...yValues),
-        maxX: Math.max(...xValues),
-        maxY: Math.max(...yValues),
-    };
+    // Find min/max directly rather than using map and spread
+    let minX = poly[0].x;
+    let maxX = poly[0].x;
+    let minY = poly[0].y;
+    let maxY = poly[0].y;
+    for (let i = 1; i < 4; i++) {
+        const x = poly[i].x;
+        const y = poly[i].y;
+        if (x < minX)
+            minX = x;
+        else if (x > maxX)
+            maxX = x;
+        if (y < minY)
+            minY = y;
+        else if (y > maxY)
+            maxY = y;
+    }
+    return { minX, minY, maxX, maxY };
 };
 class AxisAlignedRect {
     static containsPoint(aar, p) {
@@ -253266,7 +254982,6 @@ const mapTypeToFunction = {
     chunkyArrowDown: chunkyArrow,
 };
 const svg = (parent, type, fill, size) => {
-    const basePath = "http://www.w3.org/";
     const nsAttrs = [`${basePath}2000/xmlns/`, "xmlns:xlink", `${basePath}1999/xlink`];
     const svg = document.createElementNS(svgns, "svg");
     svg.setAttributeNS(nsAttrs[0], nsAttrs[1], nsAttrs[2]);
@@ -253660,15 +255375,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   createActivity: () => (/* binding */ createActivity)
 /* harmony export */ });
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../index */ "../salad/index.ts");
-/* harmony import */ var _preloader_ActivityPreloader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./preloader/ActivityPreloader */ "../salad/world/preloader/ActivityPreloader.ts");
-/* harmony import */ var _listeners_ActivityListeners__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./listeners/ActivityListeners */ "../salad/world/listeners/ActivityListeners.ts");
-/* harmony import */ var _Page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Page */ "../salad/world/Page.ts");
-/* harmony import */ var _ComponentFactories__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ComponentFactories */ "../salad/world/ComponentFactories.ts");
-/* harmony import */ var _ActivityEventEmitter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ActivityEventEmitter */ "../salad/world/ActivityEventEmitter.ts");
-/* harmony import */ var _utils_utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/utils */ "../salad/utils/utils.ts");
-/* harmony import */ var _components_DefaultComponentFactories__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/DefaultComponentFactories */ "../salad/components/DefaultComponentFactories.ts");
-/* harmony import */ var _pageComponents_DefaultPageComponentFactories__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../pageComponents/DefaultPageComponentFactories */ "../salad/pageComponents/DefaultPageComponentFactories.ts");
-/* harmony import */ var _root_utils_export_FontImport__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @root/utils/export/FontImport */ "../utils/export/FontImport.ts");
+/* harmony import */ var _listeners_ActivityListeners__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./listeners/ActivityListeners */ "../salad/world/listeners/ActivityListeners.ts");
+/* harmony import */ var _ComponentFactories__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ComponentFactories */ "../salad/world/ComponentFactories.ts");
+/* harmony import */ var _ActivityEventEmitter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ActivityEventEmitter */ "../salad/world/ActivityEventEmitter.ts");
+/* harmony import */ var _utils_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/utils */ "../salad/utils/utils.ts");
+/* harmony import */ var _PageFactory__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./PageFactory */ "../salad/world/PageFactory.ts");
 /**
  * An activity is a collection of pages that are displayed in a sequence.
  * And a way to navigate between them.
@@ -253689,10 +255400,6 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 
 
 
-
-
-
-
 class Activity {
     constructor(options) {
         this.options = options;
@@ -253701,33 +255408,37 @@ class Activity {
         // listen to different things in edit and play mode
         this.listeners = undefined;
         // remove any Vue reactivity
-        this.options.backup = (0,_utils_utils__WEBPACK_IMPORTED_MODULE_6__.clone)(this.options.backup);
-        this.options.data = (0,_utils_utils__WEBPACK_IMPORTED_MODULE_6__.clone)(this.options.data);
-        this.options.history = (0,_utils_utils__WEBPACK_IMPORTED_MODULE_6__.clone)(this.options.history);
-        this.options.script = (0,_utils_utils__WEBPACK_IMPORTED_MODULE_6__.clone)(this.options.script);
-        this.options.info = (0,_utils_utils__WEBPACK_IMPORTED_MODULE_6__.clone)(this.options.info);
-        this.options.pages = (0,_utils_utils__WEBPACK_IMPORTED_MODULE_6__.clone)(this.options.pages);
-        this.options.settings = (0,_utils_utils__WEBPACK_IMPORTED_MODULE_6__.clone)(this.options.settings);
-        if (this.options.container.id && this.options.container.id !== "salad_container") {
-            throw new Error("Container must have id 'salad_container'");
+        this.options.backup = (0,_utils_utils__WEBPACK_IMPORTED_MODULE_4__.clone)(this.options.backup);
+        this.options.data = (0,_utils_utils__WEBPACK_IMPORTED_MODULE_4__.clone)(this.options.data);
+        this.options.history = (0,_utils_utils__WEBPACK_IMPORTED_MODULE_4__.clone)(this.options.history);
+        this.options.script = (0,_utils_utils__WEBPACK_IMPORTED_MODULE_4__.clone)(this.options.script);
+        this.options.info = (0,_utils_utils__WEBPACK_IMPORTED_MODULE_4__.clone)(this.options.info);
+        this.options.pages = (0,_utils_utils__WEBPACK_IMPORTED_MODULE_4__.clone)(this.options.pages);
+        this.options.settings = (0,_utils_utils__WEBPACK_IMPORTED_MODULE_4__.clone)(this.options.settings);
+        // add the container for the pages
+        if (!this.options.pageContainer) {
+            this.options.pageContainer = document.createElement("div");
+            this.options.container.appendChild(this.options.pageContainer);
         }
+        // set up ids so css works
         this.options.container.id = "salad_container";
-        this._pageContainer = document.createElement("div");
-        this._pageContainer.id = "salad_page_container";
-        this.options.container.appendChild(this._pageContainer);
-        Object.assign(this._pageContainer.style, {
+        this.options.pageContainer.id = "salad_page_container";
+        Object.assign(this.options.pageContainer.style, {
             position: "relative",
             overflow: this.options.mode === "edit" ? "visible" : "hidden",
         });
-        this._events = new _ActivityEventEmitter__WEBPACK_IMPORTED_MODULE_5__.ActivityEventEmitter();
+        this._events = new _ActivityEventEmitter__WEBPACK_IMPORTED_MODULE_3__.ActivityEventEmitter();
     }
     makeComponents() {
         this.destroyComponents();
-        const factory = (0,_ComponentFactories__WEBPACK_IMPORTED_MODULE_4__.getComponentFactory)(this.options.mode);
+        const factory = (0,_ComponentFactories__WEBPACK_IMPORTED_MODULE_2__.getComponentFactory)(this.options.mode);
         this._components = factory.buildAllActivityComponents(this, this.options);
     }
     getComponent(name) {
         return this._components[name];
+    }
+    getComponents() {
+        return this._components;
     }
     get events() {
         return this._events;
@@ -253736,38 +255447,14 @@ class Activity {
         return this.getComponent("logger");
     }
     start() {
-        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             // start!
-            this.listeners = (0,_listeners_ActivityListeners__WEBPACK_IMPORTED_MODULE_2__.getListeners)(this, this.options.mode);
+            this.listeners = (0,_listeners_ActivityListeners__WEBPACK_IMPORTED_MODULE_1__.getListeners)(this, this.options.mode);
             this.makeComponents();
-            if (this.options.fonts) {
-                console.log("load", this.options.fonts);
-                yield new _root_utils_export_FontImport__WEBPACK_IMPORTED_MODULE_9__.FontImport(this.options.fonts).importFonts();
-            }
-            const themeColor = ((_a = this.settings.getSettings()) === null || _a === void 0 ? void 0 : _a.themeColor) || "rgb(200,200,200,0.5)";
-            const preloader = (0,_preloader_ActivityPreloader__WEBPACK_IMPORTED_MODULE_1__.getPreloader)({
-                container: this.options.container,
-                pages: this.options.pages,
-                assetManager: this.options.api.assetManager,
-                themeColor
-            });
-            yield preloader.preload();
-            const startPageIndex = this.getComponent("pages").getCurrentPageIndex();
-            const info = this.getComponent("info");
-            if (info.getHasIntroScreen()) {
-                //open info screen
-                const index = yield info.openIntroScreen();
-                if (index !== undefined) {
-                    yield this.gotoPageByIndex(index);
-                }
-                else {
-                    yield this.gotoPageByIndex(startPageIndex);
-                }
-            }
-            else {
-                return yield this.gotoPageByIndex(startPageIndex);
-            }
+            // start the components
+            yield this.getComponent("fonts").loadFonts();
+            yield this.getComponent("preloader").preload();
+            yield this.getComponent("info").open();
         });
     }
     log(msg) {
@@ -253776,50 +255463,34 @@ class Activity {
     getCurrentPage() {
         return this.currentPage;
     }
-    /**
-     * Go to a page. Do not use this to navigate between pages in the activity.
-     * Use "changePage" instead, which will handle the history properly
-     * Destroy the current one first
-     * @param index
-     */
-    gotoPageByIndex(index) {
+    onPageOut() {
         return __awaiter(this, void 0, void 0, function* () {
-            const pageData = this.options.pages[index];
-            if (!pageData) {
-                throw new Error("Cannot find page");
-            }
             for (const c of Object.values(this._components)) {
                 yield c.onPageOut(this.currentPage);
             }
-            this.destroyCurrentPage();
-            this.currentPage = (0,_Page__WEBPACK_IMPORTED_MODULE_3__.getPage)(pageData.id, this.options.container, this._pageContainer);
-            if (this.options.modalHelper) {
-                this.currentPage.setModalHelper(this.options.modalHelper);
-            }
-            const factory = (0,_components_DefaultComponentFactories__WEBPACK_IMPORTED_MODULE_7__.getDefaultComponentFactory)(this.options.mode);
-            if (this.options.componentsMap) {
-                const extras = this.options.componentsMap[this.options.mode];
-                factory.merge(extras);
-            }
-            const pageFactory = (0,_pageComponents_DefaultPageComponentFactories__WEBPACK_IMPORTED_MODULE_8__.getDefaultPageComponentFactory)(this.options.mode);
-            if (this.options.pageComponentsMap) {
-                const extras = this.options.pageComponentsMap[this.options.mode];
-                pageFactory.merge(extras);
-            }
-            this.currentPage
-                .setFactories(factory, pageFactory)
-                .setAssetManager(this.options.api.assetManager)
-                .setTranslator(this.options.api.translator)
-                .setSoundSequencer(this.options.api.soundSequencer)
-                .loadPageData(pageData.schema)
-                .loadInstancesData(pageData.instances);
+        });
+    }
+    onPageIn(index) {
+        return __awaiter(this, void 0, void 0, function* () {
             for (const c of Object.values(this._components)) {
                 yield c.onPageIn(this.currentPage, index, this.options.pages.length);
             }
+        });
+    }
+    /**
+     * Go to a page. Do not use this to navigate between pages in the activity.
+     * Use "changePage" instead, which will handle the history properly
+     * @param {number} index
+     */
+    gotoPageByIndex(index) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield this.onPageOut();
+            this.destroyCurrentPage();
+            const pageFactory = (0,_PageFactory__WEBPACK_IMPORTED_MODULE_5__.getPageFactory)(this.options.pages[index], this.options);
+            this.currentPage = pageFactory.createPage();
+            pageFactory.setup();
+            yield this.onPageIn(index);
             this.listeners.listenToPage(this.currentPage);
-            if (this.options.mode === "play") {
-                this.currentPage.getComponent("ticker").start();
-            }
             this._events.emit(_index__WEBPACK_IMPORTED_MODULE_0__["default"].Events.ACTIVITY_PAGE_CHANGE, {
                 page: this.currentPage
             });
@@ -253875,18 +255546,8 @@ class Activity {
      * The latter is only really used in edit mode when the Vue UI needs to update immediately.
      */
     save() {
-        var _a;
-        const page = this.currentPage;
-        const saveMethod = (_a = page === null || page === void 0 ? void 0 : page.getComponent("settings")) === null || _a === void 0 ? void 0 : _a.getSaveMethod();
-        const shouldSave = page && (this.options.mode === "edit" || saveMethod === "save");
-        if (shouldSave) {
-            const index = this.getComponent("pages").getPageIndexForPageId(page.getId());
-            // get the data
-            const instances = page.getInstancesData();
-            const schema = page.getPageData();
-            // save the data locally
-            this.options.pages[index] = Object.assign(Object.assign({}, this.options.pages[index]), { instances,
-                schema });
+        const saved = this.getComponent("persistence").save();
+        if (saved) {
             // emit to save the data globally
             this._events.emit(_index__WEBPACK_IMPORTED_MODULE_0__["default"].Events.ACTIVITY_CHANGE_DATA);
         }
@@ -253916,7 +255577,7 @@ class Activity {
         this.destroyCurrentPage();
         this._events.destroy();
         this.listeners.destroy();
-        this._pageContainer.remove();
+        this.options.pageContainer.remove();
         this.destroyComponents();
     }
 }
@@ -253983,8 +255644,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _activitydecorators_ui_EditActivityUIComponent__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./activitydecorators/ui/EditActivityUIComponent */ "../salad/world/activitydecorators/ui/EditActivityUIComponent.ts");
 /* harmony import */ var _activitydecorators_pages_EditActivityPagesComponent__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./activitydecorators/pages/EditActivityPagesComponent */ "../salad/world/activitydecorators/pages/EditActivityPagesComponent.ts");
 /* harmony import */ var _activitydecorators_script_ActivityScriptComponent__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./activitydecorators/script/ActivityScriptComponent */ "../salad/world/activitydecorators/script/ActivityScriptComponent.ts");
+/* harmony import */ var _activitydecorators_preloader_ActivityPreloaderComponent__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./activitydecorators/preloader/ActivityPreloaderComponent */ "../salad/world/activitydecorators/preloader/ActivityPreloaderComponent.ts");
+/* harmony import */ var _activitydecorators_fonts_ActivityFontsComponent__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./activitydecorators/fonts/ActivityFontsComponent */ "../salad/world/activitydecorators/fonts/ActivityFontsComponent.ts");
+/* harmony import */ var _activitydecorators_persistence_EditActivityPersistenceComponent__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./activitydecorators/persistence/EditActivityPersistenceComponent */ "../salad/world/activitydecorators/persistence/EditActivityPersistenceComponent.ts");
+/* harmony import */ var _activitydecorators_persistence_PlayActivityPersistenceComponent__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./activitydecorators/persistence/PlayActivityPersistenceComponent */ "../salad/world/activitydecorators/persistence/PlayActivityPersistenceComponent.ts");
 /**
 */
+
+
+
+
 
 
 
@@ -254007,10 +255676,12 @@ const defaultMap = {
     css: _activitydecorators_css_ActivityCSSComponent__WEBPACK_IMPORTED_MODULE_5__.ActivityCSSComponent,
     backup: _activitydecorators_backup_ActivityBackupComponent__WEBPACK_IMPORTED_MODULE_9__.ActivityBackupComponent,
     logger: _activitydecorators_log_ActivityLoggerComponent__WEBPACK_IMPORTED_MODULE_7__.ActivityLoggerComponent,
-    script: _activitydecorators_script_ActivityScriptComponent__WEBPACK_IMPORTED_MODULE_16__.ActivityScriptComponent
+    script: _activitydecorators_script_ActivityScriptComponent__WEBPACK_IMPORTED_MODULE_16__.ActivityScriptComponent,
+    preloader: _activitydecorators_preloader_ActivityPreloaderComponent__WEBPACK_IMPORTED_MODULE_17__.ActivityPreloaderComponent,
+    fonts: _activitydecorators_fonts_ActivityFontsComponent__WEBPACK_IMPORTED_MODULE_18__.ActivityFontsComponent,
 };
-const editMap = Object.assign(Object.assign({}, defaultMap), { transitions: _activitydecorators_transitions_EditActivityTransitionsComponent__WEBPACK_IMPORTED_MODULE_13__.EditActivityTransitionsComponent, ui: _activitydecorators_ui_EditActivityUIComponent__WEBPACK_IMPORTED_MODULE_14__.EditActivityUIComponent, history: _activitydecorators_history_EditActivityHistoryComponent__WEBPACK_IMPORTED_MODULE_10__.EditActivityHistoryComponent, settings: _activitydecorators_settings_EditActivitySettingsComponent__WEBPACK_IMPORTED_MODULE_12__.EditActivitySettingsComponent, info: _activitydecorators_info_EditActivityInfoComponent__WEBPACK_IMPORTED_MODULE_11__.EditActivityInfoComponent, pages: _activitydecorators_pages_EditActivityPagesComponent__WEBPACK_IMPORTED_MODULE_15__.EditActivityPagesComponent });
-const playMap = Object.assign(Object.assign({}, defaultMap), { transitions: _activitydecorators_transitions_PlayActivityTransitionsComponent__WEBPACK_IMPORTED_MODULE_0__.PlayActivityTransitionsComponent, ui: _activitydecorators_ui_PlayActivityUIComponent__WEBPACK_IMPORTED_MODULE_1__.PlayActivityUIComponent, history: _activitydecorators_history_PlayActivityHistoryComponent__WEBPACK_IMPORTED_MODULE_2__.PlayActivityHistoryComponent, settings: _activitydecorators_settings_PlayActivitySettingsComponent__WEBPACK_IMPORTED_MODULE_3__.PlayActivitySettingsComponent, info: _activitydecorators_info_PlayActivityInfoComponent__WEBPACK_IMPORTED_MODULE_6__.PlayActivityInfoComponent, pages: _activitydecorators_pages_PlayActivityPagesComponent__WEBPACK_IMPORTED_MODULE_8__.PlayActivityPagesComponent });
+const editMap = Object.assign(Object.assign({}, defaultMap), { transitions: _activitydecorators_transitions_EditActivityTransitionsComponent__WEBPACK_IMPORTED_MODULE_13__.EditActivityTransitionsComponent, ui: _activitydecorators_ui_EditActivityUIComponent__WEBPACK_IMPORTED_MODULE_14__.EditActivityUIComponent, history: _activitydecorators_history_EditActivityHistoryComponent__WEBPACK_IMPORTED_MODULE_10__.EditActivityHistoryComponent, settings: _activitydecorators_settings_EditActivitySettingsComponent__WEBPACK_IMPORTED_MODULE_12__.EditActivitySettingsComponent, info: _activitydecorators_info_EditActivityInfoComponent__WEBPACK_IMPORTED_MODULE_11__.EditActivityInfoComponent, pages: _activitydecorators_pages_EditActivityPagesComponent__WEBPACK_IMPORTED_MODULE_15__.EditActivityPagesComponent, persistence: _activitydecorators_persistence_EditActivityPersistenceComponent__WEBPACK_IMPORTED_MODULE_19__.EditActivityPersistenceComponent });
+const playMap = Object.assign(Object.assign({}, defaultMap), { transitions: _activitydecorators_transitions_PlayActivityTransitionsComponent__WEBPACK_IMPORTED_MODULE_0__.PlayActivityTransitionsComponent, ui: _activitydecorators_ui_PlayActivityUIComponent__WEBPACK_IMPORTED_MODULE_1__.PlayActivityUIComponent, history: _activitydecorators_history_PlayActivityHistoryComponent__WEBPACK_IMPORTED_MODULE_2__.PlayActivityHistoryComponent, settings: _activitydecorators_settings_PlayActivitySettingsComponent__WEBPACK_IMPORTED_MODULE_3__.PlayActivitySettingsComponent, info: _activitydecorators_info_PlayActivityInfoComponent__WEBPACK_IMPORTED_MODULE_6__.PlayActivityInfoComponent, pages: _activitydecorators_pages_PlayActivityPagesComponent__WEBPACK_IMPORTED_MODULE_8__.PlayActivityPagesComponent, persistence: _activitydecorators_persistence_PlayActivityPersistenceComponent__WEBPACK_IMPORTED_MODULE_20__.PlayActivityPersistenceComponent });
 class ActivityComponentFactory {
     constructor(map) {
         this.map = map;
@@ -254353,6 +256024,9 @@ class Page {
     get collisions() {
         return this.getComponent("collisions");
     }
+    get highlight() {
+        return this.getComponent("highlight");
+    }
     get layout() {
         return this.getComponent("layout");
     }
@@ -254367,6 +256041,9 @@ class Page {
     }
     get background() {
         return this.getComponent("background");
+    }
+    get eventsComponent() {
+        return this.getComponent("events");
     }
     /**
      * Get the events component, use this to dispatch page events
@@ -254475,6 +256152,75 @@ class PageEventEmitter extends _utils_TypedEventEmitter__WEBPACK_IMPORTED_MODULE
         this.removeAllListeners();
     }
 }
+
+
+/***/ }),
+
+/***/ "../salad/world/PageFactory.ts":
+/*!*************************************!*\
+  !*** ../salad/world/PageFactory.ts ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   PageFactory: () => (/* binding */ PageFactory),
+/* harmony export */   getPageFactory: () => (/* binding */ getPageFactory)
+/* harmony export */ });
+/* harmony import */ var _Page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Page */ "../salad/world/Page.ts");
+/* harmony import */ var _components_DefaultComponentFactories__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/DefaultComponentFactories */ "../salad/components/DefaultComponentFactories.ts");
+/* harmony import */ var _pageComponents_DefaultPageComponentFactories__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../pageComponents/DefaultPageComponentFactories */ "../salad/pageComponents/DefaultPageComponentFactories.ts");
+
+
+
+class PageFactory {
+    constructor(pageData, options) {
+        this.pageData = pageData;
+        this.options = options;
+    }
+    setup() {
+        const pageData = this.pageData;
+        if (this.page) {
+            this.page
+                .loadPageData(pageData.schema)
+                .loadInstancesData(pageData.instances);
+            if (this.options.mode === "play") {
+                this.page.getComponent("ticker").start();
+            }
+        }
+    }
+    createPage() {
+        const pageData = this.pageData;
+        if (!pageData) {
+            throw new Error("Cannot find page");
+        }
+        const newPage = (0,_Page__WEBPACK_IMPORTED_MODULE_0__.getPage)(pageData.id, this.options.container, this.options.pageContainer);
+        if (this.options.modalHelper) {
+            newPage.setModalHelper(this.options.modalHelper);
+        }
+        const compFactory = (0,_components_DefaultComponentFactories__WEBPACK_IMPORTED_MODULE_1__.getDefaultComponentFactory)(this.options.mode);
+        if (this.options.componentsMap) {
+            const extras = this.options.componentsMap[this.options.mode];
+            compFactory.merge(extras);
+        }
+        const pageCompFactory = (0,_pageComponents_DefaultPageComponentFactories__WEBPACK_IMPORTED_MODULE_2__.getDefaultPageComponentFactory)(this.options.mode);
+        if (this.options.pageComponentsMap) {
+            const extras = this.options.pageComponentsMap[this.options.mode];
+            pageCompFactory.merge(extras);
+        }
+        newPage
+            .setFactories(compFactory, pageCompFactory)
+            .setAssetManager(this.options.api.assetManager)
+            .setTranslator(this.options.api.translator)
+            .setSoundSequencer(this.options.api.soundSequencer);
+        this.page = newPage;
+        return newPage;
+    }
+}
+const getPageFactory = (data, options) => {
+    return new PageFactory(data, options);
+};
 
 
 /***/ }),
@@ -254645,6 +256391,48 @@ class ActivityDataComponent extends _AActivityComponent__WEBPACK_IMPORTED_MODULE
 
 /***/ }),
 
+/***/ "../salad/world/activitydecorators/fonts/ActivityFontsComponent.ts":
+/*!*************************************************************************!*\
+  !*** ../salad/world/activitydecorators/fonts/ActivityFontsComponent.ts ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ActivityFontsComponent: () => (/* binding */ ActivityFontsComponent)
+/* harmony export */ });
+/* harmony import */ var _AActivityComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../AActivityComponent */ "../salad/world/activitydecorators/AActivityComponent.ts");
+/* harmony import */ var _root_utils_export_FontImport__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @root/utils/export/FontImport */ "../utils/export/FontImport.ts");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+
+class ActivityFontsComponent extends _AActivityComponent__WEBPACK_IMPORTED_MODULE_0__.AActivityComponent {
+    constructor(activity, options) {
+        super();
+        this.activity = activity;
+        this.options = options;
+    }
+    loadFonts() {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (this.options.fonts) {
+                yield new _root_utils_export_FontImport__WEBPACK_IMPORTED_MODULE_1__.FontImport(this.options.fonts).importFonts();
+            }
+        });
+    }
+}
+
+
+/***/ }),
+
 /***/ "../salad/world/activitydecorators/history/EditActivityHistoryComponent.ts":
 /*!*********************************************************************************!*\
   !*** ../salad/world/activitydecorators/history/EditActivityHistoryComponent.ts ***!
@@ -254722,11 +256510,12 @@ class PlayActivityHistoryComponent extends _AActivityComponent__WEBPACK_IMPORTED
         super();
         this.activity = activity;
         this.options = options;
+        const pageIds = options.pages[0] ? [
+            options.pages[0].id
+        ] : [];
         this.history = options.history || {
             index: 0,
-            pageIds: [
-                options.pages[0].id
-            ]
+            pageIds
         };
     }
     getHistory() {
@@ -254812,16 +256601,16 @@ class PlayActivityHistoryComponent extends _AActivityComponent__WEBPACK_IMPORTED
 
 /***/ }),
 
-/***/ "../salad/world/activitydecorators/info/EditActivityInfoComponent.ts":
-/*!***************************************************************************!*\
-  !*** ../salad/world/activitydecorators/info/EditActivityInfoComponent.ts ***!
-  \***************************************************************************/
+/***/ "../salad/world/activitydecorators/info/AActivityInfoComponent.ts":
+/*!************************************************************************!*\
+  !*** ../salad/world/activitydecorators/info/AActivityInfoComponent.ts ***!
+  \************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   EditActivityInfoComponent: () => (/* binding */ EditActivityInfoComponent)
+/* harmony export */   AActivityInfoComponent: () => (/* binding */ AActivityInfoComponent)
 /* harmony export */ });
 /* harmony import */ var _AActivityComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../AActivityComponent */ "../salad/world/activitydecorators/AActivityComponent.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
@@ -254834,15 +256623,58 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
     });
 };
 
-class EditActivityInfoComponent extends _AActivityComponent__WEBPACK_IMPORTED_MODULE_0__.AActivityComponent {
+class AActivityInfoComponent extends _AActivityComponent__WEBPACK_IMPORTED_MODULE_0__.AActivityComponent {
+    constructor(activity, options) {
+        super();
+        this.activity = activity;
+        this.options = options;
+    }
+    open() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const startPageIndex = this.activity.getComponent("pages").getCurrentPageIndex();
+            if (this.getHasIntroScreen()) {
+                //open info screen
+                const index = yield this.openIntroScreenAndGetPageIndex();
+                if (index !== undefined) {
+                    yield this.activity.gotoPageByIndex(index);
+                }
+                else {
+                    yield this.activity.gotoPageByIndex(startPageIndex);
+                }
+            }
+            else {
+                return yield this.activity.gotoPageByIndex(startPageIndex);
+            }
+        });
+    }
     getHasIntroScreen() {
         return false;
     }
-    openIntroScreen() {
+    // the index of the page to go to after the intro screen - in other words which one they selected
+    openIntroScreenAndGetPageIndex() {
         return __awaiter(this, void 0, void 0, function* () {
-            return 0;
+            return undefined;
         });
     }
+}
+
+
+/***/ }),
+
+/***/ "../salad/world/activitydecorators/info/EditActivityInfoComponent.ts":
+/*!***************************************************************************!*\
+  !*** ../salad/world/activitydecorators/info/EditActivityInfoComponent.ts ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   EditActivityInfoComponent: () => (/* binding */ EditActivityInfoComponent)
+/* harmony export */ });
+/* harmony import */ var _AActivityInfoComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AActivityInfoComponent */ "../salad/world/activitydecorators/info/AActivityInfoComponent.ts");
+
+class EditActivityInfoComponent extends _AActivityInfoComponent__WEBPACK_IMPORTED_MODULE_0__.AActivityInfoComponent {
 }
 
 
@@ -254859,7 +256691,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   PlayActivityInfoComponent: () => (/* binding */ PlayActivityInfoComponent)
 /* harmony export */ });
-/* harmony import */ var _AActivityComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../AActivityComponent */ "../salad/world/activitydecorators/AActivityComponent.ts");
+/* harmony import */ var _AActivityInfoComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AActivityInfoComponent */ "../salad/world/activitydecorators/info/AActivityInfoComponent.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -254870,22 +256702,17 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
     });
 };
 
-class PlayActivityInfoComponent extends _AActivityComponent__WEBPACK_IMPORTED_MODULE_0__.AActivityComponent {
-    constructor(activity, options) {
-        super();
-        this.activity = activity;
-        this.options = options;
-    }
+class PlayActivityInfoComponent extends _AActivityInfoComponent__WEBPACK_IMPORTED_MODULE_0__.AActivityInfoComponent {
     getHasIntroScreen() {
         return !!this.options.info && this.options.info.enabled && this.options.info.buttons.length >= 1;
     }
-    openIntroScreen() {
+    openIntroScreenAndGetPageIndex() {
         return __awaiter(this, void 0, void 0, function* () {
             const modalHelper = this.options.modalHelper;
             const selectedData = yield (modalHelper === null || modalHelper === void 0 ? void 0 : modalHelper.openInfo(this.options.info));
             const allPageNames = this.options.pages.map((p) => p.schema.identity.displayName);
             const index = allPageNames.indexOf(selectedData.name);
-            return index;
+            return index >= 0 ? index : undefined;
         });
     }
 }
@@ -255130,6 +256957,145 @@ class PlayActivityPagesComponent extends _AActivityComponent__WEBPACK_IMPORTED_M
 
 /***/ }),
 
+/***/ "../salad/world/activitydecorators/persistence/AActivityPersistenceComponent.ts":
+/*!**************************************************************************************!*\
+  !*** ../salad/world/activitydecorators/persistence/AActivityPersistenceComponent.ts ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   AActivityPersistenceComponent: () => (/* binding */ AActivityPersistenceComponent)
+/* harmony export */ });
+/* harmony import */ var _AActivityComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../AActivityComponent */ "../salad/world/activitydecorators/AActivityComponent.ts");
+
+class AActivityPersistenceComponent extends _AActivityComponent__WEBPACK_IMPORTED_MODULE_0__.AActivityComponent {
+    constructor(activity, options) {
+        super();
+        this.activity = activity;
+        this.options = options;
+    }
+    _save() {
+        const page = this.activity.getCurrentPage();
+        const pagesComp = this.activity.getComponent("pages");
+        const index = pagesComp.getPageIndexForPageId(page.getId());
+        // get the data
+        const instances = page.getInstancesData();
+        const schema = page.getPageData();
+        // save the data locally
+        this.options.pages[index] = Object.assign(Object.assign({}, this.options.pages[index]), { instances,
+            schema });
+    }
+    save() {
+        if (this.shouldSave()) {
+            this._save();
+            return true;
+        }
+        return false;
+    }
+}
+
+
+/***/ }),
+
+/***/ "../salad/world/activitydecorators/persistence/EditActivityPersistenceComponent.ts":
+/*!*****************************************************************************************!*\
+  !*** ../salad/world/activitydecorators/persistence/EditActivityPersistenceComponent.ts ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   EditActivityPersistenceComponent: () => (/* binding */ EditActivityPersistenceComponent)
+/* harmony export */ });
+/* harmony import */ var _AActivityPersistenceComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AActivityPersistenceComponent */ "../salad/world/activitydecorators/persistence/AActivityPersistenceComponent.ts");
+
+class EditActivityPersistenceComponent extends _AActivityPersistenceComponent__WEBPACK_IMPORTED_MODULE_0__.AActivityPersistenceComponent {
+    shouldSave() {
+        //always save in edit mode
+        return true;
+    }
+}
+
+
+/***/ }),
+
+/***/ "../salad/world/activitydecorators/persistence/PlayActivityPersistenceComponent.ts":
+/*!*****************************************************************************************!*\
+  !*** ../salad/world/activitydecorators/persistence/PlayActivityPersistenceComponent.ts ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   PlayActivityPersistenceComponent: () => (/* binding */ PlayActivityPersistenceComponent)
+/* harmony export */ });
+/* harmony import */ var _AActivityPersistenceComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AActivityPersistenceComponent */ "../salad/world/activitydecorators/persistence/AActivityPersistenceComponent.ts");
+
+class PlayActivityPersistenceComponent extends _AActivityPersistenceComponent__WEBPACK_IMPORTED_MODULE_0__.AActivityPersistenceComponent {
+    shouldSave() {
+        var _a;
+        const page = this.activity.getCurrentPage();
+        const saveMethod = (_a = page === null || page === void 0 ? void 0 : page.getComponent("settings")) === null || _a === void 0 ? void 0 : _a.getSaveMethod();
+        return (saveMethod === "save");
+    }
+}
+
+
+/***/ }),
+
+/***/ "../salad/world/activitydecorators/preloader/ActivityPreloaderComponent.ts":
+/*!*********************************************************************************!*\
+  !*** ../salad/world/activitydecorators/preloader/ActivityPreloaderComponent.ts ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ActivityPreloaderComponent: () => (/* binding */ ActivityPreloaderComponent)
+/* harmony export */ });
+/* harmony import */ var _AActivityComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../AActivityComponent */ "../salad/world/activitydecorators/AActivityComponent.ts");
+/* harmony import */ var _preloader_ActivityPreloader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../preloader/ActivityPreloader */ "../salad/world/preloader/ActivityPreloader.ts");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+
+const DEFAULT_THEME = "rgb(200,200,200,0.5)";
+class ActivityPreloaderComponent extends _AActivityComponent__WEBPACK_IMPORTED_MODULE_0__.AActivityComponent {
+    constructor(activity, options) {
+        super();
+        this.activity = activity;
+        this.options = options;
+    }
+    preload() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const settings = this.activity.getComponent("settings").getSettings();
+            const themeColor = (settings === null || settings === void 0 ? void 0 : settings.themeColor) || DEFAULT_THEME;
+            const preloader = (0,_preloader_ActivityPreloader__WEBPACK_IMPORTED_MODULE_1__.getPreloader)({
+                container: this.options.container,
+                pages: this.options.pages,
+                assetManager: this.options.api.assetManager,
+                themeColor
+            });
+            yield preloader.preload();
+        });
+    }
+}
+
+
+/***/ }),
+
 /***/ "../salad/world/activitydecorators/script/ActivityScriptComponent.ts":
 /*!***************************************************************************!*\
   !*** ../salad/world/activitydecorators/script/ActivityScriptComponent.ts ***!
@@ -255143,6 +257109,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../index */ "../salad/index.ts");
 /* harmony import */ var _AActivityComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../AActivityComponent */ "../salad/world/activitydecorators/AActivityComponent.ts");
+/* harmony import */ var _root_salad_pageComponents_coderunner_CodeGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @root/salad/pageComponents/coderunner/CodeGenerator */ "../salad/pageComponents/coderunner/CodeGenerator.ts");
+
 
 
 class ActivityScriptComponent extends _AActivityComponent__WEBPACK_IMPORTED_MODULE_1__.AActivityComponent {
@@ -255151,6 +257119,8 @@ class ActivityScriptComponent extends _AActivityComponent__WEBPACK_IMPORTED_MODU
         this.activity = activity;
         this.options = options;
         this.transpiledCode = null;
+        this.globals = null;
+        this.hasRunOnce = false;
         this.script = options.script;
     }
     getContent() {
@@ -255160,6 +257130,19 @@ class ActivityScriptComponent extends _AActivityComponent__WEBPACK_IMPORTED_MODU
     setContent(content) {
         this.script.content = content;
         this.transpiledCode = null;
+    }
+    getGlobals() {
+        if (!this.hasRunOnce) {
+            const transpiledCode = this.getTranspiledCode();
+            const finalCode = `
+${transpiledCode}
+return getGlobals(arguments[0]);
+`;
+            const f = new _root_salad_pageComponents_coderunner_CodeGenerator__WEBPACK_IMPORTED_MODULE_2__.CodeGenerator().getFunctionToExecute(finalCode, false);
+            this.globals = f.apply(this.activity, [this.activity]);
+            this.hasRunOnce = true;
+        }
+        return this.globals;
     }
     getTranspiledCode() {
         var _a, _b;
@@ -256323,8 +258306,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _salad_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./salad/index */ "../salad/index.ts");
 
 
-//@ts-ignore
-window.Salad = _salad_index__WEBPACK_IMPORTED_MODULE_1__["default"];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_salad_index__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
 })();
