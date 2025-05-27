@@ -1,10 +1,10 @@
 import path from "path";
 import fs from "fs-extra";
 
-// Base path for all uploads - use /tmp for Render compatibility
+// Base path for all uploads - use /var/data for Render compatibility because that is the persistent storage
 const getBasePath = () => {
     return process.env.NODE_ENV === "production" 
-        ? path.join("/tmp", "uploads") 
+        ? path.join("/var/data", "uploads") 
         : path.join(__dirname, "uploads");
 };
 
@@ -31,3 +31,5 @@ export const getActivitiesPath = () => {
     fs.ensureDirSync(activitiesPath); // Ensure directory exists
     return activitiesPath;
 };
+
+
