@@ -13,6 +13,15 @@
                 background-position: 0 0;
                 background-size: 600% 100%;
             }
+            
+            .activities{
+                margin:10px;
+                padding:10px;
+            }
+            ul.activities-list{
+                margin:10px;
+                padding:10px;
+            }
         </style>
     </head>
 
@@ -22,14 +31,20 @@
         </h1>
         <div class="monster">
         </div>
-        <ul class="activities">
-        </ul>
+        <div class="activities">
+            <p>
+                Available activities:
+            </p>
+            <ul class="activities-list">
+            </ul>
+        </div>
+        
     </body>
     <script>
         const listActivities = async ()=>{
             const response = await fetch("/api/list", {});
             const activities = await response.json();
-            const container = document.querySelector(".activities");
+            const container = document.querySelector("ul.activities-list");
             activities.forEach((a)=>{
                 const activity = document.createElement("div");
                 const id = a.match(/^activity-(.*)\.json$/)[1];
