@@ -4,10 +4,11 @@ import cors from "cors";
 import ZipExtractor from "./zipExtractor";
 import { Fields, Files, Error as FormidableError, IncomingForm } from 'formidable';
 import { getAsset } from "./assetDatabase";
-import { getZipPath, getTempPath, getActivitiesPath, getAssetPath } from "./paths";
+import { getZipPath, getTempPath, getAssetPath } from "./paths";
 import express, { Request, Response } from 'express';
 import { JSONAsset, JSONActivity } from "./types";
-import { list } from "./activitiesDatabase";
+import { list, deleteActivity, getActivityPath, deleteAllActivities } from "./activitiesDatabase";
+import { deleteAllAssets } from "./assetDatabase";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -24,6 +25,23 @@ app.get('/', (req:Request, res:Response) => {
 app.get("/api/list", async (req:Request, res:Response) => {
     const activities = list();
     res.json(activities);
+})
+
+app.delete("/api/delete/:activityId", async (req:Request, res:Response) => {
+    const activityId = req.params.activityId as string;
+    console.log("delete activity", activityId);
+    const success = deleteActivity(activityId);
+    res.json({
+        success: success
+    });
+})
+
+app.delete("/api/wipe", async (req:Request, res:Response) => {
+    deleteAllActivities();
+    deleteAllAssets();
+    res.json({
+        success: true
+    });
 })
 
 app.get('/admin', (req:Request, res:Response) => {
@@ -79,7 +97,7 @@ app.get('/view/:activityId', async (req: Request, res:Response) => {
     let html = await fs.readFile(viewerPath, 'utf8');
 
     // Read the activity file
-    const activityPath = path.join(getActivitiesPath(), `activity-${activityId}.json`);
+    const activityPath = getActivityPath(activityId);
 
     let json: any = {};
 

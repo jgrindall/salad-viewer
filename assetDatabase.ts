@@ -35,4 +35,9 @@ const persist = async ()=>{
     await fs.writeJSON(DB_FILE, db, { spaces: 4 });
 }
 
+export const deleteAllAssets = async () => {
+    db = {};
+    await fs.writeJSON(DB_FILE, db, { spaces: 4 });
+}
+
 init();

@@ -2,12 +2,16 @@
     <head>
         <link rel="stylesheet" href="/main.css">
         <style>
-            *{
+            body{
                 margin: 10px;
                 padding: 10px;
             }
-            
+            li > div{
+                display: flex;
+                align-items: center;
+            }
         </style>
+        <script src="/utils.js"></script>
     </head>
     <body>
 
@@ -17,13 +21,64 @@
             </a>
         </div>
 
-        <form action="/admin/upload" method="post" enctype="multipart/form-data">
-            <label for="zipfile">Select a zip file:</label><br>
-            <input type="file" id="zipfile" name="zipfile" accept=".zip" required><br>
-            <button type="submit" class="btn">Submit</button>
-        </form>
+
+        <div class="container">
+            <form action="/admin/upload" method="post" enctype="multipart/form-data">
+                <h1>Upload a new activity</h1>
+                <div style="margin:15px;">
+                    <label for="zipfile">Select a zip file:</label>
+                    <input type="file" id="zipfile" name="zipfile" accept=".zip" required><br>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+
+        </div>
+
+
+        <div class="container">
+            <h1>Current activities:</h1>
+            <ul class="activities-list">
+            </ul>
+        </div>
+
+
+        <button class="btn" title='delete all' onclick="window.saladUtils.deleteAll()">
+            Wipe all activities and assets
+        </button>
+
+
     </body>
+
+
+
+
     <script>
+        
+        const listActivities = async ()=>{
+            const activities = await window.saladUtils.listActivities();
+            const container = document.querySelector("ul.activities-list");
+            if( activities.length === 0){
+                container.innerHTML = "<span>None found</span>";
+                return;
+            }
+            activities.forEach((a)=>{
+                const activity = document.createElement("li");
+                const id = a.match(/^activity-(.*)\.json$/)[1];
+                activity.innerHTML = `
+<div>
+    <a href='/view/${id}'>
+        <p>${a}</p>
+    </a>
+    <button class="btn btn-small" title='delete' onclick="window.saladUtils.deleteActivity('${id}')">
+        X
+    </button>
+</div>`;
+                container.appendChild(activity);
+            })
+        }
+
+        listActivities();
+
         
     </script>
 </html>
