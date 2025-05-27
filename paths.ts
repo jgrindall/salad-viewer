@@ -32,4 +32,5 @@ export const getActivitiesPath = () => {
     return activitiesPath;
 };
 
-
+const basePath = getBasePath();
+fs.ensureDirSync(basePath); // Create /var/data/uploads once at startup
