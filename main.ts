@@ -108,7 +108,7 @@ app.get('/view/:activityId', async (req: Request, res:Response) => {
     const fonts = json.fonts;
     
     const assetMap = {};
-    
+
     (json.assets || []).forEach((asset: JSONAsset) => {
         assetMap[asset.name] = {
             type: asset.type,
@@ -161,9 +161,14 @@ app.get('/asset/hash/:hash', async (req: Request, res: Response) => {
     const hash = req.params.hash;
     console.log("get asset", hash);
     const asset = getAsset(hash);
-    const assetPath = path.join(getAssetPath(), hash);
-    res.setHeader('Content-Type', asset.contentType || "image/png");
-    res.sendFile(assetPath);
+    if(asset){
+        const assetPath = path.join(getAssetPath(), hash);
+        res.setHeader('Content-Type', asset.contentType || "image/png");
+        res.sendFile(assetPath);
+    }
+    else{
+        res.status(404).send('Asset not found');
+    }
 });
 
 app.listen(PORT, () => {
