@@ -18,9 +18,9 @@ body{
     background-color: #00695C;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: larger;
+    font-size: x-large;
     text-decoration: none;
 }

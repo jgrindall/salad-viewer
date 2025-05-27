@@ -32,5 +32,10 @@ export const getActivitiesPath = () => {
     return activitiesPath;
 };
 
+export const getDBPath = ()=>{
+    const dbPath = path.join(getBasePath(), "asset-db.json");
+    return dbPath;
+}
+
 const basePath = getBasePath();
 fs.ensureDirSync(basePath); // Create /var/data/uploads once at startup

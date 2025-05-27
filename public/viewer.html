@@ -17,12 +17,15 @@
             }
 
             #salad_container{
-                width: 1024px;
-                height: 600px;
+                width: 100%;
+                height: 100%;
             }
             .top{
-                padding:8px;
-                margin:8px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 10;
                 > {
                     padding:8px;
                     margin:8px;
@@ -34,11 +37,8 @@
     </head>
     <body>
         <div class="top">
-            <span>
-                Activity:
-            </span>
             <a class="btn" href="/" style="float:right;">
-                Back to Home
+                Home
             </a>
         </div>
         

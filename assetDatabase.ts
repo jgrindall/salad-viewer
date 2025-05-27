@@ -1,13 +1,12 @@
 import { Asset } from "./types";
 import fs from 'fs-extra';
-import path from 'path';
+import { getDBPath } from "./paths";
 
-const DB_FILE = path.join(__dirname, 'asset-db.json');
+const DB_FILE = getDBPath();
 
 let db:{[key:string]: Asset} = {};
 
 export function saveAsset(asset: Asset) {
-  console.log("save", asset)
   db[asset.hash] = asset;
   persist();
 }
