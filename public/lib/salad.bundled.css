@@ -5,6 +5,27 @@
 :root {
   --sdk-theme-600: #8E24AA; }
 
+.moveable-control-box {
+  z-index: 50 !important; }
+  .moveable-control-box .moveable-origin {
+    display: none !important; }
+
+body.moveable-edit, #salad_container.moveable-edit {
+  --moveable-color: $clr !important;
+  --bounds-color: $clr !important; }
+  body.moveable-edit .moveable-control-box, body.moveable-edit .moveable-control, body.moveable-edit .moveable-origin, body.moveable-edit .moveable-rotation-control, body.moveable-edit .moveable-line, #salad_container.moveable-edit .moveable-control-box, #salad_container.moveable-edit .moveable-control, #salad_container.moveable-edit .moveable-origin, #salad_container.moveable-edit .moveable-rotation-control, #salad_container.moveable-edit .moveable-line {
+    color: var(--sdk-theme-600) !important;
+    background: var(--sdk-theme-600) !important;
+    border-color: var(--sdk-theme-600) !important; }
+
+body.moveable-play, #salad_container.moveable-play {
+  --moveable-color: $clr !important;
+  --bounds-color: $clr !important; }
+  body.moveable-play .moveable-control-box, body.moveable-play .moveable-control, body.moveable-play .moveable-origin, body.moveable-play .moveable-rotation-control, body.moveable-play .moveable-line, #salad_container.moveable-play .moveable-control-box, #salad_container.moveable-play .moveable-control, #salad_container.moveable-play .moveable-origin, #salad_container.moveable-play .moveable-rotation-control, #salad_container.moveable-play .moveable-line {
+    color: transparent !important;
+    background: transparent !important;
+    border-color: transparent !important; }
+
 #salad_container {
   position: absolute;
   overflow: hidden; }

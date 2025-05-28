@@ -246237,11 +246237,7 @@ class DebugComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.APageC
         this.name = "debug";
         this._redraw = this._redraw.bind(this);
     }
-    onCreated() {
-        super.onCreated();
-        // make elements that we will draw inside
-        // container
-        this._element = (0,_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__.debug)();
+    _createCanvases() {
         // draw collisions, containment and grid
         const collisonsCanvas = (0,_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__.canvas)(this._element);
         const containmentCanvas = (0,_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__.canvas)(this._element);
@@ -246265,6 +246261,12 @@ class DebugComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.APageC
             grid: new _DebugDrawers__WEBPACK_IMPORTED_MODULE_2__.GridDrawer(this.page, gridDiv),
             containment: new _DebugDrawers__WEBPACK_IMPORTED_MODULE_2__.ContainmentDrawer(this.page, containmentCanvas),
         };
+    }
+    onCreated() {
+        super.onCreated();
+        // make elements that we will draw inside
+        // container
+        this._element = (0,_utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__.debug)();
         // register a layer for this element so it gets resized properly
         const layerComp = this.getPageComponent("layers");
         layerComp.initLayer("collisions", this._element, {
@@ -246305,8 +246307,10 @@ class DebugComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.APageC
     _stopInterval() {
         const keys = Object.keys(this.data);
         keys.forEach((key) => {
-            const drawer = this._debugDrawers[key];
-            drawer === null || drawer === void 0 ? void 0 : drawer.clear();
+            if (this._debugDrawers) {
+                const drawer = this._debugDrawers[key];
+                drawer === null || drawer === void 0 ? void 0 : drawer.clear();
+            }
         });
         clearInterval(this._interval);
         this._interval = undefined;
@@ -246317,6 +246321,7 @@ class DebugComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.APageC
     update() {
         const anyEnabled = Object.values(this.data).some((enabled) => enabled);
         if (anyEnabled) {
+            this._createCanvases();
             this._startInterval();
         }
         else {
