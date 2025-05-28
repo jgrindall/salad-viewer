@@ -298,6 +298,10 @@ body.moveable-play, #salad_container.moveable-play {
               height: 100%;
               background-size: 100% 100%;
               background-repeat: no-repeat; }
+            #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-image.component-image-pixel, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-image.component-image-pixel {
+              image-rendering: pixelated;
+              image-rendering: -moz-crisp-edges;
+              image-rendering: crisp-edges; }
             #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-movement, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-movement {
               width: 0;
               height: 0;

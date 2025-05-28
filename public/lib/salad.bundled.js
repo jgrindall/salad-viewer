@@ -237847,6 +237847,8 @@ const mapTypeToInputClass = {
     arrow: _ArrowKeyListener__WEBPACK_IMPORTED_MODULE_0__.ArrowKeyListener,
     wasd: _WASDKeyListener__WEBPACK_IMPORTED_MODULE_4__.WASDKeyListener,
     arrowrot: _ArrowKeyRotListener__WEBPACK_IMPORTED_MODULE_1__.ArrowKeyRotListener,
+    arrowlr: _ArrowKeyListener__WEBPACK_IMPORTED_MODULE_0__.LRArrowKeyListener,
+    arrowud: _ArrowKeyListener__WEBPACK_IMPORTED_MODULE_0__.UDArrowKeyListener,
     arrowdrive: _ArrowDriveKeyListener__WEBPACK_IMPORTED_MODULE_2__.ArrowDriveKeyListener,
     wasddrive: _WASDDriveKeyListener__WEBPACK_IMPORTED_MODULE_5__.WASDDriveKeyListener,
 };
@@ -237919,7 +237921,9 @@ class ArrowDriveKeyListener {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   ArrowKeyListener: () => (/* binding */ ArrowKeyListener)
+/* harmony export */   ArrowKeyListener: () => (/* binding */ ArrowKeyListener),
+/* harmony export */   LRArrowKeyListener: () => (/* binding */ LRArrowKeyListener),
+/* harmony export */   UDArrowKeyListener: () => (/* binding */ UDArrowKeyListener)
 /* harmony export */ });
 /* harmony import */ var _types_external__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../types/external */ "../salad/types/external.ts");
 /* harmony import */ var _Utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Utils */ "../salad/components/gamecontrol/keylisteners/Utils.ts");
@@ -237928,7 +237932,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-class ArrowKeyListener {
+class AArrowKeyListener {
     constructor(instance, page, duration, amount) {
         this.instance = instance;
         this.page = page;
@@ -237941,18 +237945,40 @@ class ArrowKeyListener {
         this.page.events.off(_types_external__WEBPACK_IMPORTED_MODULE_0__.Events.KEY_DOWN, this.onKeyDown);
     }
     onKeyDown(eventData) {
-        let { anim, settings } = (0,_Utils__WEBPACK_IMPORTED_MODULE_1__.getAnimForKeys)(eventData.key, this.duration, this.amount, {
-            up: "ArrowUp",
-            down: "ArrowDown",
-            left: "ArrowLeft",
-            right: "ArrowRight",
-        });
+        const map = this.getMapKeys();
+        let { anim, settings } = (0,_Utils__WEBPACK_IMPORTED_MODULE_1__.getAnimForKeys)(eventData.key, this.duration, this.amount, map);
         if (anim) {
             this.instance.getComponent("animation").playAnimation(anim, settings);
         }
     }
     initListeners() {
         this.page.events.on(_types_external__WEBPACK_IMPORTED_MODULE_0__.Events.KEY_DOWN, this.onKeyDown);
+    }
+}
+class ArrowKeyListener extends AArrowKeyListener {
+    getMapKeys() {
+        return {
+            up: "ArrowUp",
+            down: "ArrowDown",
+            left: "ArrowLeft",
+            right: "ArrowRight",
+        };
+    }
+}
+class LRArrowKeyListener extends AArrowKeyListener {
+    getMapKeys() {
+        return {
+            left: "ArrowLeft",
+            right: "ArrowRight"
+        };
+    }
+}
+class UDArrowKeyListener extends AArrowKeyListener {
+    getMapKeys() {
+        return {
+            up: "ArrowUp",
+            down: "ArrowDown"
+        };
     }
 }
 
@@ -245869,12 +245895,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   getCollisionsManager: () => (/* binding */ getCollisionsManager)
 /* harmony export */ });
 /* harmony import */ var _utils_TypedEventEmitter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utils/TypedEventEmitter */ "../salad/utils/TypedEventEmitter.ts");
-/* harmony import */ var _utils_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/utils */ "../salad/utils/utils.ts");
 /**
  * A class that manages collsions
  * Dispatches events when collisions start and end
  */
-
 
 const getCollisionHashKeyForInstances = (instance1, instance2) => {
     const id1 = instance1.getId();
@@ -245888,6 +245912,11 @@ class CollisionsManager extends _utils_TypedEventEmitter__WEBPACK_IMPORTED_MODUL
     constructor() {
         super();
         this._hash = {};
+        this._tempArrays = {
+            allKeys: [],
+            end: [],
+            start: []
+        };
     }
     /**
      * Update the hash, and figure out what changed.
@@ -245896,12 +245925,22 @@ class CollisionsManager extends _utils_TypedEventEmitter__WEBPACK_IMPORTED_MODUL
      */
     update(newHash) {
         // find the changes
-        const keys = Object.keys(this._hash);
-        const newKeys = Object.keys(newHash);
-        const allKeys = (0,_utils_utils__WEBPACK_IMPORTED_MODULE_1__.unique)([...keys, ...newKeys]);
-        const end = [];
-        const start = [];
-        allKeys.forEach((k) => {
+        const tempArrays = this._tempArrays;
+        const { allKeys, end, start } = tempArrays;
+        allKeys.length = 0;
+        end.length = 0;
+        start.length = 0;
+        for (const key in this._hash) {
+            allKeys.push(key);
+        }
+        for (const key in newHash) {
+            if (!(key in this._hash)) {
+                allKeys.push(key);
+            }
+        }
+        const numKeys = allKeys.length;
+        for (let i = 0; i < numKeys; i++) {
+            const k = allKeys[i];
             if (this._hash[k] && this._hash[k].collides && !newHash[k]) {
                 // deleted a collision - was colliding but now isn't
                 end.push(this._hash[k]);
@@ -245919,18 +245958,20 @@ class CollisionsManager extends _utils_TypedEventEmitter__WEBPACK_IMPORTED_MODUL
                     start.push(newHash[k]);
                 }
             }
-        });
+        }
         //do the end events first
-        end.forEach((collisionEndData) => {
+        const numEnd = end.length;
+        for (let i = 0; i < numEnd; i++) {
             this.emit("collisionEnd", {
-                data: collisionEndData,
+                data: end[i],
             });
-        });
-        start.forEach((collisionStartData) => {
+        }
+        const numStart = start.length;
+        for (let i = 0; i < numStart; i++) {
             this.emit("collisionStart", {
-                data: collisionStartData,
+                data: start[i],
             });
-        });
+        }
         this._hash = newHash;
     }
     getCollides(key) {
@@ -246085,9 +246126,8 @@ class PlayPageCollisionsComponent extends _APageComponent__WEBPACK_IMPORTED_MODU
      * each frame, update the hash and check for collisions
      */
     onEnterFrame() {
-        const hash = this._buildCollisionHash();
         if (this._collisionsManager) {
-            this._collisionsManager.update(hash);
+            this._collisionsManager.update(this._buildCollisionHash());
         }
     }
     /**
@@ -246144,14 +246184,22 @@ class PlayPageCollisionsComponent extends _APageComponent__WEBPACK_IMPORTED_MODU
                     for (let j = i + 1; j < sortedById.length; j++) {
                         const instance2 = group[j];
                         const key = (0,_CollisionsManager__WEBPACK_IMPORTED_MODULE_1__.getCollisionHashKeyForInstances)(instance1, instance2);
-                        const shape2 = shapes[j];
-                        const canCollide2 = canCollide[j];
-                        const bothStatic = isStatic[i] && isStatic[j];
-                        hash[key] = {
-                            instance1,
-                            instance2,
-                            collides: bothStatic ? false : (canCollide1 && canCollide2 && shape1.intersects(shape2)),
-                        };
+                        if (!canCollide1 || !canCollide[j] || (isStatic[i] && isStatic[j])) {
+                            hash[key] = {
+                                instance1,
+                                instance2,
+                                collides: false
+                            };
+                            continue;
+                        }
+                        else {
+                            const shape2 = shapes[j];
+                            hash[key] = {
+                                instance1,
+                                instance2,
+                                collides: shape1.intersects(shape2)
+                            };
+                        }
                     }
                 }
             }
@@ -252716,7 +252764,7 @@ const matchMovementTypes = [
     "velocitymatchesrotation",
 ];
 const gameFireTypes = ["click", "space"];
-const gameInputTypes = ["arrow", "arrowrot", "arrowdrive", "wasd", "wasddrive"];
+const gameInputTypes = ["arrow", "arrowrot", "arrowlr", "arrowud", "arrowdrive", "wasd", "wasddrive"];
 const childPositionKeys = ["left", "right", "top", "bottom", "width", "height"];
 
 
