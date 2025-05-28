@@ -239447,8 +239447,17 @@ class ImageComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComponent
                 assetManager.loadImg(this.element, src);
                 this._updatePosition();
                 this._updateShadow();
+                this._updateRendering();
             }
         });
+    }
+    _updateRendering() {
+        if (this.data.rendering === "auto") {
+            this.element.classList.remove("component-image-pixel");
+        }
+        else {
+            this.element.classList.add("component-image-pixel");
+        }
     }
     // some special stuff for builderstray
     _updateShadow() {
@@ -243746,7 +243755,8 @@ const defaultSchema = {
         enabled: false,
         path: "",
         position: {},
-        shadow: "none"
+        shadow: "none",
+        rendering: "auto"
     },
     clock: {
         enabled: false,
