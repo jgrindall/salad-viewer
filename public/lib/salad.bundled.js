@@ -251280,8 +251280,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 let DEBUG = false;
 // @ts-ignore
-window.__showDebug = () => {
-    DEBUG = true;
+window.__toggleDebug = () => {
+    DEBUG = !DEBUG;
 };
 class Logger {
     constructor(component) {
