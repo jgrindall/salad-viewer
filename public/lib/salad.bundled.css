@@ -5,6 +5,12 @@
 :root {
   --sdk-theme-600: #8E24AA; }
 
+* {
+  touch-action: manipulation; }
+
+body {
+  overscroll-behavior: none; }
+
 .moveable-control-box {
   z-index: 50 !important; }
   .moveable-control-box .moveable-origin {

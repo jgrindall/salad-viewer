@@ -248731,6 +248731,7 @@ class APointerEventHandler {
      * @param e
      */
     onPointerMove(e) {
+        e.preventDefault();
         const point = this.getPagePositionForEvent(e);
         const size = this.page.getComponent("background").getSize();
         if (point.x < 0 || point.y < 0 || point.x > size.width || point.y > size.height) {
