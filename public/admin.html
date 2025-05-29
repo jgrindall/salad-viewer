@@ -16,40 +16,36 @@
     <body>
 
         <div class="top">
-            <a class="btn" href="/" style="float:right;">
-                Back to Home
+            <a class="btn" href="/" style="position: fixed;top:0;right:0;">
+                Home
             </a>
         </div>
 
+        <div class="wrapper">
+            <div class="container container-1">
+                <form action="/admin/upload" method="post" enctype="multipart/form-data">
+                    <h1>Upload a new activity</h1>
+                    <div style="margin:15px;">
+                        <label for="zipfile">Select a zip file:</label>
+                        <input type="file" id="zipfile" name="zipfile" accept=".zip" required><br>
+                    </div>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
 
-        <div class="container">
-            <form action="/admin/upload" method="post" enctype="multipart/form-data">
-                <h1>Upload a new activity</h1>
-                <div style="margin:15px;">
-                    <label for="zipfile">Select a zip file:</label>
-                    <input type="file" id="zipfile" name="zipfile" accept=".zip" required><br>
-                </div>
-                <button type="submit" class="btn">Submit</button>
-            </form>
+            </div>
 
+
+            <div class="container container-2">
+                <h1>Current activities:</h1>
+                <ul class="activities-list">
+                </ul>
+                <button class="btn" title='delete all' onclick="window.saladUtils.deleteAll()">
+                    Wipe all activities and assets
+                </button>
+            </div>
         </div>
-
-
-        <div class="container">
-            <h1>Current activities:</h1>
-            <ul class="activities-list">
-            </ul>
-        </div>
-
-
-        <button class="btn" title='delete all' onclick="window.saladUtils.deleteAll()">
-            Wipe all activities and assets
-        </button>
-
 
     </body>
-
-
 
 
     <script>

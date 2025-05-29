@@ -5,7 +5,6 @@
         <link rel="stylesheet" href="/main.css">
 
         <style>
-            
             .monster{
                 width: 220px;
                 height: 283px;
@@ -13,7 +12,6 @@
                 background-position: 0 0;
                 background-size: 600% 100%;
             }
-            
             .activities{
                 margin:10px;
                 padding:10px;
@@ -27,23 +25,26 @@
     </head>
 
     <body>
-        <h1>
-            This is the home page
-        </h1>
-        <div class="monster">
-        </div>
+        <div class="wrapper">
+            <div class="container container-1">
+                <h1>
+                    Home
+                </h1>
+                <div class="monster">
+                </div>
+            </div>
 
-        <div class="container">
-            <div class="activities">
-                <p>
-                    Available activities:
-                </p>
-                <ul class="activities-list">
-                </ul>
+            <div class="container container-2">
+                <div class="activities">
+                    <p>
+                        Available activities:
+                    </p>
+                    <ul class="activities-list">
+                    </ul>
+                </div>
             </div>
         </div>
-
-        <a class="btn" href="/admin" style="float:right;">
+        <a class="btn" href="/admin" style="position:fixed;bottom:0;right:0;">
             Admin
         </a>
         
