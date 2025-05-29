@@ -155,6 +155,7 @@ app.get('/view/:activityId', async (req: Request, res:Response) => {
             const options = {
                 mode: "play",
                 container,
+                script,
                 data,
                 api,
                 fonts,
