@@ -246430,6 +246430,13 @@ class ADebugDrawer {
         this.page = page;
         this.element = element;
     }
+    getAllVisibleInstances() {
+        const insComp = this.page.getComponent("instances");
+        return insComp.getAllInstances().filter((instance) => {
+            const visComp = instance.getComponent("visibility");
+            return visComp.getEditorVisibility();
+        });
+    }
 }
 class CollisionsDrawer extends ADebugDrawer {
     constructor(page, element) {
@@ -246456,8 +246463,7 @@ class CollisionsDrawer extends ADebugDrawer {
      * Put a blob on the origins
      */
     _redrawOrigins() {
-        const insComp = this.page.getComponent("instances");
-        const instances = insComp.getAllInstances();
+        const instances = this.getAllVisibleInstances();
         const elt = this.element;
         const ctx = elt.getContext("2d");
         const originPoints = instances.map((instance) => {
@@ -246474,8 +246480,7 @@ class CollisionsDrawer extends ADebugDrawer {
      * draw the collision shapes (circles, polygons, etc.)
      */
     _redrawCollisionShapes() {
-        const insComp = this.page.getComponent("instances");
-        const instances = insComp.getAllInstances();
+        const instances = this.getAllVisibleInstances();
         const elt = this.element;
         const ctx = elt.getContext("2d");
         const shapes = instances.map((instance) => {
@@ -246524,8 +246529,7 @@ class BoundingCircle extends ADebugDrawer {
         this._redrawBoxes();
     }
     _redrawBoxes() {
-        const insComp = this.page.getComponent("instances");
-        const instances = insComp.getAllInstances();
+        const instances = this.getAllVisibleInstances();
         const elt = this.element;
         const ctx = elt.getContext("2d");
         const circles = instances.map((instance) => {
@@ -246551,8 +246555,7 @@ class ContainmentDrawer extends ADebugDrawer {
         const ctx = elt.getContext("2d");
         ctx.clearRect(0, 0, elt.width, elt.height);
         ctx.fillStyle = CONTAINMENT_COLOR;
-        const insComp = this.page.getComponent("instances");
-        const instances = insComp.getAllInstances();
+        const instances = this.getAllVisibleInstances();
         const shapes = instances
             .map((instance) => {
             const shape = instance.getComponent("containment").getImplementedShape();
@@ -252734,6 +252737,8 @@ const shapeTypes = [
     "rect",
     "roundrect",
     "triangle",
+    "rightTriangle",
+    "parallelogram",
     "circle",
     "arrowup",
     "arrowdown",
@@ -254974,6 +254979,44 @@ const roundrect = (svg, type, fill) => {
     newRect.setAttribute("ry", radius.toString());
     svg.append(newRect);
 };
+const rtTri = (svg, type, fill) => {
+    const sizeAttr = "100%";
+    svg.setAttribute("width", sizeAttr);
+    svg.setAttribute("height", sizeAttr);
+    svg.setAttribute("viewBox", "0 0 100 100");
+    svg.setAttribute("preserveAspectRatio", "none");
+    let triangle = document.createElementNS(svgns, "polygon");
+    // Right-angled triangle: bottom-left corner, bottom-right corner, top-left corner
+    triangle.setAttribute("points", "0,100 100,100 0,0");
+    triangle.setAttribute("fill", fill);
+    svg.append(triangle);
+};
+const parallelogram = (svg, type, fill) => {
+    const sizeAttr = "100%";
+    const viewBoxSize = 100;
+    svg.setAttribute("width", sizeAttr);
+    svg.setAttribute("height", sizeAttr);
+    svg.setAttribute("viewBox", `0 0 ${viewBoxSize} ${viewBoxSize}`);
+    svg.setAttribute("preserveAspectRatio", "none");
+    const updateParallelogram = () => {
+        // Get the actual rendered dimensions
+        const rect = svg.getBoundingClientRect();
+        const aspectRatio = rect.width / rect.height;
+        // Calculate skew to maintain 45 degrees with current aspect ratio
+        const skewOffset = viewBoxSize / aspectRatio;
+        // Clear existing content
+        svg.innerHTML = '';
+        let parallelogram = document.createElementNS(svgns, "polygon");
+        parallelogram.setAttribute("points", `${Math.min(skewOffset, viewBoxSize)},${viewBoxSize} ${viewBoxSize},${viewBoxSize} ${Math.max(viewBoxSize - skewOffset, 0)},0 0,0`);
+        parallelogram.setAttribute("fill", fill);
+        svg.append(parallelogram);
+    };
+    // Initial draw
+    updateParallelogram();
+    // Update on resize
+    const resizeObserver = new ResizeObserver(updateParallelogram);
+    resizeObserver.observe(svg);
+};
 const svgPoly = (radius, numSides) => {
     var radians = (deg) => (Math.PI * deg) / 180;
     var vb = 2 * radius;
@@ -255027,6 +255070,8 @@ const mapTypeToFunction = {
     rect,
     roundrect: roundrect,
     triangle: polygon(3),
+    rightTriangle: rtTri,
+    parallelogram: parallelogram,
     pentagon: polygon(5),
     hexagon: polygon(6),
     octagon: polygon(8),
