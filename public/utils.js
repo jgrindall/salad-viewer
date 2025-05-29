@@ -28,5 +28,11 @@ window.saladUtils = {
             alert("Failed to delete all activities: " + data.error);
         }
     },
+    getActivityData: async (activityId) => {
+        const response = await fetch(`/api/activity/${activityId}`);
+        const activityData = await response.json();
+        return activityData;
+                
+    }
 }
 

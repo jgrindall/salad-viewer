@@ -77,24 +77,15 @@ app.post('/admin/upload', async (req:Request, res:Response) => {
     }
 });
 
-/**
- * View an activity
- */
-app.get('/view/:activityId', async (req: Request, res:Response) => {
+app.get('/api/activity/:activityId', async (req: Request, res:Response) => {
     const activityId = req.params.activityId;
 
     if (!activityId) {
         res
         .status(404)
-        .sendFile(path.join(__dirname, 'public', '404.html'));
+        .json({});
         return;
     }
-
-    const viewerPath = path.join(__dirname, 'public', 'viewer.html');
-    
-
-    // basic html
-    let html = await fs.readFile(viewerPath, 'utf8');
 
     // Read the activity file
     const activityPath = getActivityPath(activityId);
@@ -118,8 +109,6 @@ app.get('/view/:activityId', async (req: Request, res:Response) => {
         return;
     }
 
-    
-    
     const pages = json.pages;
     const data = json.data;
     const script = json.script;
@@ -135,41 +124,23 @@ app.get('/view/:activityId', async (req: Request, res:Response) => {
         }
     });
 
-    // Make a script to load the activity
-    const scriptSrc = `
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-
-            const container = document.getElementById("salad_container");
-            
-            const api = window.getApi(${JSON.stringify(assetMap, null, 4)});
-        
-            const data = ${JSON.stringify(data, null, 4)};
-        
-            const script = ${JSON.stringify(script, null, 4)};
-        
-            const pages = ${JSON.stringify(pages, null, 4)};
-
-            const fonts = ${JSON.stringify(fonts, null, 4)};
-        
-            const options = {
-                mode: "play",
-                container,
-                script,
-                data,
-                api,
-                fonts,
-                pages
-            };
-
-            Salad.Factory.createActivity(options);
-        });
-      </script>
-    `;
+    const activityData = {
+        assetMap,
+        data: json.data,
+        script: json.script,
+        pages: json.pages,
+        fonts: json.fonts
+    };
     
-    // Insert the script right before the closing body tag
-    html = html.replace('</body>', `${scriptSrc}\n</body>`);
-    res.send(html);
+    res.json(activityData);
+});
+
+/**
+ * View an activity
+ */
+app.get('/view/:activityId', async (req: Request, res:Response) => {
+    const viewerPath = path.join(__dirname, 'public', 'viewer.html');
+    res.sendFile(viewerPath);
 });
 
 

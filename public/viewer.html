@@ -9,6 +9,7 @@
 
         <script src="/lib/salad.bundled.js"></script>
         <script src="/lib/api.js"></script>
+        <script src="/utils.js"></script>
 
         <style>
             html, body{
@@ -45,6 +46,33 @@
         <div id="salad_container">
         </div>
 
+
+        <script>
+            document.addEventListener('DOMContentLoaded', async () => {
+                const activityId = window.location.pathname.split('/').pop();
+                
+                const {
+                    assetMap,
+                    data,
+                    script,
+                    pages,
+                    fonts
+                } =  await window.saladUtils.getActivityData(activityId);
+                
+                const container = document.getElementById("salad_container");
+                const api = window.getApi(assetMap);
+                
+                Salad.Factory.createActivity({
+                    mode: "play",
+                    container,
+                    script,
+                    data,
+                    api,
+                    fonts,
+                    pages
+                });
+            });
+        </script>
 
 
     </body>
