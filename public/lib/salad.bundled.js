@@ -236763,6 +236763,7 @@ class ADraggableComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComp
     activate() {
         // only used in edit mode
     }
+    forceDragging(e) { }
     startDragging(e) { }
     deactivate() {
         // only used in edit mode
@@ -236919,16 +236920,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ PlayDraggableComponent)
 /* harmony export */ });
 /* harmony import */ var _ADraggableComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ADraggableComponent */ "../salad/components/draggable/ADraggableComponent.ts");
-/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../.. */ "../salad/index.ts");
+/* harmony import */ var _types_external__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../types/external */ "../salad/types/external.ts");
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../.. */ "../salad/index.ts");
 /**
  * Draggable in play mode
  */
+
 
 
 const ORIGINAL_POSITION_KEY = "__originalPosition";
 class PlayDraggableComponent extends _ADraggableComponent__WEBPACK_IMPORTED_MODULE_0__["default"] {
     constructor(data, instance, page) {
         super(data, instance, page);
+        this.onPointerDown = this.onPointerDown.bind(this);
+        this.onPagePointerUp = this.onPagePointerUp.bind(this);
     }
     onCreated() {
         super.onCreated();
@@ -236956,8 +236961,9 @@ class PlayDraggableComponent extends _ADraggableComponent__WEBPACK_IMPORTED_MODU
      * @param e
      */
     startDragging(e) {
+        var _a;
         //eg. call moveable dragstart function
-        this.dragger.startDraggingUsingEvent(e);
+        (_a = this.dragger) === null || _a === void 0 ? void 0 : _a.startDraggingUsingEvent(e);
     }
     /**
      * put it back where it started
@@ -236973,14 +236979,72 @@ class PlayDraggableComponent extends _ADraggableComponent__WEBPACK_IMPORTED_MODU
         this._removeDraggable();
     }
     createDragger() {
-        this.dragger = ___WEBPACK_IMPORTED_MODULE_1__["default"].Utils.Dragging.getPlayDragger(this.page, this.instance);
+        this.dragger = ___WEBPACK_IMPORTED_MODULE_2__["default"].Utils.Dragging.getPlayDragger(this.page, this.instance);
+        this.page.events.on(___WEBPACK_IMPORTED_MODULE_2__["default"].Events.PAGE_POINTERUP, this.onPagePointerUp);
+    }
+    forceDragging(e) {
+        this.createDragger();
+        // we need a settimeout here to ensure that the dragger is set up before we start dragging
+        setTimeout(() => {
+            this.startDragging(e);
+        });
+    }
+    onPointerDown(eventData) {
+        const rotateComp = this.instance.getComponent("rotateable");
+        if (rotateComp && rotateComp.getHitHandle(eventData.originalEvent)) {
+            // if we hit the rotate handle, don't start dragging
+            return;
+        }
+        this.forceDragging(eventData.originalEvent);
+    }
+    dispatchClick(e) {
+        // figure out where they clicked
+        const clientPos = {
+            x: e.clientX,
+            y: e.clientY,
+        };
+        const point = this.page
+            .layout
+            .getPagePositionForClientPosition(clientPos);
+        const eventData = {
+            target: this.instance,
+            targets: [this.instance],
+            point,
+            originalEvent: e,
+        };
+        // just dispatch the events we need. This is annoying but moveable swallows these events.
+        this.page.events.emit(_types_external__WEBPACK_IMPORTED_MODULE_1__.Events.INSTANCE_CLICK, eventData);
+        this.instance.events.emit(_types_external__WEBPACK_IMPORTED_MODULE_1__.Events.INSTANCE_CLICK, eventData);
+    }
+    onPagePointerUp(eventData) {
+        if (this.dragger) {
+            const moved = this.dragger.getHasMoved();
+            if (moved) {
+                // if we have moved, then we need to check drop zones
+                this.page.dragndrop.dropInstance(this.instance);
+            }
+            else {
+                // if we didn't move, dispatch a click event
+                this.dispatchClick(eventData.originalEvent);
+            }
+        }
+        this._removeDraggable();
+        this.page.events.off(___WEBPACK_IMPORTED_MODULE_2__["default"].Events.PAGE_POINTERUP, this.onPagePointerUp);
+    }
+    _addListeners() {
+        this.instance.events.on(___WEBPACK_IMPORTED_MODULE_2__["default"].Events.INSTANCE_POINTERDOWN, this.onPointerDown);
+    }
+    _removeListeners() {
+        this.instance.events.off(___WEBPACK_IMPORTED_MODULE_2__["default"].Events.INSTANCE_POINTERDOWN, this.onPointerDown);
+        this.page.events.off(___WEBPACK_IMPORTED_MODULE_2__["default"].Events.PAGE_POINTERUP, this.onPagePointerUp);
     }
     enable() {
         super.enable();
         //clean up the old draggable and events
+        this._removeListeners();
         this._removeDraggable();
         // make new one
-        this.createDragger();
+        this._addListeners();
     }
 }
 
@@ -237685,7 +237749,15 @@ class PlayDroppableComponent extends _ADroppableComponent__WEBPACK_IMPORTED_MODU
             if (instanceToEject) {
                 // eject it
                 this.removeContent(instanceToEject);
-                instanceToEject.getComponent("draggable").resetPosition();
+                const spawn = instanceToEject.getComponent("spawn");
+                if (spawn && spawn.getSpawnParent()) {
+                    this.page.instances.destroyInstance(instanceToEject);
+                }
+                else {
+                    const drag = instanceToEject.getComponent("draggable");
+                    // if it has no spawn parent, just reset the position
+                    drag.resetPosition();
+                }
             }
             // and return true
             return true;
@@ -241040,6 +241112,10 @@ class ARotateableComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.ACom
     setStep(step) {
         this.data.step = step;
     }
+    getHitHandle(event) {
+        // nothing in edit mode
+        return false;
+    }
     getDependencies() {
         return ["transform", "render"];
     }
@@ -241238,13 +241314,16 @@ class PlayRotateableComponent extends _ARotateableComponent__WEBPACK_IMPORTED_MO
             this.dragDisabled = false;
         }
     }
-    onPointerDown(eventData) {
+    getHitHandle(event) {
         var _a;
-        // you hit the handle, so start rotating
-        const pos = (0,_utils_utils__WEBPACK_IMPORTED_MODULE_2__.getEventPosition)(eventData.originalEvent);
-        const started = (_a = this.handle) === null || _a === void 0 ? void 0 : _a.getWasHit(pos);
+        const pos = (0,_utils_utils__WEBPACK_IMPORTED_MODULE_2__.getEventPosition)(event);
+        return this.data.enabled && ((_a = this.handle) === null || _a === void 0 ? void 0 : _a.getWasHit(pos));
+    }
+    onPointerDown(eventData) {
+        // if you hit the handle, start rotating
+        const hitHandle = this.getHitHandle(eventData.originalEvent);
         // if our rotate was started, add the listeners for moving and stopping
-        if (started) {
+        if (hitHandle) {
             this.instance.events.on(_types_external__WEBPACK_IMPORTED_MODULE_0__.Events.INSTANCE_POINTERDRAG, this.onPointerDrag);
             this.page.events.on(_types_external__WEBPACK_IMPORTED_MODULE_0__.Events.PAGE_POINTERUP, this.onPointerUp);
             const dragComp = this.instance.getComponent("draggable");
@@ -241257,6 +241336,10 @@ class PlayRotateableComponent extends _ARotateableComponent__WEBPACK_IMPORTED_MO
             if (isDraggable) {
                 this.instance.getComponent("draggable").disable();
                 this.dragDisabled = true;
+            }
+            if (this.data.bringToFront) {
+                const renderComponent = this.instance.getComponent("render");
+                renderComponent.bringToFront();
             }
         }
         else {
@@ -242127,7 +242210,7 @@ class Spawner {
             el.dispatchEvent(eventWithTarget);
             //start drag!
             const dragComp = instance.getComponent("draggable");
-            dragComp.startDragging(eventWithTarget);
+            dragComp.forceDragging(eventWithTarget);
         }
     }
     /**
@@ -243781,6 +243864,7 @@ const defaultSchema = {
     },
     rotateable: {
         enabled: false,
+        bringToFront: true,
         handlePosition: {
             x: 0,
             y: 0
@@ -243946,6 +244030,9 @@ class ADragger {
             draggable: true,
             renderDirections: [],
         };
+    }
+    getHasMoved() {
+        return false;
     }
     destroyMoveable() {
         if (this.moveable) {
@@ -244245,7 +244332,6 @@ __webpack_require__.r(__webpack_exports__);
  * @returns
  */
 const getMoveable = (target, container, moveableOptions, dragOptions) => {
-    console.log("moveableOptions", moveableOptions);
     const moveable = new moveable__WEBPACK_IMPORTED_MODULE_0__["default"](container, Object.assign({ target,
         container }, moveableOptions))
         .on("click", dragOptions.onClick)
@@ -244310,7 +244396,6 @@ class PlayDragger extends _ADragger__WEBPACK_IMPORTED_MODULE_2__.ADragger {
     constructor(page, instance) {
         super(page, instance);
         this.hasMoved = false;
-        this._useGlobalScale = false;
         const renderComponent = this.instance.getComponent("render");
         const target = renderComponent.getElement();
         const positionComponent = this.instance.getComponent("position");
@@ -244319,76 +244404,24 @@ class PlayDragger extends _ADragger__WEBPACK_IMPORTED_MODULE_2__.ADragger {
         let startPos = undefined;
         // get the options
         const dragOptions = {
-            onClick: (e) => {
-                // figure out where they clicked
-                const clientPos = {
-                    x: e.clientX,
-                    y: e.clientY,
-                };
-                const point = this.page
-                    .layout
-                    .getPagePositionForClientPosition(clientPos);
-                const eventData = {
-                    target: this.instance,
-                    targets: [this.instance],
-                    point,
-                    originalEvent: e.inputEvent,
-                };
-                // just dispatch the events we need. This is annoying but moveable swallows these events.
-                this.page.events.emit(_types_external__WEBPACK_IMPORTED_MODULE_1__.Events.INSTANCE_CLICK, eventData);
-                this.instance.events.emit(_types_external__WEBPACK_IMPORTED_MODULE_1__.Events.INSTANCE_CLICK, eventData);
-            },
             onDragStart: (e) => {
-                // find out if they clicked on the collision shape, if not stop.
-                const clientPos = {
-                    x: e.clientX,
-                    y: e.clientY,
-                };
-                const p = this.page
-                    .layout
-                    .getPagePositionForClientPosition(clientPos);
-                const collComp = this.instance.getComponent("collision");
-                const shape = collComp.getTransformedShape();
-                const inside = shape.containsPoint(p);
+                // find out if they clicked on the right shape
                 this.hasMoved = false;
-                if (!inside) {
-                    console.log("e", e);
-                    e.stop();
+                startPos = positionComponent.getPosition();
+                if (draggableData.bringToFront) {
+                    renderComponent.bringToFront();
                 }
-                else {
-                    startPos = positionComponent.getPosition();
-                    if (draggableData.bringToFront) {
-                        renderComponent.bringToFront();
-                    }
-                    this.page.events.emit(_types_external__WEBPACK_IMPORTED_MODULE_1__.Events.INSTANCE_START_DRAG, {
-                        selectedInstance: this.instance,
-                    });
-                    this.instance.events.emit(_types_external__WEBPACK_IMPORTED_MODULE_1__.Events.INSTANCE_START_DRAG, {
-                        selectedInstance: this.instance,
-                    });
-                }
-            },
-            onDragEnd: () => {
-                if (this.hasMoved) {
-                    // dispatch the relevant events
-                    this.page.dragndrop.dropInstance(this.instance);
-                }
-                startPos = undefined;
-                this._useGlobalScale = false;
+                this.page.events.emit(_types_external__WEBPACK_IMPORTED_MODULE_1__.Events.INSTANCE_START_DRAG, {
+                    selectedInstance: this.instance,
+                });
+                this.instance.events.emit(_types_external__WEBPACK_IMPORTED_MODULE_1__.Events.INSTANCE_START_DRAG, {
+                    selectedInstance: this.instance,
+                });
             },
             onDrag: (e) => {
-                let scale = 1;
-                if (this._useGlobalScale) {
-                    /**
-                     * not sure why but when we force start dragging (when we spawn a new instance) we need to use the global scale.
-                     * if we don't do this, the instance will move too fast.
-                     * otherwise (if we are just dragging normally) we can use 1
-                     */
-                    scale = this.page.layout.getGlobalScale() || 1;
-                }
                 this.hasMoved = true;
-                const dx = e.beforeTranslate[0] / scale;
-                const dy = e.beforeTranslate[1] / scale;
+                const dx = e.beforeTranslate[0];
+                const dy = e.beforeTranslate[1];
                 // update the position component.
                 let newPosition = {
                     x: startPos.x + dx,
@@ -244416,8 +244449,10 @@ class PlayDragger extends _ADragger__WEBPACK_IMPORTED_MODULE_2__.ADragger {
         //make the moveable instance
         this.moveable = (0,_MoveableFactory__WEBPACK_IMPORTED_MODULE_3__.getMoveable)(target, this.page.getPageContainer(), this.getMoveableOptions(), dragOptions);
     }
+    getHasMoved() {
+        return this.hasMoved;
+    }
     startDraggingUsingEvent(e) {
-        this._useGlobalScale = true;
         super.startDraggingUsingEvent(e);
     }
 }
