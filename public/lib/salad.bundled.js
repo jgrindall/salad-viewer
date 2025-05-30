@@ -255001,7 +255001,9 @@ const parallelogram = (svg, type, fill) => {
     const updateParallelogram = () => {
         // Get the actual rendered dimensions
         const rect = svg.getBoundingClientRect();
-        const aspectRatio = rect.width / rect.height;
+        const w = Math.max(rect.width, 1);
+        const h = Math.max(rect.height, 1);
+        const aspectRatio = w / h;
         // Calculate skew to maintain 45 degrees with current aspect ratio
         const skewOffset = viewBoxSize / aspectRatio;
         // Clear existing content

@@ -33,6 +33,7 @@ body.moveable-play, #salad_container.moveable-play {
     border-color: transparent !important; }
 
 #salad_container {
+  touch-action: none;
   position: absolute;
   overflow: hidden; }
   #salad_container .layer {
