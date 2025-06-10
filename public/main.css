@@ -6,13 +6,25 @@
 
 
 body{
-    font-size: larger;
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
     font-family: "Fredoka", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     color: #00695C;
     margin:8px;
     padding:8px;
+}
+
+h1{
+    font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+ul{
+    padding-left: 32px;
+}
+
+.title{
+    font-weight: 600;
 }
 
 .btn{
@@ -48,6 +60,7 @@ body{
 .monster{
     width: 190px;
     height: 250px;
+    max-height: 80vh;
 }
 
 a{
