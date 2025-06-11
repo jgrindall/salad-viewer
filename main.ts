@@ -7,7 +7,7 @@ import { getAsset } from "./assetDatabase";
 import { getZipPath, getTempPath, getAssetPath } from "./paths";
 import express, { Request, Response } from 'express';
 import { JSONAsset, JSONActivity } from "./types";
-import { list, deleteActivity, getActivityPath, deleteAllActivities } from "./activitiesDatabase";
+import { list, deleteActivity, getActivityPath, deleteAllActivities, getIdFromPath } from "./activitiesDatabase";
 import { deleteAllAssets } from "./assetDatabase";
 
 const app = express();
@@ -108,12 +108,7 @@ app.get('/api/activity/:activityId', async (req: Request, res:Response) => {
         .sendFile(path.join(__dirname, 'public', '404.html'));
         return;
     }
-
-    const pages = json.pages;
-    const data = json.data;
-    const script = json.script;
-    const fonts = json.fonts;
-    
+ 
     const assetMap = {};
 
     (json.assets || []).forEach((asset: JSONAsset) => {
@@ -141,6 +136,21 @@ app.get('/api/activity/:activityId', async (req: Request, res:Response) => {
 app.get('/view/:activityId', async (req: Request, res:Response) => {
     const viewerPath = path.join(__dirname, 'public', 'viewer.html');
     res.sendFile(viewerPath);
+});
+
+
+app.get('/view', async (req: Request, res:Response) => {
+    // If no activityId is provided
+    const activities = list();
+    console.log("activities", activities);
+    const activityPath = activities.length > 0 ? activities[0] : null;
+    if (!activityPath) {
+        res.status(404).send('Activity not found');
+    }
+    else{
+        const activityId = getIdFromPath(activityPath);
+        res.redirect(`/view/${activityId}`);
+    }
 });
 
 

@@ -32,3 +32,11 @@ export function getActivityPath(activityId: string): string {
     return activityPath;
 }
 
+export function getIdFromPath(filePath: string): string{
+    const match = filePath.match(/activity-(.+)\.json/);
+    if (match && match[1]) {
+        return match[1];
+    }
+    throw new Error(`Invalid activity file name: ${filePath}`);
+}
+
