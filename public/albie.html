@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/main.css">
+
+        <style>
+          
+        </style>
+        <script src="/utils.js"></script>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="container container-1">
+                <h1>
+                    Hello Albie
+                </h1>
+                <div class="monster monster-1">
+                </div>
+            </div>
+
+            <div class="container container-2">
+                <div class="activities">
+                    <p class="title" style="display: flex;align-items: center;margin-bottom: 32px;">
+                        <span class="star">✪</span>Today's challenges:
+                    </p>
+                    
+                    <ul class="activities-list">
+                    </ul>
+
+                    <p class="title" style="display: flex;align-items: center;margin-bottom: 32px;">
+                        <span class="star">♛</span>Your rewards:
+                        <div class="locked">
+                           <span>Locked</span>
+                        </div>
+
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+        <a class="btn" href="/admin" style="position:fixed;bottom:0;right:0;">
+            Admin
+        </a>
+        
+    </body>
+
+    
+
+    <script>
+
+        const names = [
+            "Maths",
+            "Logic",
+            "Spelling",
+            "Colors",
+            "Puzzles",
+            "Shapes",
+            "Reading",
+            "Letters",
+            "Numbers"
+        ]
+
+        const getName = (a, i)=>{
+            return names[i];
+        }
+        
+
+        const listActivities = async ()=>{
+            const activities = await window.saladUtils.listActivities();
+            const container = document.querySelector("ul.activities-list");
+            if( activities.length === 0){
+                container.innerHTML = "<span>None found</span>";
+                return;
+            }
+            activities.forEach((a, i)=>{
+                const activity = document.createElement("li");
+                const id = a.match(/^activity-(.*)\.json$/)[1];
+                activity.innerHTML = `
+<a href='/view/${id}'>
+    <p>${getName(a, i)}</p>
+</a>
+`;
+                container.appendChild(activity);
+            })
+        }
+
+        listActivities();
+
+        
+
+    </script>
+</html>

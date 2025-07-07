@@ -12,21 +12,21 @@
 
     <body>
         <div class="wrapper">
-            <div class="container container-1">
-                <h1>
-                    Hello Albie
+            <div class="container container-large">
+                <h1 style="margin-bottom:32px;">
+                    Who's playing today?
                 </h1>
-                <div class="monster monster-1">
-                </div>
-            </div>
-
-            <div class="container container-2">
-                <div class="activities">
-                    <p class="title">
-                        Today's challenges:
-                    </p>
-                    <ul class="activities-list">
-                    </ul>
+                <div class="avatars">
+                    <a class="avatar avatar-1" href="/albie" >
+                        <p>
+                            Albie
+                        </p>
+                    </a>
+                    <a class="avatar avatar-2" href="/albie">
+                        <p>
+                            Milo
+                        </p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -36,34 +36,5 @@
         
     </body>
 
-    
 
-    <script>
-        
-
-        const listActivities = async ()=>{
-            const activities = await window.saladUtils.listActivities();
-            const container = document.querySelector("ul.activities-list");
-            if( activities.length === 0){
-                container.innerHTML = "<span>None found</span>";
-                return;
-            }
-            activities.forEach((a)=>{
-                const activity = document.createElement("li");
-                const id = a.match(/^activity-(.*)\.json$/)[1];
-                console.log(id);
-                activity.innerHTML = `
-<a href='/view/${id}'>
-    <p>${a}</p>
-</a>
-`;
-                container.appendChild(activity);
-            })
-        }
-
-        listActivities();
-
-        
-
-    </script>
 </html>
