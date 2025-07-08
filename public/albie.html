@@ -31,8 +31,8 @@
 
                     <p class="title" style="display: flex;align-items: center;margin-bottom: 18px;">
                         <span class="star">♛</span>Your rewards:
-                        <div class="locked">
-                           <span>Locked</span>
+                        <div id="rewards" class="locked">
+                           <span id="rewards-label">Locked</span>
                         </div>
 
                     </p>
@@ -42,13 +42,23 @@
         </div>
         <a class="btn" href="/admin" style="position:fixed;bottom:0;right:0;">
             Admin
-        </a>
-        
+        </a>        
     </body>
 
-    
-
     <script>
+
+        const loadRewards = ()=>{
+            const rewards = window.saladUtils.listRewards()
+            const rewardsEl = document.querySelector("#rewards-label");
+            const rewardsContainer = document.querySelector("#rewards");
+            if( rewards.length >= 1 ){
+                rewardsEl.innerHTML = `Rewards (${rewards.length})`;
+                rewardsContainer.classList.add("unlocked");
+                rewardsContainer.addEventListener("click", ()=>{
+                    document.location.href = "/rewards";
+                });
+            }
+        }
 
         const names = [
             "Maths",
@@ -66,7 +76,6 @@
             return names[i % names.length];
         }
         
-
         const listActivities = async ()=>{
             const activities = await window.saladUtils.listActivities();
             const container = document.querySelector("ul.activities-list");
@@ -88,7 +97,7 @@
 
         listActivities();
 
-        
+        loadRewards();
 
     </script>
 </html>

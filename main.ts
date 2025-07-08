@@ -48,6 +48,10 @@ app.get('/admin', (req:Request, res:Response) => {
     res.sendFile(path.join(__dirname, 'public', 'admin.html'));
 });
 
+app.get('/rewards', (req:Request, res:Response) => {
+    res.sendFile(path.join(__dirname, 'public', 'rewards.html'));
+});
+
 app.post('/admin/upload', async (req:Request, res:Response) => {
     try { 
         const form = new IncomingForm();

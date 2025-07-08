@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/main.css">
+
+        <style>
+          
+        </style>
+        <script src="/utils.js"></script>
+    </head>
+
+    <body>
+
+        <a class="btn" onclick="if(history.length > 1) {history.back(); }else {window.location.href='/';} return false;" style="position:absolute;top:0;right:0;float:right;">
+            Back
+        </a>
+
+
+        <div class="wrapper">
+
+            <div class="container container-1">
+                <h1>
+                    Rewards
+                </h1>
+                <div class="monster monster-3">
+                </div>
+            </div>
+
+            <div class="container container-2">
+                <div class="activities">
+                    <iframe src="https://www.youtube.com/embed/5wCLCKG9syc?si=-0Vs7UZVGVtrZR4n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <iframe src="https://www.youtube.com/embed/NBXVWnhjAYE?si=aCtc27D2Z5igGfEu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <iframe src="https://www.youtube.com/embed/MfSMKGz5Xgw?si=2jGoNM9FFbGBPoEt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <iframe src="https://www.youtube.com/embed/k9vcFAZBzt0?si=d6mHgJ2qHB4Pkavy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                </div>
+            </div>
+
+        </div>
+
+        
+
+    </body>
+
+    <script>
+
+        const loadRewards = ()=>{
+            const rewards = window.saladUtils.listRewards()
+            const iframes = document.querySelectorAll("iframe");
+            for(let i = 0; i < iframes.length; i++){
+                if(i >= rewards.length){
+                    iframes[i].classList.add("hidden");
+                }
+            } 
+        }
+
+        loadRewards();
+
+        
+    </script>
+</html>

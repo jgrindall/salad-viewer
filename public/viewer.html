@@ -79,6 +79,7 @@
                     setTimeout(() => {
                         alert("well done Albie, reward unlocked!")
                         window.location.href = "/albie.html";
+                        window.saladUtils.addReward("" + activityId);
                     }, 1000);
                 })
             });

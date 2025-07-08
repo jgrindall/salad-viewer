@@ -16,6 +16,20 @@ window.saladUtils = {
             alert("Failed to delete activity: " + data.error);
         }
     },
+    resetRewards: async () => {
+        window.sessionStorage.removeItem("learnandearn-rewards");
+    },
+    addReward: (activityId) => {
+        const rewardsArray = saladUtils.listRewards();
+        if (!rewardsArray.includes(activityId)) {
+            rewardsArray.push(activityId);
+            window.sessionStorage.setItem("learnandearn-rewards", rewardsArray.join(","));
+        }
+    },
+    listRewards: () => {
+        const rewards = window.sessionStorage.getItem("learnandearn-rewards") || "";
+        return rewards.split(",").filter(Boolean);
+    },
     deleteAll: async () => {
         const response = await fetch("/api/wipe", {
             method: "DELETE"
