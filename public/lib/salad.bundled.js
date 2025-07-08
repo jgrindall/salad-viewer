@@ -241710,9 +241710,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _AComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../AComponent */ "../salad/components/AComponent.ts");
 /* harmony import */ var _utils_domElementFactory__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/domElementFactory */ "../salad/utils/domElementFactory.ts");
+/* harmony import */ var _root_salad_utils_svgElementFactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @root/salad/utils/svgElementFactory */ "../salad/utils/svgElementFactory.ts");
 /**
  * shape component
  */
+
 
 
 class ShapeComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComponent {
@@ -241775,6 +241777,7 @@ class ShapeComponent extends _AComponent__WEBPACK_IMPORTED_MODULE_0__.AComponent
     }
     _destroyElement() {
         if (this.element) {
+            (0,_root_salad_utils_svgElementFactory__WEBPACK_IMPORTED_MODULE_2__.cleanUp)(this.element);
             this.element.remove();
         }
     }
@@ -254956,6 +254959,7 @@ const createLine = (svg, type, fill, size) => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   cleanUp: () => (/* binding */ cleanUp),
 /* harmony export */   svg: () => (/* binding */ svg)
 /* harmony export */ });
 /* harmony import */ var _shapes_arrows__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./shapes/arrows */ "../salad/utils/shapes/arrows.ts");
@@ -254965,6 +254969,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
+const cleanUpMap = new WeakMap();
 const basePath = "http://www.w3.org/";
 const svgns = `${basePath}2000/svg`;
 const chunkyArrow = (svg, type, fill) => {
@@ -255028,7 +255033,7 @@ const rtTri = (svg, type, fill) => {
     triangle.setAttribute("fill", fill);
     svg.append(triangle);
 };
-const parallelogram = (svg, type, fill) => {
+const parallelogram = (svg, type, fill, size) => {
     const sizeAttr = "100%";
     const viewBoxSize = 100;
     svg.setAttribute("width", sizeAttr);
@@ -255037,16 +255042,16 @@ const parallelogram = (svg, type, fill) => {
     svg.setAttribute("preserveAspectRatio", "none");
     const updateParallelogram = () => {
         // Get the actual rendered dimensions
-        const rect = svg.getBoundingClientRect();
-        const w = Math.max(rect.width, 1);
-        const h = Math.max(rect.height, 1);
+        const w = Math.max(size.width, 1);
+        const h = Math.max(size.height, 1);
         const aspectRatio = w / h;
         // Calculate skew to maintain 45 degrees with current aspect ratio
         const skewOffset = viewBoxSize / aspectRatio;
         // Clear existing content
         svg.innerHTML = '';
         let parallelogram = document.createElementNS(svgns, "polygon");
-        parallelogram.setAttribute("points", `${Math.min(skewOffset, viewBoxSize)},${viewBoxSize} ${viewBoxSize},${viewBoxSize} ${Math.max(viewBoxSize - skewOffset, 0)},0 0,0`);
+        const points = `${Math.min(skewOffset, viewBoxSize)},${viewBoxSize} ${viewBoxSize},${viewBoxSize} ${Math.max(viewBoxSize - skewOffset, 0)},0 0,0`;
+        parallelogram.setAttribute("points", points);
         parallelogram.setAttribute("fill", fill);
         svg.append(parallelogram);
     };
@@ -255055,6 +255060,9 @@ const parallelogram = (svg, type, fill) => {
     // Update on resize
     const resizeObserver = new ResizeObserver(updateParallelogram);
     resizeObserver.observe(svg);
+    cleanUpMap.set(svg, () => {
+        resizeObserver.disconnect();
+    });
 };
 const svgPoly = (radius, numSides) => {
     var radians = (deg) => (Math.PI * deg) / 180;
@@ -255107,10 +255115,10 @@ const star = (svg, type, fill) => {
 };
 const mapTypeToFunction = {
     rect,
-    roundrect: roundrect,
+    roundrect,
     triangle: polygon(3),
     rightTriangle: rtTri,
-    parallelogram: parallelogram,
+    parallelogram,
     pentagon: polygon(5),
     hexagon: polygon(6),
     octagon: polygon(8),
@@ -255130,13 +255138,24 @@ const mapTypeToFunction = {
     chunkyArrowDown: chunkyArrow,
 };
 const svg = (parent, type, fill, size) => {
-    const nsAttrs = [`${basePath}2000/xmlns/`, "xmlns:xlink", `${basePath}1999/xlink`];
+    const nsAttrs = [
+        `${basePath}2000/xmlns/`,
+        "xmlns:xlink",
+        `${basePath}1999/xlink`
+    ];
     const svg = document.createElementNS(svgns, "svg");
     svg.setAttributeNS(nsAttrs[0], nsAttrs[1], nsAttrs[2]);
     const fn = mapTypeToFunction[type];
     fn(svg, type, fill, size);
     parent.append(svg);
     return svg;
+};
+const cleanUp = (svg) => {
+    const cleanUp = cleanUpMap.get(svg);
+    if (cleanUp) {
+        cleanUp();
+        cleanUpMap.delete(svg);
+    }
 };
 
 
