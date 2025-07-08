@@ -88,6 +88,11 @@ app.post('/admin/upload', async (req:Request, res:Response) => {
     }
 });
 
+app.get('/explore/links/:link', async (req: Request, res:Response) => {
+    const viewerPath = path.join(__dirname, 'public', 'explore', 'link.html');
+    res.sendFile(viewerPath);
+})
+
 app.get('/api/activity/:activityId', async (req: Request, res:Response) => {
     const activityId = req.params.activityId;
 
