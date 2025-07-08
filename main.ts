@@ -54,21 +54,32 @@ app.post('/admin/upload', async (req:Request, res:Response) => {
         form.keepExtensions = true;
         form.uploadDir = getZipPath();
         form.parse(req, async (err:FormidableError, fields:Fields, files:Files) => {
-            //get the file
-            const zipFile = files.zipfile[0] || files.zipfile;
-            const tempPath = path.join(getZipPath(), zipFile.newFilename);
+            //get the file(s)
 
-            // where to put it
-            const extractPath = path.join(getTempPath(), path.basename(zipFile.newFilename, '.zip'));
-            await fs.ensureDir(extractPath);
+            const zipFiles = Array.isArray(files.zipfile) ? files.zipfile : [files.zipfile];
 
-            // extract it all
-            const extractor = new ZipExtractor(tempPath, extractPath);
-            const id = await extractor.extract();
-            
+            let idsExtracted = [];
+
+            for (const zipFile of zipFiles) {
+                const tempPath = path.join(getZipPath(), zipFile.newFilename);
+
+                // where to put it
+                const extractPath = path.join(getTempPath(), path.basename(zipFile.newFilename, '.zip'));
+                await fs.ensureDir(extractPath);
+
+                // extract it all
+                const extractor = new ZipExtractor(tempPath, extractPath);
+                const id = await extractor.extract();
+                idsExtracted.push(id);
+            }
+
             // go to the activity
-            res.redirect(`/view/${id}`);
-
+            if(idsExtracted.length === 1){
+                res.redirect(`/view/${idsExtracted[0]}`);
+            }
+            else{
+                res.redirect(`/admin`);
+            }
         });
     }
     catch (error) {
