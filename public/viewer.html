@@ -61,8 +61,8 @@
                 
                 const container = document.getElementById("salad_container");
                 const api = window.getApi(assetMap);
-                
-                Salad.Factory.createActivity({
+
+                const activity = await Salad.Factory.createActivity({
                     mode: "play",
                     container,
                     script,
@@ -71,6 +71,13 @@
                     fonts,
                     pages
                 });
+
+                activity.events.on(Salad.Events.ACTIVITY_COMPLETE, ()=>{
+                    setTimeout(() => {
+                        alert("well done Albie, reward unlocked!")
+                        window.location.href = "/albie.html";
+                    }, 3000);
+                })
             });
         </script>
 

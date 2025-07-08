@@ -249588,7 +249588,6 @@ class AInstancesComponent extends _APageComponent__WEBPACK_IMPORTED_MODULE_0__.A
      * @returns
      */
     addInstanceUsingSchema(schema) {
-        console.log("addInstanceUsingSchema", schema);
         const instance = this._builder.buildInstanceUsingSchema(schema);
         // add it to the world
         this.addInstance(instance);
@@ -252884,11 +252883,12 @@ const Events = {
     DRAWING_TOOL_CHANGE: "drawingToolSettingsChange",
     INSTANCE_START_DRAG: "instanceStartDrag",
     SELECTION_CHANGE: "selectionChange",
-    ACTIVITY_CHANGE_DATA: "activityChangeData",
-    ACTIVITY_CHANGE_SELECTION: "activityChangeSelection",
-    ACTIVITY_PAGE_DESTROYED: "activityPageDestroyed",
-    ACTIVITY_PAGE_CHANGE: "activityPageChange",
-    ACTIVITY_APPLY_SETTINGS: "activityApplySettings",
+    ACTIVITY_CHANGE_DATA: "$activityChangeData",
+    ACTIVITY_CHANGE_SELECTION: "$activityChangeSelection",
+    ACTIVITY_PAGE_DESTROYED: "$activityPageDestroyed",
+    ACTIVITY_PAGE_CHANGE: "$activityPageChange",
+    ACTIVITY_APPLY_SETTINGS: "$activityApplySettings",
+    ACTIVITY_COMPLETE: "$activityComplete",
     PAGE_SOUND_START: "soundStart",
     PAGE_SOUND_END: "soundEnd",
 };
@@ -253472,6 +253472,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 class InstanceBuilder {
     constructor(page, factory, defaultSchema) {
         this.page = page;
@@ -253480,15 +253481,16 @@ class InstanceBuilder {
     }
     build(schema) {
         var _a;
-        if (!((_a = schema.identity) === null || _a === void 0 ? void 0 : _a.displayName)) {
+        const clonedSchema = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.clone)(schema);
+        if (!((_a = clonedSchema.identity) === null || _a === void 0 ? void 0 : _a.displayName)) {
             throw new Error("Please ensure you specify identity.displayName");
         }
-        const name = schema.identity.displayName;
+        const name = clonedSchema.identity.displayName;
         const displayName = this.page.getComponent("instances").getNonDuplicateName(name);
-        schema.identity.displayName = displayName;
+        clonedSchema.identity.displayName = displayName;
         const id = _index__WEBPACK_IMPORTED_MODULE_2__["default"].Utils.getUUID();
         const instance = (0,_world_Instance__WEBPACK_IMPORTED_MODULE_0__.getInstance)(id);
-        const merged = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.mergeDefaultsIntoSchema)(this.defaultSchema, schema);
+        const merged = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.mergeDefaultsIntoSchema)(this.defaultSchema, clonedSchema);
         const components = this.factory.buildAllComponents(merged, instance, this.page);
         instance.setComponents(components);
         return instance;
@@ -257124,6 +257126,10 @@ class AActivityPersistenceComponent extends _AActivityComponent__WEBPACK_IMPORTE
     }
     _save() {
         const page = this.activity.getCurrentPage();
+        if (!page) {
+            PM.pmAlert("No current page to save data for.");
+            return;
+        }
         const pagesComp = this.activity.getComponent("pages");
         const index = pagesComp.getPageIndexForPageId(page.getId());
         // get the data

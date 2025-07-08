@@ -33,6 +33,7 @@ body.moveable-play, #salad_container.moveable-play {
     border-color: transparent !important; }
 
 #salad_container {
+  touch-action: none;
   position: absolute;
   overflow: hidden; }
   #salad_container .layer {
@@ -441,7 +442,13 @@ body.moveable-play, #salad_container.moveable-play {
                 letter-spacing: 0;
                 word-spacing: 0;
                 font-feature-settings: "kern" 0, "liga" 0;
-                -webkit-font-smoothing: antialiased; }
+                -webkit-font-smoothing: antialiased;
+                letter-spacing: 0;
+                word-spacing: normal;
+                font-variant-ligatures: normal !important;
+                font-feature-settings: "kern" 0, "liga" 0;
+                font-kerning: none;
+                font-stretch: normal; }
                 #salad_container .layer.layer-instances-container .layer-instances .instance .component.component-text textarea:disabled, #salad_container .layer.layer-instances-container .layer-instances-hud .instance .component.component-text textarea:disabled {
                   background-color: transparent !important;
                   pointer-events: none; }
