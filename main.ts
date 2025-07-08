@@ -153,12 +153,14 @@ app.get('/view/:activityId', async (req: Request, res:Response) => {
 app.get('/view', async (req: Request, res:Response) => {
     // If no activityId is provided
     const activities = list();
-    console.log("activities", activities);
-    const activityPath = activities.length > 0 ? activities[0] : null;
-    if (!activityPath) {
+
+    if (activities.length === 0) {
         res.status(404).send('Activity not found');
+        return;
     }
     else{
+        const randomIndex = Math.floor(Math.random() * activities.length);
+        const activityPath = activities[randomIndex];
         const activityId = getIdFromPath(activityPath);
         res.redirect(`/view/${activityId}`);
     }
