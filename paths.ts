@@ -38,4 +38,9 @@ export const getDBPath = ()=>{
 }
 
 const basePath = getBasePath();
-fs.ensureDirSync(basePath); // Create /var/data/uploads once at startup
+try{
+    fs.ensureDirSync(basePath); // Create /var/data/uploads once at startup
+}
+catch(e){
+    console.warn(`failed to create base upload directory: ${basePath}`, e);
+}
