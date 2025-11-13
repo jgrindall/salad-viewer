@@ -40,4 +40,9 @@ export const deleteAllAssets = async () => {
     await fs.writeJSON(DB_FILE, db, { spaces: 4 });
 }
 
-init();
+try{
+    init();
+}
+catch(e){
+    console.warn('Failed to initialize asset database:', e);
+}
